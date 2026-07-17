@@ -2,16 +2,34 @@
 
 ## Course Design Repository
 
-This repository contains:
+This repository contains a complete course design for the Professional Elective course **Informatica Intelligent Data Management Cloud (IDMC)**.
 
+## Repository Contents
+
+- Course Syllabus
 - Course Design
-- Original Syllabus
-- Weekly Course Plan
+- 42 Session Teaching Plan
 - Lesson Plans
 - Learning Activities
-- Assessment Plan
+- Assessment Strategy
+- Rubrics
 - References
 
-**Course Duration:** 42 Sessions
+## Course Information
 
-**Author:** Prof. Hidam Rameshwar Singh
+- Course: Informatica Intelligent Data Management Cloud
+- Duration: 42 Sessions
+- L-T-P: 3-0-0
+- CIE: 50%
+- SEE: 50%
+
+## Developed Using
+
+- Visual Studio Code
+- Git
+- GitHub
+- Markdown
+
+## Author
+
+Prof. Hidam Rameshwar Singh
