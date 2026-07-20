@@ -1,4 +1,7 @@
-# UNIT 4
+
+<p align="center">
+  <img src="../Assets/banners/unit4-banner.png" width="100%">
+</p># UNIT 4
 
 # Faculty Notes
 

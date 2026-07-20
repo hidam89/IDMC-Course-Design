@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="../Assets/banners/unit2-banner.png" width="100%">
+</p>
 # UNIT 2
 
 # Faculty Notes
@@ -3975,3 +3978,355 @@ After completing these guided activities, students will be able to:
 ---
 
 # End of Chapter 9
+# Chapter 10
+
+# Unit Summary, Revision and Examination Preparation
+
+---
+
+## Course Outcome
+
+**CO2:** Demonstrate the configuration of IICS Sub-organizations, User Management, and Secure Agent Installation, and analyze their impact on data integration processes.
+
+---
+
+# Unit Overview
+
+This unit introduced the administrative capabilities of Informatica Intelligent Cloud Services (IICS). Students learned how organizations manage users, security, runtime environments, and execution infrastructure.
+
+The unit progressed from organizational administration to runtime execution, providing the foundation required for subsequent units on integration development and administration.
+
+---
+
+# Unit Concept Map
+
+```
+IICS Administration
+
+│
+
+├── Organization Hierarchy
+
+│      └── Sub-Organizations
+
+│
+
+├── User Management
+
+│      ├── Authentication
+
+│      ├── Users
+
+│      ├── User Groups
+
+│      ├── User Roles
+
+│      └── User Statistics
+
+│
+
+├── Runtime Environment
+
+│      ├── Hosted Agent
+
+│      └── Secure Agent
+
+│
+
+└── Secure Agent
+
+       ├── Agent Manager
+
+       ├── Agent Core
+
+       ├── Services
+
+       ├── Installation
+
+       ├── Monitoring
+
+       └── Troubleshooting
+```
+
+---
+
+# Key Concepts
+
+Students should clearly understand the following concepts:
+
+- Organization
+- Sub-Organization
+- Organization Hierarchy
+- User Management
+- Native Authentication
+- Salesforce Authentication
+- User Statistics
+- User Groups
+- User Roles
+- Role-Based Access Control (RBAC)
+- Runtime Environment
+- Hosted Agent
+- Secure Agent
+- Agent Manager
+- Agent Core
+- Runtime Services
+- Secure Communication
+
+---
+
+# Important Definitions
+
+### Organization
+
+The highest administrative entity within IICS used to manage users, assets, licenses, and runtime environments.
+
+---
+
+### Sub-Organization
+
+A child administrative unit created under an organization to simplify administration and improve governance.
+
+---
+
+### User Group
+
+A logical collection of users used to simplify administration.
+
+---
+
+### User Role
+
+A predefined or custom set of permissions assigned to users or groups.
+
+---
+
+### Runtime Environment
+
+The execution platform where integration tasks are processed.
+
+---
+
+### Secure Agent
+
+A lightweight runtime application installed within an organization's network that securely executes IICS tasks.
+
+---
+
+### Agent Manager
+
+The service responsible for controlling, monitoring, and maintaining Secure Agent services.
+
+---
+
+### Agent Core
+
+The component responsible for executing integration jobs and managing runtime operations.
+
+---
+
+# Chapter-wise Recap
+
+## Chapter 1
+
+- Organization Architecture
+- Administrative hierarchy
+- Enterprise structure
+
+---
+
+## Chapter 2
+
+- Sub-Organizations
+- Parent-child hierarchy
+- License allocation
+
+---
+
+## Chapter 3
+
+- User Management
+- Authentication
+- User creation
+- User administration
+
+---
+
+## Chapter 4
+
+- User Statistics
+- List View
+- Chart View
+- Monitoring
+
+---
+
+## Chapter 5
+
+- User Groups
+- Group administration
+- Enterprise grouping
+
+---
+
+## Chapter 6
+
+- User Roles
+- RBAC
+- System-defined roles
+- Custom roles
+
+---
+
+## Chapter 7
+
+- Runtime Environment
+- Hosted Agent
+- Secure Agent
+- Runtime architecture
+
+---
+
+## Chapter 8
+
+- Secure Agent
+- Agent Manager
+- Agent Core
+- Startup sequence
+- Installation
+- Troubleshooting
+
+---
+
+## Chapter 9
+
+- Guided demonstrations
+- Authentication
+- Runtime verification
+- Enterprise scenarios
+
+---
+
+# Frequently Asked University Questions
+
+## 2-Mark Questions
+
+1. Define Sub-Organization.
+2. What is Native Authentication?
+3. What is a User Group?
+4. Define Runtime Environment.
+5. What is Secure Agent?
+6. What is Agent Core?
+
+---
+
+## 5-Mark Questions
+
+1. Explain User Management.
+2. Differentiate User Groups and User Roles.
+3. Explain Runtime Environment.
+4. Describe Secure Agent Architecture.
+5. Explain Hosted Agent vs Secure Agent.
+
+---
+
+## 10-Mark Questions
+
+1. Explain Organization Hierarchy with a suitable diagram.
+2. Describe User Management in IICS.
+3. Explain Secure Agent Architecture and Components.
+4. Explain Secure Agent Installation.
+5. Discuss Runtime Environments with enterprise examples.
+
+---
+
+## 15-Mark Questions
+
+1. Explain the complete User Administration process in IICS.
+2. Discuss Secure Agent Architecture, installation, monitoring, and troubleshooting.
+3. Explain the importance of Runtime Environments in enterprise cloud integration.
+4. Explain RBAC and User Role management with examples.
+
+---
+
+# Frequently Asked Interview Questions
+
+1. Why are Sub-Organizations required?
+2. What is RBAC?
+3. Explain User Groups.
+4. Explain Hosted Agent.
+5. Explain Secure Agent.
+6. What is Agent Manager?
+7. What is Agent Core?
+8. Why is Secure Agent required?
+9. Explain Runtime Environment.
+10. How would you troubleshoot an Offline Secure Agent?
+
+---
+
+# Common Misconceptions
+
+| Misconception | Correct Understanding |
+|--------------|-----------------------|
+| Organization and Sub-Organization are identical. | A Sub-Organization is a child administrative unit. |
+| User Groups define permissions. | User Groups organize users; Roles define permissions. |
+| Hosted Agent can access on-premises databases directly. | Secure Agent is required for on-premises connectivity. |
+| Secure Agent stores enterprise data permanently. | It executes tasks and securely transfers data. |
+| Every user should receive Administrator privileges. | Apply the Principle of Least Privilege. |
+
+---
+
+# Faculty Teaching Checklist
+
+Before completing Unit 2, verify that students can:
+
+- Explain Organization Hierarchy.
+- Create Sub-Organizations.
+- Describe User Authentication methods.
+- Create and manage Users.
+- Explain User Groups and Roles.
+- Compare Hosted Agent and Secure Agent.
+- Describe Secure Agent Architecture.
+- Explain installation and verification steps.
+- Identify common troubleshooting techniques.
+
+---
+
+# Student Revision Checklist
+
+Before the examination, students should be able to:
+
+- Define all key terms.
+- Draw Organization Hierarchy.
+- Explain RBAC.
+- Compare User Groups and Roles.
+- Compare Hosted Agent and Secure Agent.
+- Draw Secure Agent Architecture.
+- Explain Secure Agent startup sequence.
+- Describe installation steps.
+- Explain troubleshooting methods.
+
+---
+
+# Course Outcome Achievement
+
+| Skill | CO2 Mapping |
+|-------|-------------|
+| Organization Administration | ✓ |
+| User Management | ✓ |
+| Authentication | ✓ |
+| User Groups | ✓ |
+| User Roles | ✓ |
+| Runtime Environment | ✓ |
+| Secure Agent | ✓ |
+| Installation | ✓ |
+| Troubleshooting | ✓ |
+
+---
+
+# End of Unit Summary
+
+This unit established the administrative and runtime foundation of Informatica Intelligent Cloud Services (IICS). Students are now prepared to explore data integration development, asset management, and advanced platform capabilities in the subsequent units.
+
+---
+
+# End of Faculty Notes – Unit 2

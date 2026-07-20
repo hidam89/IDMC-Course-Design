@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="../Assets/banners/unit1-banner.png" width="100%">
+</p>
 # UNIT 1
 
 # Quiz and Assessment

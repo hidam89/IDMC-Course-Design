@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="../Assets/banners/unit1-banner.png" width="100%">
+</p>
 # UNIT 1 – FACULTY NOTES
 
 # Informatica Intelligent Data Management Cloud (IDMC)

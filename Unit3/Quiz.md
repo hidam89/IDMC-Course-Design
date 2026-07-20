@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="../Assets/banners/unit3-banner.png" width="100%">
+</p>
 # UNIT 3
 
 # Quiz (MCQs)

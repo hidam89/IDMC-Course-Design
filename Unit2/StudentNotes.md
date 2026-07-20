@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="../Assets/banners/unit2-banner.png" width="100%">
+</p>
 # UNIT 2
 
 # Student Notes
@@ -2409,3 +2412,272 @@ The Secure Agent is the core execution component of Informatica Intelligent Clou
 ---
 
 # End of Chapter 8
+# Chapter 9
+
+# Unit Summary and Quick Revision
+
+---
+
+# Course Outcome (CO2)
+
+**Demonstrate the configuration of IICS Sub-organizations, User Management, and Secure Agent Installation, and analyze their impact on data integration processes.**
+
+---
+
+# Unit Overview
+
+This unit focused on the administrative and runtime capabilities of Informatica Intelligent Cloud Services (IICS). Students learned how organizations manage users, permissions, runtime environments, and secure connectivity for enterprise data integration.
+
+---
+
+# Unit Concept Map
+
+```
+                 IICS Administration
+
+                        │
+        ┌───────────────┼───────────────┐
+        │                               │
+ Organization                    Runtime Environment
+        │                               │
+        │                        ┌──────┴──────┐
+        │                        │             │
+ Sub-Organizations         Hosted Agent   Secure Agent
+        │                               │
+        │                        ┌──────┴──────┐
+        │                        │             │
+ User Management          Agent Manager   Agent Core
+        │
+ ┌──────┼────────┬─────────────┐
+ │      │        │             │
+Users Groups   Roles   Authentication
+```
+
+---
+
+# Important Definitions
+
+| Term | Definition |
+|------|------------|
+| Organization | Highest administrative entity in IICS |
+| Sub-Organization | Child administrative unit created under an Organization |
+| User Management | Process of creating and managing users |
+| Native Authentication | Authentication managed by Informatica Cloud |
+| Salesforce Authentication | Authentication using Salesforce credentials |
+| User Group | Logical collection of users |
+| User Role | Collection of permissions assigned to users |
+| RBAC | Role-Based Access Control |
+| Runtime Environment | Platform where integration jobs execute |
+| Hosted Agent | Cloud-managed runtime |
+| Secure Agent | Customer-managed runtime installed locally |
+| Agent Manager | Controls Secure Agent services |
+| Agent Core | Executes integration jobs |
+
+---
+
+# Quick Comparison Tables
+
+## Organization vs Sub-Organization
+
+| Organization | Sub-Organization |
+|--------------|------------------|
+| Parent entity | Child entity |
+| Manages overall governance | Manages departmental resources |
+| Allocates licenses | Uses allocated licenses |
+
+---
+
+## User Groups vs User Roles
+
+| User Groups | User Roles |
+|--------------|------------|
+| Organize users | Define permissions |
+| Administrative grouping | Security mechanism |
+| Simplify management | Control access |
+
+---
+
+## Native vs Salesforce Authentication
+
+| Native | Salesforce |
+|---------|-------------|
+| Credentials stored in IICS | Credentials stored in Salesforce |
+| No SSO | Supports SSO |
+| Simple configuration | Enterprise integration |
+
+---
+
+## Hosted Agent vs Secure Agent
+
+| Hosted Agent | Secure Agent |
+|---------------|--------------|
+| Managed by Informatica | Managed by Customer |
+| No installation | Installation required |
+| Cloud-to-cloud integration | Hybrid cloud integration |
+| No on-premises access | On-premises access supported |
+
+---
+
+# Key Points to Remember
+
+✔ Organization is the highest administrative unit.
+
+✔ Sub-Organizations simplify enterprise administration.
+
+✔ Authentication verifies user identity.
+
+✔ User Groups organize users.
+
+✔ User Roles define permissions.
+
+✔ RBAC improves enterprise security.
+
+✔ Runtime Environment executes integration jobs.
+
+✔ Hosted Agent is cloud-managed.
+
+✔ Secure Agent is locally installed.
+
+✔ Agent Manager manages services.
+
+✔ Agent Core executes integration tasks.
+
+---
+
+# Frequently Asked Examination Questions
+
+## 2-Mark Questions
+
+1. Define Organization.
+2. What is a Sub-Organization?
+3. What is Native Authentication?
+4. Define User Group.
+5. What is RBAC?
+6. What is a Runtime Environment?
+7. What is Secure Agent?
+8. Define Agent Manager.
+9. Define Agent Core.
+10. What is Hosted Agent?
+
+---
+
+## 5-Mark Questions
+
+1. Explain User Management.
+2. Differentiate User Groups and User Roles.
+3. Explain Native and Salesforce Authentication.
+4. Compare Hosted Agent and Secure Agent.
+5. Explain Runtime Environment.
+
+---
+
+## 10-Mark Questions
+
+1. Explain Organization Hierarchy with a suitable diagram.
+2. Explain User Management in IICS.
+3. Explain Role-Based Access Control (RBAC).
+4. Describe Secure Agent Architecture.
+5. Explain Secure Agent installation and verification.
+
+---
+
+# Frequently Asked Interview Questions
+
+1. What is IICS?
+2. Why are Sub-Organizations required?
+3. Explain RBAC.
+4. Differentiate User Groups and User Roles.
+5. Why is Secure Agent required?
+6. What is Agent Manager?
+7. What is Agent Core?
+8. Compare Hosted Agent and Secure Agent.
+9. What is the Principle of Least Privilege?
+10. How would you troubleshoot a Secure Agent that is offline?
+
+---
+
+# Common Mistakes
+
+❌ Confusing User Groups with User Roles.
+
+✔ User Groups organize users; User Roles define permissions.
+
+---
+
+❌ Assuming Hosted Agent can access on-premises databases.
+
+✔ Secure Agent is required for on-premises connectivity.
+
+---
+
+❌ Assigning Administrator privileges to all users.
+
+✔ Follow the Principle of Least Privilege.
+
+---
+
+❌ Ignoring inactive user accounts.
+
+✔ Periodically review and disable inactive accounts.
+
+---
+
+# Examination Preparation Checklist
+
+Before the examination, ensure that you can:
+
+- Define all important terms.
+- Draw the Organization Hierarchy.
+- Explain User Management.
+- Compare Native and Salesforce Authentication.
+- Compare User Groups and User Roles.
+- Explain RBAC.
+- Compare Hosted Agent and Secure Agent.
+- Draw Secure Agent Architecture.
+- Describe Secure Agent installation.
+- Explain common troubleshooting techniques.
+
+---
+
+# CO2 Achievement Checklist
+
+| Skill | Status |
+|-------|:------:|
+| Explain Organization Hierarchy | ✓ |
+| Configure Sub-Organizations | ✓ |
+| Create and Manage Users | ✓ |
+| Explain Authentication | ✓ |
+| Explain User Groups | ✓ |
+| Explain User Roles | ✓ |
+| Explain Runtime Environment | ✓ |
+| Explain Secure Agent | ✓ |
+| Describe Installation | ✓ |
+| Explain Troubleshooting | ✓ |
+
+---
+
+# One-Page Revision Notes
+
+- Organization → Highest administrative unit.
+- Sub-Organization → Departmental administration.
+- Authentication → Identity verification.
+- User Group → Collection of users.
+- User Role → Collection of permissions.
+- RBAC → Permissions assigned through roles.
+- Runtime Environment → Executes jobs.
+- Hosted Agent → Cloud-managed runtime.
+- Secure Agent → Local runtime for hybrid integration.
+- Agent Manager → Controls Secure Agent services.
+- Agent Core → Executes integration jobs.
+
+---
+
+# Unit Summary
+
+In this unit, we explored the administrative foundation of Informatica Intelligent Cloud Services (IICS). We learned how organizations are structured, how users are managed, how security is implemented using groups and roles, and how Runtime Environments and Secure Agents enable secure enterprise data integration.
+
+A strong understanding of these concepts is essential before studying data integration development and advanced administration topics in subsequent units.
+
+---
+
+# End of Unit 2 Student Notes

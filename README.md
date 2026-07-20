@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="Assets/banners/repository-banner.png" width="100%">
+</p>
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Markdown](https://img.shields.io/badge/Documentation-Markdown-blue)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)

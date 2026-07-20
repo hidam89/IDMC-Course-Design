@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="../Assets/banners/unit1-banner.png" width="100%">
+</p>
+
+# UNIT 1
+
+# Student Notes
 # UNIT 1 – STUDENT NOTES
 
 # Informatica Intelligent Data Management Cloud (IDMC)
@@ -279,6 +286,13 @@ Unlike traditional software, IDMC consists of multiple cloud services working to
 ---
 
 # Simplified IDMC Architecture
+## Introduction to IDMC
+
+<p align="center">
+<img src="../Assets/diagrams/Common/idmc-platform-architecture.png" width="95%">
+</p>
+
+**Figure 1.1:** Informatica Intelligent Data Management Cloud (IDMC) Platform Architecture
 
 ```
 Enterprise Applications
