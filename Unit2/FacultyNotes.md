@@ -2598,3 +2598,394 @@ The next section explains the internal working of the Secure Agent, including Ag
 ---
 
 # End of Chapter 8 – Part A
+# Chapter 8
+
+# Informatica Cloud Secure Agent
+
+## Part B – Agent Manager, Agent Core and Service Startup
+
+---
+
+## Learning Objectives
+
+After completing this section, students will be able to:
+
+- Explain the internal architecture of Secure Agent.
+- Describe the responsibilities of Agent Manager.
+- Explain the Agent Core component.
+- Understand the Secure Agent startup sequence.
+- Differentiate between Local User and Network User execution.
+- Analyze Secure Agent performance.
+
+---
+
+# Internal Architecture
+
+The Secure Agent consists of multiple services working together.
+
+```
+                Secure Agent
+
+        ┌─────────────────────────┐
+        │     Agent Manager       │
+        └────────────┬────────────┘
+                     │
+        ┌────────────┴────────────┐
+        │       Agent Core        │
+        └────────────┬────────────┘
+                     │
+    ┌────────┬────────┬─────────┬─────────┐
+    │        │        │         │         │
+ Data     Process   API      Metadata   Log
+Integration Server Runtime   Service   Manager
+```
+
+Each component has a dedicated responsibility, allowing the Secure Agent to execute integration jobs efficiently.
+
+---
+
+# Agent Manager
+
+## What is Agent Manager?
+
+The **Agent Manager** is the primary service responsible for controlling the Secure Agent.
+
+It performs the following functions:
+
+- Starts services
+- Stops services
+- Monitors health
+- Downloads updates
+- Communicates with Informatica Cloud
+- Restarts failed services
+- Collects logs
+
+The Agent Manager acts as the supervisor of the Secure Agent.
+
+---
+
+## Responsibilities of Agent Manager
+
+- Service lifecycle management
+- Automatic updates
+- Registration with Informatica Cloud
+- Configuration management
+- Health monitoring
+- Failure recovery
+- Status reporting
+
+---
+
+# Agent Core
+
+## What is Agent Core?
+
+The **Agent Core** is the execution engine of the Secure Agent.
+
+It is responsible for:
+
+- Executing mappings
+- Managing runtime resources
+- Loading connectors
+- Scheduling tasks
+- Executing workflows
+- Monitoring execution
+
+If Agent Manager is the "supervisor," Agent Core is the "worker" that performs the actual integration tasks.
+
+---
+
+# Responsibilities of Agent Core
+
+- Execute integration jobs
+- Load runtime services
+- Connect to data sources
+- Apply transformations
+- Transfer data
+- Handle exceptions
+- Generate execution logs
+
+---
+
+# Secure Agent Service Startup
+
+When the Secure Agent starts, several background services are initialized automatically.
+
+Typical startup sequence:
+
+1. Operating System starts the Secure Agent service.
+2. Agent Manager initializes.
+3. Configuration files are loaded.
+4. Agent Core starts.
+5. Runtime services are initialized.
+6. Connectors are loaded.
+7. Secure connection to Informatica Cloud is established.
+8. Agent status is updated to **Running**.
+
+Only after this sequence is complete can the Secure Agent execute jobs.
+
+---
+
+# Service Startup Routine
+
+```
+Operating System
+
+↓
+
+Secure Agent Service
+
+↓
+
+Agent Manager
+
+↓
+
+Configuration Loading
+
+↓
+
+Agent Core
+
+↓
+
+Connector Services
+
+↓
+
+Runtime Services
+
+↓
+
+Secure Cloud Connection
+
+↓
+
+Ready for Execution
+```
+
+---
+
+# Secure Communication
+
+The Secure Agent always initiates the connection to Informatica Cloud using outbound HTTPS communication.
+
+Key points:
+
+- No inbound firewall ports are required.
+- Communication is encrypted using TLS.
+- Authentication is performed using secure tokens.
+- Configuration data is transmitted securely.
+
+This design minimizes security risks while enabling hybrid cloud connectivity.
+
+---
+
+# Running Secure Agent as Local User
+
+The Secure Agent can run using a **Local Windows User Account**.
+
+### Advantages
+
+- Easy to configure.
+- Suitable for standalone installations.
+- Minimal administrative overhead.
+
+### Limitations
+
+- Limited access to network resources.
+- Cannot access some shared folders or network services without additional configuration.
+
+### Recommended For
+
+- Development environments
+- Small organizations
+- Personal testing
+
+---
+
+# Running Secure Agent as Network User
+
+The Secure Agent can also run under a **Windows Domain (Network) User Account**.
+
+### Advantages
+
+- Access to network drives.
+- Access to shared folders.
+- Integration with Active Directory.
+- Better enterprise authentication.
+
+### Limitations
+
+- Requires domain administration.
+- Additional configuration is needed.
+
+### Recommended For
+
+- Production environments
+- Enterprise deployments
+- Hybrid cloud infrastructures
+
+---
+
+# Local User vs Network User
+
+| Feature | Local User | Network User |
+|---------|------------|--------------|
+| Local File Access | ✔ | ✔ |
+| Shared Folder Access | Limited | ✔ |
+| Active Directory Integration | ✘ | ✔ |
+| Enterprise Authentication | ✘ | ✔ |
+| Production Ready | Limited | ✔ |
+
+---
+
+# Performance Considerations
+
+Secure Agent performance depends on:
+
+- CPU utilization
+- Available memory
+- Disk I/O
+- Network bandwidth
+- Number of concurrent jobs
+- Data volume
+- Connector performance
+
+Administrators should monitor these factors regularly to maintain efficient execution.
+
+---
+
+# Monitoring Secure Agent
+
+Administrators should monitor:
+
+- Service status
+- CPU usage
+- Memory usage
+- Job execution time
+- Failed jobs
+- Queue length
+- Connector status
+- Disk utilization
+
+Regular monitoring helps detect performance issues before they affect business operations.
+
+---
+
+# Common Problems
+
+Problem | Possible Cause
+--------|----------------
+Agent Offline | Network connectivity issue
+Job Failure | Database connection error
+High CPU Usage | Too many concurrent tasks
+Slow Performance | Insufficient memory
+Authentication Failure | Invalid credentials
+Agent Not Starting | Configuration or service issue
+
+---
+
+# Enterprise Example
+
+A manufacturing company installs a Secure Agent on a Windows Server joined to the corporate domain.
+
+The Secure Agent runs under a domain service account, allowing it to:
+
+- Access SQL Server
+- Read files from shared network storage
+- Connect to ERP systems
+- Execute scheduled integrations
+
+This configuration supports secure, centralized administration.
+
+---
+
+# Best Practices
+
+- Run production agents using dedicated service accounts.
+- Allocate sufficient CPU and RAM.
+- Monitor services regularly.
+- Review logs periodically.
+- Separate Development, Testing, and Production environments.
+- Keep Secure Agent updated.
+- Document service account permissions.
+
+---
+
+# Classroom Activity
+
+An enterprise has the following requirements:
+
+- Access to SQL Server on the corporate network.
+- Read files from a shared folder.
+- Authenticate using Active Directory.
+
+Questions:
+
+1. Should the Secure Agent run as a Local User or Network User?
+2. Explain your reasoning.
+3. Identify any additional permissions that may be required.
+
+---
+
+# Discussion Questions
+
+1. What is the difference between Agent Manager and Agent Core?
+2. Why does the Secure Agent establish outbound connections instead of accepting inbound connections?
+3. In what situations should a Network User account be preferred over a Local User account?
+
+---
+
+# Faculty Tips
+
+A useful analogy:
+
+- **Agent Manager** is the **factory manager** who oversees operations.
+- **Agent Core** is the **production line** where the actual work is performed.
+- **Connector Services** are the **workers** specialized for different tasks (database, file, API, etc.).
+
+This analogy helps students understand how different Secure Agent components collaborate.
+
+---
+
+# Interview Questions
+
+1. What is the role of Agent Manager?
+2. What responsibilities are handled by Agent Core?
+3. Describe the Secure Agent startup sequence.
+4. Compare Local User and Network User execution.
+5. What factors affect Secure Agent performance?
+
+---
+
+# Examination Tips
+
+Students should be able to:
+
+- Explain Agent Manager.
+- Explain Agent Core.
+- Draw the Secure Agent startup sequence.
+- Compare Local User and Network User.
+- Discuss performance considerations.
+
+---
+
+# Summary
+
+In this section, students learned:
+
+- Agent Manager
+- Agent Core
+- Service Startup
+- Startup Routine
+- Secure Communication
+- Local User vs Network User
+- Performance Monitoring
+- Enterprise Deployment Best Practices
+
+These concepts prepare students for the final section, where they will install and configure the Secure Agent on Windows and learn troubleshooting techniques.
+
+---
+
+# End of Chapter 8 – Part B
