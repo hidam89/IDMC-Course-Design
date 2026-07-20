@@ -1100,3 +1100,428 @@ These concepts enable administrators to optimize runtime performance and ensure 
 ---
 
 # End of Session 3
+# Session 4
+
+# Connections and File Transfer Settings
+
+**Duration:** 2 Hours
+
+---
+
+# Learning Objectives
+
+After completing this session, students will be able to:
+
+- Explain the concept of Connections in IDMC.
+- Differentiate between various IDMC Connectors.
+- Configure cloud and on-premises connections.
+- Describe File Transfer settings.
+- Apply best practices for secure connection management.
+- Troubleshoot common connection issues.
+
+---
+
+# Introduction
+
+In any data integration platform, the first requirement is establishing a connection between the integration service and the source or target system.
+
+IDMC uses **Connections** to securely communicate with databases, cloud applications, APIs, file systems, and enterprise applications.
+
+Without a valid connection, integration tasks cannot read or write data.
+
+---
+
+# What is a Connection?
+
+A **Connection** is a reusable object that stores all information required to communicate with an external system.
+
+It contains:
+
+- Connection Name
+- Connector Type
+- Authentication Information
+- Host Details
+- Port Number
+- Database or Application Information
+- Runtime Environment
+- Security Configuration
+
+Once created, the same connection can be reused across multiple mappings, tasks, and workflows.
+
+---
+
+# Connection Architecture
+
+```
+          IDMC
+
+            │
+
+      Connection Object
+
+            │
+
+     Secure Agent Runtime
+
+            │
+
+   ┌────────┼────────┐
+
+ Database   Cloud App   File Server
+
+ Oracle     Salesforce   FTP/SFTP
+
+ SQL Server Workday      Amazon S3
+
+ REST API   SAP          Local Files
+```
+
+---
+
+# Why are Connections Important?
+
+Connections provide:
+
+- Secure communication
+- Reusability
+- Centralized configuration
+- Easier maintenance
+- Better governance
+
+Instead of configuring connection details repeatedly, administrators create a reusable connection object.
+
+---
+
+# IDMC Connectors
+
+A **Connector** is a software component that enables communication with a specific technology or application.
+
+Examples include:
+
+### Database Connectors
+
+- Oracle
+- SQL Server
+- MySQL
+- PostgreSQL
+- Snowflake
+
+---
+
+### Cloud Connectors
+
+- Salesforce
+- Workday
+- ServiceNow
+- Microsoft Dynamics
+- SAP Cloud
+
+---
+
+### File Connectors
+
+- Flat File
+- FTP
+- SFTP
+- Amazon S3
+- Azure Blob Storage
+- Google Cloud Storage
+
+---
+
+### Enterprise Connectors
+
+- SAP
+- REST API
+- SOAP Web Services
+- Kafka
+- JMS
+
+---
+
+# Connector Categories
+
+| Category | Examples |
+|-----------|----------|
+| Relational Databases | Oracle, SQL Server, MySQL |
+| Cloud Applications | Salesforce, Workday |
+| Enterprise Applications | SAP, ServiceNow |
+| File Systems | FTP, SFTP, S3 |
+| APIs | REST, SOAP |
+
+---
+
+# Connection Configuration
+
+General steps for creating a connection:
+
+1. Open **Administrator Console**.
+2. Navigate to **Connections**.
+3. Click **New Connection**.
+4. Select Connector Type.
+5. Enter connection details.
+6. Assign Runtime Environment.
+7. Test the connection.
+8. Save the connection.
+
+---
+
+# Typical Connection Parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| Connection Name | Unique identifier |
+| Connector Type | Oracle, Salesforce, etc. |
+| Host | Server name or IP |
+| Port | Communication port |
+| Username | Login account |
+| Password | Authentication credential |
+| Database/Service | Target database or application |
+| Runtime Environment | Hosted or Secure Agent |
+
+---
+
+# Commonly Used Connections
+
+## Oracle Database
+
+Required:
+
+- Host
+- Port
+- Service Name
+- Username
+- Password
+- Secure Agent
+
+---
+
+## SQL Server
+
+Required:
+
+- Server Name
+- Database Name
+- Authentication
+- Runtime Environment
+
+---
+
+## Salesforce
+
+Required:
+
+- Username
+- Password
+- Security Token
+- OAuth (if applicable)
+
+---
+
+## REST API
+
+Required:
+
+- Endpoint URL
+- HTTP Method
+- Authentication
+- Headers
+
+---
+
+## Amazon S3
+
+Required:
+
+- Bucket Name
+- Access Key
+- Secret Key
+- Region
+
+---
+
+# File Transfer Settings
+
+File transfer allows Secure Agent to exchange files with local or remote systems.
+
+Supported methods include:
+
+- Local File System
+- FTP
+- SFTP
+- Amazon S3
+- Azure Blob Storage
+
+Typical operations:
+
+- Upload
+- Download
+- Copy
+- Archive
+- Delete
+
+---
+
+# Best Practices
+
+- Use encrypted communication (HTTPS/SFTP).
+- Store credentials securely.
+- Reuse existing connections whenever possible.
+- Test every connection before deployment.
+- Assign the correct Runtime Environment.
+- Follow the Principle of Least Privilege.
+
+---
+
+# Enterprise Example
+
+A retail company integrates:
+
+- Oracle ERP
+- Salesforce CRM
+- Amazon S3
+- REST APIs
+
+Instead of creating separate credentials for every mapping, reusable connections are created and shared across multiple integration projects.
+
+Benefits include:
+
+- Reduced configuration effort
+- Improved security
+- Simplified maintenance
+
+---
+
+# Demonstration
+
+Perform the following:
+
+1. Open Administrator Console.
+2. Navigate to **Connections**.
+3. Create an Oracle Connection.
+4. Test the connection.
+5. Create a Salesforce Connection.
+6. Configure an SFTP Connection.
+7. Review Runtime Environment selection.
+
+---
+
+# Troubleshooting
+
+| Problem | Possible Cause | Solution |
+|----------|----------------|----------|
+| Connection Failed | Incorrect credentials | Verify username and password |
+| Database Unreachable | Network issue | Check host, port, firewall |
+| Authentication Error | Invalid token | Regenerate authentication token |
+| Timeout | Slow network | Increase timeout and verify connectivity |
+| Runtime Error | Wrong Runtime Environment | Select the correct Secure Agent |
+
+---
+
+# Teaching Tips
+
+Ask students:
+
+> "Why should organizations create reusable connections instead of entering credentials in every mapping?"
+
+Encourage discussion on:
+
+- Security
+- Reusability
+- Governance
+- Maintainability
+
+---
+
+# Classroom Discussion
+
+Discuss the advantages and disadvantages of:
+
+- Database Connections
+- Cloud Application Connections
+- API Connections
+- File-Based Connections
+
+Which connector type would be most suitable for:
+
+- Banking?
+- Healthcare?
+- E-commerce?
+
+---
+
+# Lab Activity
+
+1. Create an Oracle Connection.
+2. Test the connection.
+3. Create a Salesforce Connection.
+4. Configure an SFTP Connection.
+5. Document the required parameters.
+6. Compare Hosted and Secure Runtime selection.
+
+---
+
+# Interview Questions
+
+1. What is a Connection in IDMC?
+2. What is the difference between a Connection and a Connector?
+3. Why should connections be reusable?
+4. Explain Runtime Environment selection during connection configuration.
+5. How would you troubleshoot a failed database connection?
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. Define a Connection.
+2. What is a Connector?
+3. Name two commonly used IDMC connectors.
+
+---
+
+### 5 Marks
+
+1. Explain the steps involved in creating a Connection.
+2. Discuss the different categories of IDMC Connectors.
+
+---
+
+### 10 Marks
+
+Explain Connections and Connectors in IDMC, including configuration steps, file transfer settings, enterprise applications, and troubleshooting techniques.
+
+---
+
+# Key Points
+
+✔ A Connection stores communication details for external systems.
+
+✔ Connectors enable communication with specific technologies.
+
+✔ Connections are reusable across multiple assets.
+
+✔ File transfer supports FTP, SFTP, cloud storage, and local files.
+
+✔ Always test connections before deployment.
+
+---
+
+# Summary
+
+In this session, students learned:
+
+- Connections
+- IDMC Connectors
+- Connection Configuration
+- Commonly Used Connections
+- File Transfer Settings
+- Best Practices
+- Troubleshooting
+
+These concepts form the foundation for integrating IDMC with enterprise databases, cloud applications, APIs, and file systems.
+
+---
+
+# End of Session 4
