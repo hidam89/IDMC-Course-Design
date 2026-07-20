@@ -1344,3 +1344,376 @@ User Groups help administrators manage large numbers of users efficiently while 
 ---
 
 # End of Chapter 5
+# Chapter 6
+
+# User Roles
+
+---
+
+## Introduction
+
+In an enterprise environment, every user does not require the same level of access. For example, an Organization Administrator needs full administrative privileges, whereas a Data Analyst may only need permission to view reports.
+
+To manage access efficiently and securely, Informatica Intelligent Cloud Services (IICS) uses **User Roles**. A User Role is a collection of permissions assigned to users or user groups based on their responsibilities.
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Define User Roles.
+- Explain Role-Based Access Control (RBAC).
+- Describe System-defined Roles.
+- Explain Custom Roles.
+- Apply the Principle of Least Privilege.
+- Differentiate User Roles from User Groups.
+
+---
+
+# What is a User Role?
+
+A **User Role** is a collection of permissions that determines what actions a user can perform within the IICS environment.
+
+Roles control access to:
+
+- Assets
+- Connections
+- Mappings
+- Tasks
+- Runtime Environments
+- Administrative functions
+
+Instead of assigning permissions individually, administrators assign a role containing the required permissions.
+
+---
+
+# Why are User Roles Required?
+
+Without User Roles:
+
+- Difficult permission management
+- Increased security risks
+- Higher chance of configuration errors
+- Complex administration
+
+With User Roles:
+
+- Centralized permission management
+- Improved security
+- Easier administration
+- Better compliance
+- Faster onboarding of new users
+
+---
+
+# Role-Based Access Control (RBAC)
+
+**Role-Based Access Control (RBAC)** is a security model where permissions are assigned to roles rather than directly to individual users.
+
+Users inherit permissions through the roles assigned to them.
+
+---
+
+# RBAC Architecture
+
+```
+Users
+
+↓
+
+Assigned Role
+
+↓
+
+Permissions
+
+↓
+
+Assets and Resources
+```
+
+Example:
+
+```
+Priya
+
+↓
+
+Developer Role
+
+↓
+
+Read
+Create
+Modify
+Execute
+
+↓
+
+Mappings
+Tasks
+Connections
+```
+
+---
+
+# System-defined Roles
+
+IICS provides predefined roles for common administrative and operational tasks.
+
+Examples include:
+
+- Organization Administrator
+- Application Administrator
+- Security Administrator
+- Developer
+- Operator
+- Monitor
+
+These roles contain predefined permission sets and are suitable for most organizations.
+
+---
+
+# Organization Administrator
+
+### Responsibilities
+
+- Manage users
+- Manage groups
+- Create roles
+- Configure Secure Agents
+- Allocate licenses
+- Monitor organization resources
+
+This role has the highest administrative privileges.
+
+---
+
+# Developer Role
+
+Typical responsibilities:
+
+- Create mappings
+- Develop integration tasks
+- Configure transformations
+- Test workflows
+- Deploy assets
+
+Developers generally do not manage users or organizational settings.
+
+---
+
+# Operator Role
+
+Operators are responsible for monitoring and executing integration tasks.
+
+Typical activities include:
+
+- Running jobs
+- Monitoring execution
+- Restarting failed tasks
+- Reviewing logs
+- Generating reports
+
+---
+
+# Custom Roles
+
+Organizations may require permissions that are not available in predefined roles.
+
+A **Custom Role** allows administrators to create a role with a specific combination of permissions.
+
+Example:
+
+A "Data Quality Reviewer" role may require:
+
+- Read access
+- Execute profiling jobs
+- View reports
+
+without requiring administrative privileges.
+
+---
+
+# Creating a Custom Role
+
+General procedure:
+
+1. Open **Administrator Console**.
+2. Navigate to **Roles**.
+3. Select **Create Role**.
+4. Enter:
+   - Role Name
+   - Description
+5. Select required permissions.
+6. Save the role.
+7. Assign users or groups.
+
+---
+
+# Assigning Roles
+
+Roles can be assigned to:
+
+- Individual Users
+- User Groups
+
+Assigning roles to groups simplifies administration in large organizations.
+
+---
+
+# Principle of Least Privilege (PoLP)
+
+The **Principle of Least Privilege** states that:
+
+> Every user should receive only the permissions required to perform assigned responsibilities.
+
+### Benefits
+
+- Improved security
+- Reduced accidental changes
+- Lower insider risk
+- Better compliance
+- Easier auditing
+
+---
+
+# User Roles vs User Groups
+
+| User Roles | User Groups |
+|------------|-------------|
+| Define permissions | Organize users |
+| Security mechanism | Administrative grouping |
+| Control system access | Simplify user management |
+| Permission-based | Membership-based |
+
+---
+
+# Enterprise Example
+
+A multinational bank has:
+
+- Organization Administrator
+- Data Engineers
+- Business Analysts
+- Auditors
+
+Recommended role assignments:
+
+| User | Assigned Role |
+|------|---------------|
+| IT Administrator | Organization Administrator |
+| Data Engineer | Developer |
+| Business Analyst | Monitor |
+| Internal Auditor | Read-only Custom Role |
+
+This ensures each user receives only the permissions necessary for their responsibilities.
+
+---
+
+# Advantages
+
+- Better security
+- Easier administration
+- Centralized permission management
+- Supports compliance
+- Reduces configuration errors
+
+---
+
+# Best Practices
+
+- Use System-defined Roles whenever possible.
+- Create Custom Roles only when necessary.
+- Review role assignments regularly.
+- Document custom permissions.
+- Apply the Principle of Least Privilege.
+
+---
+
+# Common Mistakes
+
+❌ Assigning Administrator privileges to every user.
+
+✔ Grant only the permissions required.
+
+---
+
+❌ Creating too many Custom Roles.
+
+✔ Keep role definitions simple and reusable.
+
+---
+
+❌ Never reviewing user permissions.
+
+✔ Conduct periodic access reviews.
+
+---
+
+# Important Points
+
+✔ Roles define permissions.
+
+✔ RBAC improves enterprise security.
+
+✔ Custom Roles provide flexibility.
+
+✔ Follow the Principle of Least Privilege.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. Define User Role.
+2. What is RBAC?
+3. What is the Principle of Least Privilege?
+
+---
+
+### 5 Marks
+
+1. Explain System-defined Roles and Custom Roles.
+2. Differentiate User Roles and User Groups.
+
+---
+
+### 10 Marks
+
+Explain Role-Based Access Control (RBAC) in IICS with a suitable diagram and enterprise example.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| User Roles define permissions |
+| RBAC assigns permissions through roles |
+| System-defined Roles are built into IICS |
+| Custom Roles are created for specific requirements |
+| Apply the Principle of Least Privilege |
+
+---
+
+# Chapter Summary
+
+In this chapter, we learned:
+
+- User Roles
+- Role-Based Access Control (RBAC)
+- System-defined Roles
+- Custom Roles
+- Role Assignment
+- Principle of Least Privilege
+- Enterprise applications
+- Best practices
+
+User Roles are a fundamental security mechanism in IICS, ensuring that users receive appropriate permissions while protecting organizational resources.
+
+---
+
+# End of Chapter 6
