@@ -796,3 +796,277 @@ Effective User Management is essential for maintaining a secure, scalable, and w
 ---
 
 # End of Chapter 3
+# Chapter 4
+
+# User Statistics
+
+---
+
+## Introduction
+
+Managing users is only one part of administration. Administrators must also monitor user activities to ensure that organizational resources are used efficiently and securely.
+
+User Statistics in Informatica Intelligent Cloud Services (IICS) provide valuable information about user accounts, login activity, license usage, and system utilization.
+
+These statistics help administrators make informed decisions regarding user management and system optimization.
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Explain User Statistics.
+- Describe List View and Chart View.
+- Interpret user activity reports.
+- Explain the importance of monitoring users.
+- Analyze user utilization trends.
+
+---
+
+# What are User Statistics?
+
+User Statistics are administrative reports that provide information about users and their activities within an organization.
+
+The statistics help administrators monitor:
+
+- User activity
+- Login history
+- Account status
+- License utilization
+- User roles
+- Authentication methods
+
+---
+
+# Why are User Statistics Important?
+
+User Statistics help organizations to:
+
+- Improve security.
+- Monitor active users.
+- Detect inactive accounts.
+- Optimize license allocation.
+- Support auditing and compliance.
+- Improve administrative decision-making.
+
+---
+
+# User Statistics Dashboard
+
+The User Statistics Dashboard provides an overview of user information.
+
+Typical information includes:
+
+- Total Users
+- Active Users
+- Inactive Users
+- Locked Accounts
+- Last Login
+- Assigned Roles
+- License Usage
+
+---
+
+# List View
+
+## What is List View?
+
+List View displays user information in a table.
+
+Example information:
+
+| User | Role | Status | Last Login |
+|------|------|---------|------------|
+| Admin | Organization Administrator | Active | Today |
+| Rahul | Developer | Active | Yesterday |
+| Priya | Analyst | Inactive | 30 Days Ago |
+
+---
+
+# Advantages of List View
+
+- Detailed information
+- Easy searching
+- Sorting capability
+- Filtering support
+- Administrative management
+
+---
+
+# Chart View
+
+Chart View displays user statistics graphically.
+
+Common charts include:
+
+- Active vs Inactive Users
+- User Role Distribution
+- Authentication Types
+- License Utilization
+- Login Trends
+
+Charts help administrators quickly identify patterns and trends.
+
+---
+
+# Benefits of Chart View
+
+- Easy visualization
+- Better reporting
+- Trend analysis
+- Executive dashboards
+- Capacity planning
+
+---
+
+# Comparison: List View vs Chart View
+
+| Feature | List View | Chart View |
+|----------|-----------|------------|
+| Detailed Records | ✔ | ✘ |
+| Graphical Display | ✘ | ✔ |
+| Trend Analysis | Limited | Excellent |
+| Executive Reporting | Moderate | Excellent |
+| Data Filtering | ✔ | Limited |
+
+---
+
+# Monitoring User Activity
+
+Administrators should regularly monitor:
+
+- Failed login attempts
+- Inactive users
+- Locked accounts
+- New user registrations
+- License usage
+- User roles
+- Authentication methods
+
+Regular monitoring helps maintain a secure and efficient environment.
+
+---
+
+# Enterprise Example
+
+A university has:
+
+- 600 Users
+- 500 Active Users
+- 70 Inactive Users
+- 30 Locked Accounts
+
+After reviewing the User Statistics Dashboard, the administrator decides to:
+
+- Disable unused accounts.
+- Reallocate licenses.
+- Unlock valid user accounts.
+- Investigate repeated failed login attempts.
+
+---
+
+# Best Practices
+
+- Review user statistics weekly.
+- Remove inactive users.
+- Monitor failed login attempts.
+- Generate monthly reports.
+- Optimize license allocation.
+
+---
+
+# Advantages
+
+- Better administration
+- Improved security
+- Efficient license utilization
+- Better compliance
+- Easier auditing
+
+---
+
+# Common Mistakes
+
+❌ Ignoring inactive users.
+
+✔ Disable unused accounts periodically.
+
+---
+
+❌ Not monitoring failed logins.
+
+✔ Investigate repeated authentication failures.
+
+---
+
+❌ Allocating licenses without reviewing statistics.
+
+✔ Use reports to optimize license usage.
+
+---
+
+# Important Points
+
+✔ User Statistics help administrators monitor system usage.
+
+✔ List View provides detailed records.
+
+✔ Chart View provides graphical analysis.
+
+✔ Statistics improve security and resource management.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. What are User Statistics?
+2. Define List View.
+3. Define Chart View.
+
+---
+
+### 5 Marks
+
+1. Differentiate List View and Chart View.
+2. Explain the importance of User Statistics.
+
+---
+
+### 10 Marks
+
+Discuss User Statistics in IICS and explain how they support effective user administration.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| User Statistics monitor user activity |
+| List View provides detailed records |
+| Chart View provides graphical analysis |
+| Statistics improve security |
+| Helps optimize license utilization |
+
+---
+
+# Chapter Summary
+
+In this chapter, we studied:
+
+- User Statistics
+- User Statistics Dashboard
+- List View
+- Chart View
+- Monitoring user activity
+- Enterprise applications
+- Best practices
+
+User Statistics enable administrators to monitor users effectively, improve security, and optimize organizational resources.
+
+---
+
+# End of Chapter 4
