@@ -1782,3 +1782,415 @@ Effective asset management ensures that enterprise integration projects remain s
 ---
 
 # End of Chapter 5
+# Chapter 6
+
+# Asset Management CLI, Bundle Management and Scheduling
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Explain the Asset Management CLI Utility.
+- Import and export assets using both the UI and CLI.
+- Describe Bundle Management.
+- Create and manage schedules.
+- Explain the RunAJob Utility.
+- Understand enterprise deployment workflows.
+
+---
+
+# Introduction
+
+Enterprise integration projects often contain hundreds of assets distributed across Development, Testing, User Acceptance Testing (UAT), and Production environments.
+
+Managing these assets manually is time-consuming and increases the possibility of errors.
+
+IDMC provides several automation tools that simplify deployment and administration:
+
+- Asset Management CLI
+- Asset Import and Export
+- Bundle Management
+- Scheduling
+- RunAJob Utility
+
+These tools improve productivity, consistency, and reliability.
+
+---
+
+# Asset Management CLI Utility
+
+The **Asset Management Command Line Interface (CLI)** allows administrators to manage IDMC assets using command-line commands instead of the graphical interface.
+
+It is especially useful for:
+
+- Automation
+- Batch processing
+- DevOps pipelines
+- CI/CD integration
+
+---
+
+# Common CLI Operations
+
+The Asset Management CLI can perform operations such as:
+
+- Import Assets
+- Export Assets
+- List Assets
+- Update Assets
+- Delete Assets
+- Deploy Assets
+
+---
+
+# Advantages of CLI
+
+Compared with manual administration, the CLI offers:
+
+- Faster execution
+- Automation
+- Reduced human error
+- Script-based deployment
+- Easy integration with DevOps tools
+
+---
+
+# CLI Workflow
+
+```
+Administrator
+
+        │
+
+ Asset Management CLI
+
+        │
+
+ Authentication
+
+        │
+
+ IDMC Repository
+
+        │
+
+      Assets
+```
+
+---
+
+# Asset Import
+
+Importing assets means transferring assets into an IDMC organization.
+
+Assets may be imported from:
+
+- Development environments
+- ZIP packages
+- Backup files
+- Another IDMC organization
+
+---
+
+# Asset Export
+
+Exporting assets creates reusable deployment packages.
+
+Exported assets can be used for:
+
+- Backup
+- Migration
+- Disaster Recovery
+- Promotion to another environment
+
+---
+
+# Import–Export Process
+
+```
+Development
+
+↓
+
+Export Assets
+
+↓
+
+ZIP Package
+
+↓
+
+Import Assets
+
+↓
+
+Testing
+
+↓
+
+Production
+```
+
+---
+
+# Bundle Management
+
+A **Bundle** is a collection of related assets packaged together for deployment.
+
+A bundle may include:
+
+- Connections
+- Mappings
+- Mapping Tasks
+- Workflows
+- Schedules
+
+Bundles help ensure that dependent assets are deployed together.
+
+---
+
+# Bundle Lifecycle
+
+```
+Create Bundle
+
+↓
+
+Validate Dependencies
+
+↓
+
+Export
+
+↓
+
+Import
+
+↓
+
+Deploy
+
+↓
+
+Verify
+```
+
+---
+
+# Benefits of Bundle Management
+
+- Simplified deployment
+- Dependency management
+- Version consistency
+- Faster migration
+- Easier rollback
+
+---
+
+# Scheduling
+
+A **Schedule** automates the execution of integration tasks.
+
+Instead of running jobs manually, administrators define:
+
+- Execution time
+- Frequency
+- Time zone
+- Runtime Environment
+
+---
+
+# Schedule Components
+
+A schedule generally contains:
+
+- Schedule Name
+- Start Date
+- End Date
+- Frequency
+- Time Zone
+- Runtime Environment
+- Notification Settings
+
+---
+
+# Types of Schedules
+
+| Type | Example |
+|------|---------|
+| Once | Initial data migration |
+| Daily | Nightly ETL process |
+| Weekly | Weekly reports |
+| Monthly | Payroll processing |
+| Custom | Every 6 hours |
+
+---
+
+# Schedule Workflow
+
+```
+Create Schedule
+
+↓
+
+Assign Task
+
+↓
+
+Set Frequency
+
+↓
+
+Save
+
+↓
+
+Automatic Execution
+```
+
+---
+
+# RunAJob Utility
+
+The **RunAJob Utility** enables administrators to execute integration jobs programmatically.
+
+It is commonly used for:
+
+- Automated execution
+- Batch processing
+- External schedulers
+- CI/CD pipelines
+
+Unlike manual execution, RunAJob allows tasks to be triggered from scripts or other enterprise applications.
+
+---
+
+# Enterprise Example
+
+A retail company processes:
+
+- Inventory Updates
+- Customer Synchronization
+- Sales Reports
+
+Instead of manually executing these jobs every day:
+
+- Assets are deployed using Bundles.
+- Schedules execute jobs automatically every night.
+- RunAJob Utility is used for special on-demand executions.
+
+Benefits include:
+
+- Reduced manual effort
+- Improved reliability
+- Consistent deployment
+- Better operational efficiency
+
+---
+
+# Best Practices
+
+- Export assets before making major changes.
+- Validate bundle dependencies before deployment.
+- Maintain version-controlled bundles.
+- Test imported assets before production use.
+- Use schedules for repetitive jobs.
+- Document CLI commands used in production.
+
+---
+
+# Common Problems
+
+| Problem | Possible Cause | Solution |
+|----------|----------------|----------|
+| Import Failed | Missing dependency | Export all dependent assets |
+| Bundle Error | Invalid references | Validate bundle contents |
+| Schedule Not Running | Incorrect time zone | Verify schedule settings |
+| CLI Login Failed | Invalid credentials | Re-authenticate |
+| RunAJob Failed | Runtime unavailable | Verify Secure Agent status |
+
+---
+
+# Advantages
+
+✔ Automated deployment
+
+✔ Reduced manual work
+
+✔ Faster migration
+
+✔ Better version control
+
+✔ Improved operational efficiency
+
+---
+
+# Important Points
+
+✔ CLI supports automation.
+
+✔ Bundles group related assets.
+
+✔ Scheduling automates execution.
+
+✔ RunAJob enables programmatic job execution.
+
+✔ Enterprise deployments should always validate dependencies.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. What is the Asset Management CLI?
+2. Define Bundle Management.
+3. What is the RunAJob Utility?
+
+---
+
+### 5 Marks
+
+1. Explain Asset Import and Export.
+2. Discuss Scheduling in IDMC.
+
+---
+
+### 10 Marks
+
+Explain Asset Management CLI, Bundle Management, Scheduling, and RunAJob Utility with suitable workflow diagrams and enterprise examples.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| CLI enables automation. |
+| Bundles package related assets. |
+| Import moves assets into IDMC. |
+| Export creates deployment packages. |
+| Scheduling automates execution. |
+
+---
+
+# Chapter Summary
+
+In this chapter, we learned:
+
+- Asset Management CLI
+- Asset Import
+- Asset Export
+- Bundle Management
+- Scheduling
+- RunAJob Utility
+- Enterprise Deployment
+- Best Practices
+
+These tools help administrators automate deployments, improve consistency, and efficiently manage enterprise integration environments.
+
+---
+
+# End of Chapter 6
