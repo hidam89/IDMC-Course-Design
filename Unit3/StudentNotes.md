@@ -2194,3 +2194,358 @@ These tools help administrators automate deployments, improve consistency, and e
 ---
 
 # End of Chapter 6
+# Chapter 7
+
+# Monitoring Tasks and Operational Insights
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Explain the importance of monitoring in IDMC.
+- Describe Event Monitoring.
+- Monitor job execution status.
+- Understand File Server monitoring.
+- Explain the Operational Insights Service.
+- Apply best practices for enterprise monitoring.
+
+---
+
+# Introduction
+
+Enterprise integration jobs process large volumes of business data every day. Administrators must continuously monitor these jobs to ensure successful execution, identify failures, and maintain system performance.
+
+IDMC provides several monitoring tools, including:
+
+- Event Monitoring
+- Job Status Monitoring
+- File Server Monitoring
+- Operational Insights
+
+These tools help administrators proactively detect problems and maintain reliable integration services.
+
+---
+
+# What is Monitoring?
+
+Monitoring is the continuous observation of integration activities, runtime resources, and system events.
+
+Monitoring enables administrators to:
+
+- Track job execution
+- Detect failures
+- Analyze performance
+- Identify bottlenecks
+- Ensure Service Level Agreements (SLAs)
+
+---
+
+# Monitoring Architecture
+
+```
+                Integration Jobs
+
+                        │
+
+               Secure Agent Runtime
+
+                        │
+
+        ┌───────────────┼────────────────┐
+
+      Event Logs     Job Logs     Runtime Metrics
+
+                        │
+
+            Operational Insights Dashboard
+
+                        │
+
+               Administrator Alerts
+```
+
+---
+
+# Event Monitoring
+
+Event Monitoring records significant events generated during integration execution.
+
+Examples include:
+
+- Job Started
+- Job Completed
+- Job Failed
+- Authentication Failure
+- Connection Failure
+- Runtime Error
+- Schedule Triggered
+- Secure Agent Offline
+
+Event logs help administrators quickly identify operational issues.
+
+---
+
+# Event Categories
+
+| Event Type | Description |
+|------------|-------------|
+| Information | Normal system events |
+| Warning | Potential issues |
+| Error | Execution failures |
+| Critical | Immediate administrative attention required |
+
+---
+
+# Monitoring Job Status
+
+Job Status Monitoring allows administrators to track the progress of integration tasks.
+
+Common job statuses include:
+
+- Queued
+- Running
+- Success
+- Failed
+- Cancelled
+- Suspended
+
+Monitoring job status ensures that failed or delayed jobs are identified promptly.
+
+---
+
+# Job Status Lifecycle
+
+```
+Created
+
+↓
+
+Queued
+
+↓
+
+Running
+
+↓
+
+Completed
+
+or
+
+Failed
+
+or
+
+Cancelled
+```
+
+---
+
+# Job Status Description
+
+| Status | Meaning |
+|---------|---------|
+| Queued | Waiting for execution |
+| Running | Currently executing |
+| Success | Completed successfully |
+| Failed | Execution unsuccessful |
+| Cancelled | Manually stopped |
+| Suspended | Temporarily paused |
+
+---
+
+# File Server Monitoring
+
+Many integration processes exchange data through file systems.
+
+Common file locations include:
+
+- Local File System
+- FTP
+- SFTP
+- Amazon S3
+- Azure Blob Storage
+- Google Cloud Storage
+
+Administrators monitor:
+
+- File availability
+- File transfer status
+- Processing time
+- File size
+- Transfer errors
+
+Proper monitoring ensures reliable file-based integrations.
+
+---
+
+# Operational Insights Service
+
+Operational Insights is a monitoring dashboard within IDMC that provides administrators with information about system performance and operational health.
+
+It displays:
+
+- Job execution statistics
+- Runtime performance
+- Secure Agent health
+- Connection statistics
+- Historical execution trends
+- Resource utilization
+
+---
+
+# Operational Insights Dashboard
+
+Typical dashboard widgets include:
+
+- Total Jobs Executed
+- Successful Jobs
+- Failed Jobs
+- Average Execution Time
+- Active Secure Agents
+- Runtime Utilization
+- Active Connections
+- Schedule Performance
+
+---
+
+# Benefits of Operational Insights
+
+- Centralized monitoring
+- Trend analysis
+- Capacity planning
+- Faster troubleshooting
+- SLA monitoring
+- Executive reporting
+
+---
+
+# Enterprise Example
+
+A logistics company executes more than 10,000 integration jobs every day.
+
+Administrators observe:
+
+- Increasing execution time
+- Frequent failures on one Secure Agent
+- High CPU utilization
+
+Using Operational Insights they:
+
+- Add another Secure Agent
+- Redistribute workloads
+- Tune runtime settings
+
+Result:
+
+- Improved performance
+- Reduced failures
+- Better resource utilization
+
+---
+
+# Monitoring Best Practices
+
+- Monitor dashboards daily.
+- Investigate repeated failures immediately.
+- Configure alerts for critical events.
+- Review execution trends regularly.
+- Archive historical logs.
+- Monitor Secure Agent health continuously.
+
+---
+
+# Common Monitoring Issues
+
+| Problem | Possible Cause | Solution |
+|----------|----------------|----------|
+| Job Failed | Invalid connection | Verify connection settings |
+| Long Queue Time | Busy runtime | Increase resources or tune concurrency |
+| Secure Agent Offline | Network or service issue | Restart agent and verify connectivity |
+| File Transfer Failed | Missing file or permission | Verify file location and access rights |
+| Slow Execution | Resource bottleneck | Optimize runtime properties |
+
+---
+
+# Advantages
+
+✔ Continuous system monitoring
+
+✔ Early detection of failures
+
+✔ Better resource utilization
+
+✔ Faster troubleshooting
+
+✔ Improved system reliability
+
+---
+
+# Important Points
+
+✔ Monitoring ensures reliable integration execution.
+
+✔ Event Monitoring records important runtime events.
+
+✔ Job Status Monitoring tracks execution progress.
+
+✔ Operational Insights provides centralized dashboards.
+
+✔ Regular monitoring improves enterprise performance.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. What is Event Monitoring?
+2. Define Operational Insights.
+3. List any two job statuses.
+
+---
+
+### 5 Marks
+
+1. Explain Job Status Monitoring.
+2. Discuss the benefits of Operational Insights.
+
+---
+
+### 10 Marks
+
+Explain Monitoring in IDMC, including Event Monitoring, Job Status Monitoring, File Server Monitoring, Operational Insights, and enterprise best practices.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| Monitoring tracks system activities. |
+| Event Monitoring records runtime events. |
+| Job Status indicates execution progress. |
+| Operational Insights provides performance dashboards. |
+| Monitoring helps maintain SLA compliance. |
+
+---
+
+# Chapter Summary
+
+In this chapter, we learned:
+
+- Event Monitoring
+- Job Status Monitoring
+- File Server Monitoring
+- Operational Insights
+- Enterprise Monitoring
+- Best Practices
+- Troubleshooting
+
+These monitoring capabilities enable administrators to maintain secure, reliable, and high-performing enterprise integration environments.
+
+---
+
+# End of Chapter 7
