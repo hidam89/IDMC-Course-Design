@@ -1814,3 +1814,468 @@ In this chapter, you learned:
 - The importance of trusted data for analytics, AI, and business decision making.
 
 Cloud Data Quality ensures that enterprise data is accurate, complete, consistent, valid, unique, and timely, enabling organizations to make informed decisions with confidence.
+---
+
+# Chapter 6
+
+# Master Data Management (MDM)
+
+---
+
+## Learning Objectives
+
+After studying this chapter, you should be able to:
+
+- Define Master Data Management (MDM).
+- Differentiate master data and transactional data.
+- Explain the concept of a Single Source of Truth (SSOT).
+- Describe Customer 360.
+- Identify enterprise applications of MDM.
+- Explain the benefits of MDM in improving data consistency and decision making.
+
+---
+
+# Introduction
+
+Every enterprise stores information in multiple business systems such as CRM, ERP, Finance, HRMS, and Inventory. These systems often maintain separate copies of the same customer, supplier, or product information.
+
+Without proper management, organizations experience duplicate records, inconsistent information, and unreliable reports.
+
+Master Data Management (MDM) addresses these challenges by maintaining one trusted version of important business entities.
+
+---
+
+# What is Master Data Management?
+
+**Master Data Management (MDM)** is an Informatica Intelligent Data Management Cloud (IDMC) service that creates, maintains, and governs a single, trusted version of critical business data across an organization.
+
+The primary objective of MDM is to provide a **Single Source of Truth (SSOT)** for master data.
+
+---
+
+# What is Master Data?
+
+Master Data refers to the core business entities that are shared across multiple applications and departments.
+
+Common master data domains include:
+
+- Customer
+- Product
+- Supplier
+- Employee
+- Vendor
+- Location
+- Asset
+
+Unlike transactional data, master data changes infrequently but is used by many business processes.
+
+---
+
+# Master Data vs Transactional Data
+
+| Master Data | Transactional Data |
+|--------------|-------------------|
+| Core business entities | Business activities or events |
+| Changes infrequently | Changes continuously |
+| Shared across departments | Specific to one transaction |
+| Customer, Product, Supplier | Sales Order, Invoice, Payment |
+
+---
+
+# Why is MDM Required?
+
+Without MDM:
+
+- Duplicate customer records
+- Different customer names in different systems
+- Incorrect addresses
+- Multiple customer IDs
+- Poor customer service
+- Inaccurate reports
+
+With MDM:
+
+- One trusted customer record
+- Consistent information
+- Better customer experience
+- Improved analytics
+- Reliable decision making
+
+---
+
+# Single Source of Truth (SSOT)
+
+A **Single Source of Truth (SSOT)** means maintaining one authoritative and trusted version of master data that is shared across all enterprise applications.
+
+```
+CRM
+
+↓
+
+ERP
+
+↓
+
+Finance
+
+↓
+
+Marketing
+
+↓
+
+Customer Support
+
+↓
+
+Master Data Hub
+
+↓
+
+Single Trusted Customer Record
+```
+
+Every application refers to the same trusted information.
+
+---
+
+# Customer 360
+
+Customer 360 is one of the most important applications of MDM.
+
+Instead of maintaining separate customer records in different systems, Customer 360 creates a unified customer profile.
+
+Example:
+
+```
+Customer
+
+↓
+
+Orders
+
+↓
+
+Payments
+
+↓
+
+Support Tickets
+
+↓
+
+Marketing Campaigns
+
+↓
+
+Loyalty Points
+
+↓
+
+Customer 360 Profile
+```
+
+This provides a complete view of customer interactions across the organization.
+
+---
+
+# MDM Architecture
+
+```
+Source Systems
+
+CRM
+
+ERP
+
+Finance
+
+Inventory
+
+↓
+
+Master Data Hub
+
+↓
+
+Match & Merge
+
+↓
+
+Golden Record
+
+↓
+
+Enterprise Applications
+```
+
+### Explanation
+
+- **Source Systems** provide master data.
+- **Master Data Hub** consolidates records.
+- **Match & Merge** identifies duplicates.
+- **Golden Record** becomes the trusted master record.
+- Enterprise applications consume the trusted data.
+
+---
+
+# Golden Record
+
+A **Golden Record** is the best and most accurate version of a master data entity created after matching, merging, and validating records from multiple systems.
+
+Example:
+
+```
+CRM
+
+Customer: Ramesh Kumar
+
+↓
+
+ERP
+
+Customer: R. Kumar
+
+↓
+
+Support
+
+Customer: Ramesh K.
+
+↓
+
+Golden Record
+
+Customer: Ramesh Kumar
+```
+
+---
+
+# Enterprise Example
+
+## Retail Company
+
+A customer purchases products through:
+
+- Website
+- Mobile App
+- Physical Store
+- Customer Support
+
+Each system stores customer details separately.
+
+Using MDM:
+
+- Duplicate records are identified.
+- Customer information is merged.
+- One trusted customer profile is maintained.
+- Marketing, sales, and support teams access the same information.
+
+---
+
+# Banking Example
+
+A customer has:
+
+- Savings Account
+- Credit Card
+- Home Loan
+- Internet Banking
+
+Without MDM:
+
+- Multiple customer IDs
+- Different addresses
+- Duplicate records
+
+With MDM:
+
+- One customer profile
+- Consistent KYC information
+- Improved compliance
+- Better customer service
+
+---
+
+# Benefits of MDM
+
+- Single Source of Truth
+- Better customer experience
+- Improved reporting
+- Reduced duplication
+- Better regulatory compliance
+- Improved AI and analytics
+- Faster business decisions
+
+---
+
+# Limitations
+
+- Requires governance policies
+- Initial implementation may be complex
+- Business rules must be carefully defined
+- Continuous maintenance is required
+
+---
+
+# MDM Lifecycle
+
+```
+Collect Master Data
+
+↓
+
+Profile
+
+↓
+
+Match
+
+↓
+
+Merge
+
+↓
+
+Golden Record
+
+↓
+
+Govern
+
+↓
+
+Share Across Enterprise
+```
+
+---
+
+# Remember
+
+**MDM does not replace operational databases.**
+
+It manages trusted master data and synchronizes it across enterprise systems.
+
+---
+
+# MDM vs CDQ
+
+| MDM | CDQ |
+|------|-----|
+| Manages master data | Improves data quality |
+| Creates Golden Record | Cleanses and validates data |
+| Customer 360 | Data Profiling |
+| Single Source of Truth | Trusted Data |
+
+Both services complement each other.
+
+---
+
+# Exam Tips
+
+Frequently asked university questions:
+
+1. Define Master Data Management.
+2. Differentiate Master Data and Transactional Data.
+3. Explain Customer 360.
+4. Explain Single Source of Truth.
+5. Draw and explain the MDM architecture.
+6. What is a Golden Record?
+
+---
+
+# Frequently Asked Questions
+
+### Q1. Is MDM a database?
+
+**Answer:**
+
+No.
+
+MDM is a process and platform for managing trusted master data. It works with existing databases rather than replacing them.
+
+---
+
+### Q2. What is the difference between Customer 360 and CRM?
+
+**Answer:**
+
+CRM manages customer interactions, while Customer 360 provides a unified, trusted view of customer information gathered from multiple systems.
+
+---
+
+### Q3. What is a Golden Record?
+
+**Answer:**
+
+A Golden Record is the most accurate, complete, and trusted version of a master data entity after matching and merging records from multiple systems.
+
+---
+
+# Practice Questions
+
+## Multiple Choice
+
+1. Which IDMC service creates a Single Source of Truth?
+2. What is a Golden Record?
+3. Which of the following is an example of master data?
+
+---
+
+## Short Answer
+
+1. Define Master Data Management.
+2. What is Customer 360?
+3. Explain the concept of a Golden Record.
+
+---
+
+## Descriptive Questions
+
+1. Explain the architecture of Master Data Management.
+2. Differentiate Master Data and Transactional Data.
+3. Discuss the importance of Single Source of Truth in enterprise systems.
+
+---
+
+## Scenario-Based Question
+
+A multinational company stores customer information separately in CRM, ERP, Finance, and Customer Support systems. Different departments maintain different addresses and contact numbers for the same customer.
+
+Answer the following:
+
+1. Which IDMC service should be implemented?
+2. Explain how MDM solves this problem.
+3. What is the role of the Golden Record?
+4. How does Customer 360 improve business operations?
+
+---
+
+# Quick Revision
+
+✔ Master Data
+
+✔ Golden Record
+
+✔ Customer 360
+
+✔ Single Source of Truth
+
+✔ Match & Merge
+
+✔ Master Data Hub
+
+---
+
+# Chapter Summary
+
+In this chapter, you learned:
+
+- The concept of Master Data Management (MDM).
+- The difference between Master Data and Transactional Data.
+- The importance of a Single Source of Truth.
+- The role of Customer 360 and Golden Records.
+- The architecture and lifecycle of MDM.
+- Enterprise applications of MDM.
+
+Master Data Management enables organizations to maintain trusted, consistent, and shared business information, forming the foundation for effective governance, analytics, customer experience, and enterprise decision making.
