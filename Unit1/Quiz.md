@@ -1,32 +1,36 @@
 # UNIT 1
 
-# QUESTION BANK
+# Quiz and Assessment
 
 ---
 
-# Question Bank Overview
+# Quiz Overview
 
-| Category | Questions |
-|-----------|-----------|
-| MCQ | 100 |
-| True/False | 30 |
-| Fill in the Blanks | 30 |
-| Short Answer | 40 |
-| Descriptive | 25 |
-| Long Answer | 15 |
-| Case Study | 20 |
-| Viva | 30 |
-| Interview | 25 |
+| Section | Type | Questions |
+|----------|------|-----------|
+| A | Multiple Choice Questions | 40 |
+| B | True / False | 15 |
+| C | Fill in the Blanks | 15 |
+| D | Match the Following | 10 |
+| E | Short Answer Quiz | 10 |
+| F | Scenario-Based Quiz | 10 |
+| G | Rapid Fire Viva | 20 |
 
 ---
 
 # Section A
 
-# Multiple Choice Questions
+# Multiple Choice Questions (1–20)
 
-## Enterprise Data Management
+---
 
-### MCQ 1
+## MCQ 1
+
+**Course Outcome:** CO1
+
+**Bloom's Level:** L1 – Remember
+
+**Difficulty:** Easy
 
 Enterprise Data Management primarily focuses on
 
@@ -34,25 +38,25 @@ A. Computer Hardware
 
 B. Data Integration and Governance
 
-C. Software Installation
+C. Operating Systems
 
-D. Operating Systems
+D. Network Cabling
 
-**Answer**
+**Answer:** B
 
-B
+**Explanation**
 
-Bloom Level
-
-L1
-
-CO
-
-CO1
+Enterprise Data Management integrates, governs, and manages enterprise data across an organization.
 
 ---
 
-### MCQ 2
+## MCQ 2
+
+**CO:** CO1
+
+**Bloom's Level:** L1
+
+**Difficulty:** Easy
 
 Which of the following is NOT an enterprise application?
 
@@ -64,69 +68,67 @@ C. HRMS
 
 D. Keyboard
 
-Answer
-
-D
+**Answer:** D
 
 ---
 
-### MCQ 3
+## MCQ 3
 
-Enterprise Data Management helps organizations achieve
+**CO:** CO1
 
-A. Duplicate Data
+Enterprise Data Management helps organizations improve
 
-B. Better Decision Making
+A. Data Duplication
 
-C. Increased Errors
+B. Decision Making
 
-D. Manual Reporting
+C. Manual Reporting
 
-Answer
+D. Hardware Performance
 
-B
+**Answer:** B
 
 ---
 
-### MCQ 4
+## MCQ 4
 
-Which system manages customer relationships?
+**CO:** CO1
+
+Which enterprise application manages customer relationships?
 
 A. ERP
 
 B. CRM
 
-C. HRMS
+C. Payroll
 
-D. Payroll
+D. Firewall
 
-Answer
-
-B
+**Answer:** B
 
 ---
 
-### MCQ 5
+## MCQ 5
 
-Enterprise Data Management improves
+**CO:** CO1
 
-A. Data Quality
+Which of the following is a benefit of Enterprise Data Management?
 
-B. Duplicate Records
+A. Increased Duplicate Records
 
-C. Data Errors
+B. Improved Data Quality
 
-D. Hardware Cost
+C. More Manual Work
 
-Answer
+D. Higher Storage Errors
 
-A
+**Answer:** B
 
 ---
 
-# Evolution of Informatica
+## MCQ 6
 
-### MCQ 6
+**CO:** CO1
 
 PowerCenter is primarily a
 
@@ -136,51 +138,51 @@ B. ETL Tool
 
 C. CRM
 
-D. Web Browser
+D. Programming Language
 
-Answer
-
-B
+**Answer:** B
 
 ---
 
-### MCQ 7
+## MCQ 7
 
-Which platform succeeded IICS?
+**CO:** CO1
 
-A. PowerCenter
+Which Informatica platform evolved into IDMC?
 
-B. IDMC
+A. Oracle
 
-C. Oracle
+B. SAP
 
-D. SAP
+C. IICS
 
-Answer
+D. Hadoop
 
-B
-
----
-
-### MCQ 8
-
-IDMC is
-
-A. Database
-
-B. Cloud Platform
-
-C. Operating System
-
-D. ERP
-
-Answer
-
-B
+**Answer:** C
 
 ---
 
-### MCQ 9
+## MCQ 8
+
+**CO:** CO1
+
+IDMC stands for
+
+A. Intelligent Data Management Cloud
+
+B. Integrated Data Migration Center
+
+C. Intelligent Database Management Console
+
+D. Information Data Management Core
+
+**Answer:** A
+
+---
+
+## MCQ 9
+
+**CO:** CO1
 
 IDMC supports
 
@@ -192,32 +194,31 @@ C. On-Premises
 
 D. All of the Above
 
-Answer
-
-D
+**Answer:** D
 
 ---
 
-### MCQ 10
+## MCQ 10
 
-Which service integrates enterprise data?
+**CO:** CO1
+
+Which IDMC service performs data integration?
 
 A. CDI
 
 B. CAI
 
-C. MDM
+C. CDQ
 
-D. CDGC
+D. MDM
 
-Answer
-
-A
+**Answer:** A
 
 ---
-# Cloud Data Integration
 
-### MCQ 11
+## MCQ 11
+
+**CO:** CO2
 
 ETL stands for
 
@@ -227,17 +228,17 @@ B. Execute Transfer Link
 
 C. Export Table Load
 
-D. None
+D. Extract Transfer Login
 
-Answer
-
-A
+**Answer:** A
 
 ---
 
-### MCQ 12
+## MCQ 12
 
-Which component executes mappings?
+**CO:** CO2
+
+Which component executes mapping tasks?
 
 A. Secure Agent
 
@@ -247,49 +248,49 @@ C. Dashboard
 
 D. Gateway
 
-Answer
-
-A
+**Answer:** A
 
 ---
 
-### MCQ 13
+## MCQ 13
 
-Which transformation combines records?
+**CO:** CO2
+
+Which transformation combines records from multiple sources?
 
 A. Lookup
 
 B. Joiner
 
-C. Sorter
+C. Sequence
 
-D. Sequence
+D. Router
 
-Answer
-
-B
+**Answer:** B
 
 ---
 
-### MCQ 14
+## MCQ 14
 
-Which target is a cloud data warehouse?
+**CO:** CO2
+
+Which of the following is a cloud data warehouse?
 
 A. Snowflake
 
 B. Notepad
 
-C. Excel
+C. Paint
 
 D. Chrome
 
-Answer
-
-A
+**Answer:** A
 
 ---
 
-### MCQ 15
+## MCQ 15
+
+**CO:** CO2
 
 ELT performs transformation
 
@@ -297,103 +298,98 @@ A. Before Loading
 
 B. After Loading
 
-C. During Installation
+C. During Extraction
 
-D. Never
+D. Before Extraction
 
-Answer
-
-B
+**Answer:** B
 
 ---
-# Cloud Application Integration
 
-### MCQ 16
+## MCQ 16
 
-CAI is mainly used for
+**CO:** CO2
+
+Cloud Application Integration (CAI) is mainly used for
 
 A. Workflow Automation
 
-B. Hardware Repair
+B. Hardware Installation
 
-C. Network Cabling
+C. Operating System Updates
 
-D. File Compression
+D. Database Backup
 
-Answer
-
-A
+**Answer:** A
 
 ---
 
-### MCQ 17
+## MCQ 17
 
-Which architecture is event-driven?
+**CO:** CO2
 
-A. CAI
-
-B. CDQ
-
-C. MDM
-
-D. CDGC
-
-Answer
-
-A
-
----
-
-### MCQ 18
-
-Which protocol is commonly used for APIs?
-
-A. REST
-
-B. VGA
-
-C. HDMI
-
-D. SMTP only
-
-Answer
-
-A
-
----
-
-### MCQ 19
-
-CAI integrates
+CAI primarily integrates
 
 A. Applications
 
-B. Databases Only
+B. Hardware
 
-C. Hardware
+C. Networks
 
-D. Networks
+D. Storage Devices
 
-Answer
-
-A
+**Answer:** A
 
 ---
 
-### MCQ 20
+## MCQ 18
 
-Workflow automation improves
+**CO:** CO2
 
-A. Manual Work
+Which protocol is commonly used for REST APIs?
 
-B. Business Efficiency
+A. HTTP
 
-C. Hardware Failure
+B. FTP
 
-D. Network Delay
+C. SMTP
 
-Answer
+D. POP3
 
-B
+**Answer:** A
 
 ---
+
+## MCQ 19
+
+**CO:** CO2
+
+An event-driven workflow starts when
+
+A. A predefined event occurs
+
+B. The computer restarts
+
+C. A file is deleted
+
+D. The database shuts down
+
+**Answer:** A
+
+---
+
+## MCQ 20
+
+**CO:** CO2
+
+Workflow automation primarily improves
+
+A. Business Efficiency
+
+B. Hardware Speed
+
+C. Memory Size
+
+D. Screen Resolution
+
+**Answer:** A
