@@ -3141,3 +3141,428 @@ In this chapter, you learned:
 - The relationship between CIH, CDMP, and Cloud Data Governance.
 
 CIH and CDMP complete the enterprise data management lifecycle by ensuring that trusted data reaches the right applications and users in a secure, governed, and scalable manner.
+---
+
+# Chapter 9
+
+# Unit Review, Quick Revision & Exam Preparation
+
+---
+
+# Unit Learning Summary
+
+By completing this unit, you should be able to:
+
+- Explain Enterprise Data Management.
+- Describe the evolution of Informatica.
+- Explain the architecture of IDMC.
+- Differentiate all major IDMC services.
+- Identify appropriate services for enterprise scenarios.
+- Explain how enterprise data moves from operational systems to business intelligence.
+
+---
+
+# Complete IDMC Service Lifecycle
+
+```
+Enterprise Systems
+
+↓
+
+Cloud Data Integration (CDI)
+
+↓
+
+Cloud Data Quality (CDQ)
+
+↓
+
+Master Data Management (MDM)
+
+↓
+
+Cloud Data Governance & Catalog (CDGC)
+
+↓
+
+Cloud Integration Hub (CIH)
+
+↓
+
+Cloud Data Marketplace (CDMP)
+
+↓
+
+Analytics
+
+↓
+
+Artificial Intelligence
+
+↓
+
+Business Decisions
+```
+
+---
+
+# Complete Service Comparison
+
+| Service | Primary Purpose | Example |
+|----------|-----------------|---------|
+| CDI | Data Integration | Oracle → Snowflake |
+| CAI | Application Integration | ERP ↔ CRM |
+| CDQ | Improve Data Quality | Remove duplicate customers |
+| MDM | Single Source of Truth | Customer 360 |
+| CDGC | Governance & Metadata | Data Lineage |
+| CIH | Publish–Subscribe Data Distribution | Product Information |
+| CDMP | Self-Service Data Discovery | Certified Sales Dataset |
+
+---
+
+# Which Service Should I Use?
+
+| Business Requirement | Informatica Service |
+|----------------------|--------------------|
+| Move data between databases | CDI |
+| Automate business workflows | CAI |
+| Remove duplicate records | CDQ |
+| Create Customer 360 | MDM |
+| Govern enterprise data | CDGC |
+| Publish trusted data | CIH |
+| Discover trusted datasets | CDMP |
+
+---
+
+# Enterprise Case Study
+
+## ABC Retail Corporation
+
+ABC Retail operates:
+
+- Salesforce CRM
+- SAP ERP
+- Oracle Database
+- Snowflake
+- Marketing Platform
+- Customer Support Portal
+
+Business Requirements:
+
+1. Integrate customer data.
+2. Remove duplicate records.
+3. Maintain one customer profile.
+4. Govern sensitive customer information.
+5. Share trusted data with departments.
+6. Enable self-service analytics.
+
+### Recommended Solution
+
+| Requirement | Service |
+|-------------|---------|
+| Data Integration | CDI |
+| Data Cleansing | CDQ |
+| Customer 360 | MDM |
+| Governance | CDGC |
+| Data Distribution | CIH |
+| Self-Service Analytics | CDMP |
+
+---
+
+# Concept Map
+
+```
+Enterprise Data
+
+↓
+
+Integration (CDI)
+
+↓
+
+Quality (CDQ)
+
+↓
+
+Master Data (MDM)
+
+↓
+
+Governance (CDGC)
+
+↓
+
+Distribution (CIH)
+
+↓
+
+Self-Service Access (CDMP)
+
+↓
+
+Business Intelligence
+
+↓
+
+Decision Making
+```
+
+---
+
+# Glossary
+
+| Term | Meaning |
+|------|----------|
+| ETL | Extract, Transform, Load |
+| ELT | Extract, Load, Transform |
+| Metadata | Data about data |
+| Data Lineage | Flow of data from source to destination |
+| Golden Record | Trusted master record |
+| Customer 360 | Unified customer profile |
+| SSOT | Single Source of Truth |
+| Secure Agent | Executes CDI tasks |
+| Publish–Subscribe | One publisher, multiple consumers |
+| Data Steward | Person responsible for managing data quality and governance |
+
+---
+
+# Common Examination Mistakes
+
+Avoid the following mistakes:
+
+❌ Confusing CDI with CAI.
+
+✔ CDI integrates **data**.
+
+✔ CAI integrates **applications**.
+
+---
+
+❌ Confusing CDQ with MDM.
+
+✔ CDQ improves data quality.
+
+✔ MDM creates trusted master records.
+
+---
+
+❌ Assuming Governance means Security.
+
+✔ Governance also includes:
+
+- Metadata
+- Ownership
+- Lineage
+- Stewardship
+- Compliance
+
+---
+
+# Memory Tricks
+
+Remember the IDMC workflow:
+
+**I → Q → M → G → H → P**
+
+Where:
+
+- I = Integration (CDI)
+- Q = Quality (CDQ)
+- M = Master Data (MDM)
+- G = Governance (CDGC)
+- H = Hub (CIH)
+- P = Marketplace (CDMP)
+
+Think:
+
+> **"Integrate Quality Master Governance Hub Platform."**
+
+---
+
+# Interview Preparation
+
+### Question 1
+
+Explain the complete IDMC architecture.
+
+---
+
+### Question 2
+
+Differentiate CDI and CAI.
+
+---
+
+### Question 3
+
+Explain Customer 360.
+
+---
+
+### Question 4
+
+What is a Golden Record?
+
+---
+
+### Question 5
+
+Explain Publish–Subscribe architecture.
+
+---
+
+### Question 6
+
+Why is governance important for AI?
+
+---
+
+### Question 7
+
+Explain the complete enterprise data lifecycle.
+
+---
+
+# Practice Questions
+
+## Multiple Choice
+
+1. Which IDMC service creates a Single Source of Truth?
+2. Which service improves data quality?
+3. Which service uses Publish–Subscribe architecture?
+4. Which service supports workflow automation?
+5. Which service provides metadata management?
+
+---
+
+## Short Answer
+
+1. Define Enterprise Data Management.
+2. Explain ETL.
+3. Explain Customer 360.
+4. What is Metadata?
+5. Define Data Lineage.
+
+---
+
+## Descriptive Questions
+
+1. Explain the evolution of Informatica.
+2. Draw the architecture of IDMC.
+3. Explain the lifecycle of enterprise data management.
+4. Compare CDI and CAI.
+5. Compare CDQ and MDM.
+6. Explain the importance of Cloud Data Governance.
+7. Explain Publish–Subscribe architecture.
+
+---
+
+## Scenario-Based Questions
+
+### Scenario 1
+
+A hospital wants to:
+
+- Integrate patient records.
+- Remove duplicate patient IDs.
+- Create one patient profile.
+- Govern medical records.
+- Share trusted information with departments.
+
+Recommend the appropriate IDMC services and justify your choices.
+
+---
+
+### Scenario 2
+
+A bank stores customer data in CRM, ERP, Loan Management, and Internet Banking systems.
+
+Explain how IDMC can provide:
+
+- Trusted customer information
+- Governance
+- Analytics
+- Better customer service
+
+---
+
+# Two-Minute Revision
+
+Remember:
+
+✔ Enterprise Data Management
+
+↓
+
+✔ IDMC
+
+↓
+
+✔ CDI
+
+↓
+
+✔ CAI
+
+↓
+
+✔ CDQ
+
+↓
+
+✔ MDM
+
+↓
+
+✔ CDGC
+
+↓
+
+✔ CIH
+
+↓
+
+✔ CDMP
+
+↓
+
+✔ Business Intelligence
+
+↓
+
+✔ Decision Making
+
+---
+
+# Key Takeaways
+
+- Enterprise data must be integrated before it can be trusted.
+- Data quality is essential for reliable analytics.
+- Master Data Management creates a Single Source of Truth.
+- Governance ensures compliance and trust.
+- Cloud Integration Hub distributes trusted data efficiently.
+- Cloud Data Marketplace enables self-service access to certified datasets.
+- Together, these services form the Informatica Intelligent Data Management Cloud ecosystem.
+
+---
+
+# Unit Summary
+
+Congratulations!
+
+You have completed **Unit 1**.
+
+You now understand:
+
+- Enterprise Data Management
+- Evolution of Informatica
+- IDMC Architecture
+- Cloud Data Integration (CDI)
+- Cloud Application Integration (CAI)
+- Cloud Data Quality (CDQ)
+- Master Data Management (MDM)
+- Cloud Data Governance & Catalog (CDGC)
+- Cloud Integration Hub (CIH)
+- Cloud Data Marketplace (CDMP)
+
+These concepts form the foundation for the remaining units, where you will learn how to configure, administer, and use the Informatica Intelligent Data Management Cloud platform in real enterprise environments.
