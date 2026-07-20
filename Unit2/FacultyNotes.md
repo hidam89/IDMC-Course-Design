@@ -1353,3 +1353,395 @@ User Groups simplify administration while improving consistency and scalability.
 ---
 
 # End of Chapter 5
+# Chapter 6
+
+# User Roles
+
+---
+
+## Course Outcome
+
+CO2
+
+---
+
+## Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Explain the concept of User Roles.
+- Describe Role-Based Access Control (RBAC).
+- Differentiate between System-defined and Custom Roles.
+- Create and assign custom roles.
+- Apply the Principle of Least Privilege.
+- Design secure access control policies.
+
+---
+
+# Introduction
+
+In an enterprise environment, not every user should have the same level of access. A System Administrator requires complete administrative privileges, while a Business Analyst may only need permission to view reports.
+
+To enforce controlled access, IICS uses **User Roles**.
+
+A User Role defines **what a user is allowed to do** within the Informatica Intelligent Cloud Services (IICS) environment.
+
+---
+
+# What is a User Role?
+
+A **Role** is a collection of permissions that determines which operations a user can perform.
+
+Instead of assigning permissions one by one, administrators assign a predefined role to a user.
+
+Roles improve:
+
+- Security
+- Administration
+- Compliance
+- Consistency
+- Scalability
+
+---
+
+# Role-Based Access Control (RBAC)
+
+Role-Based Access Control (RBAC) is an access control mechanism in which permissions are assigned to roles rather than directly to users.
+
+Users obtain permissions by being assigned one or more roles.
+
+---
+
+# RBAC Architecture
+
+```
+Users
+
+↓
+
+Assigned Role
+
+↓
+
+Permissions
+
+↓
+
+Assets and Resources
+```
+
+Example:
+
+```
+John
+
+↓
+
+Developer Role
+
+↓
+
+Read
+Create
+Edit
+Execute
+
+↓
+
+Mappings
+Tasks
+Connections
+```
+
+---
+
+# Why RBAC?
+
+Without RBAC
+
+- Difficult administration
+- Inconsistent permissions
+- Higher security risks
+- Increased human errors
+
+With RBAC
+
+- Centralized permission management
+- Better governance
+- Easier auditing
+- Improved security
+- Faster onboarding
+
+---
+
+# System-defined Roles
+
+IICS provides several predefined roles.
+
+Examples include:
+
+- Organization Administrator
+- Application Administrator
+- Security Administrator
+- Developer
+- Operator
+- Monitor
+- Business User (depending on licensed services)
+
+These roles contain predefined permission sets and are recommended for common administrative tasks.
+
+---
+
+# Organization Administrator
+
+Responsibilities include:
+
+- Manage users
+- Manage groups
+- Manage roles
+- Manage licenses
+- Configure Secure Agents
+- Monitor organization resources
+
+This role has the highest level of administrative authority within the organization.
+
+---
+
+# Developer Role
+
+Typical responsibilities:
+
+- Create mappings
+- Configure tasks
+- Develop integrations
+- Test workflows
+- Deploy assets
+
+Developers generally do not manage users or organizational settings.
+
+---
+
+# Operator Role
+
+Operators are responsible for day-to-day execution and monitoring.
+
+Typical activities:
+
+- Run jobs
+- Monitor execution
+- Restart failed tasks
+- Review logs
+- Generate reports
+
+---
+
+# Custom Roles
+
+Organizations often require permissions that are not fully addressed by predefined roles.
+
+IICS allows administrators to create **Custom Roles**.
+
+A Custom Role combines only the permissions required for a particular job function.
+
+---
+
+# Creating a Custom Role
+
+General steps:
+
+1. Open Administrator Console.
+2. Navigate to **Roles**.
+3. Select **Create Role**.
+4. Enter:
+   - Role Name
+   - Description
+5. Select required permissions.
+6. Save the role.
+7. Assign users.
+
+---
+
+# Assigning Roles
+
+Roles can be assigned to:
+
+- Individual Users
+- User Groups
+
+Assigning roles to groups simplifies administration for large organizations.
+
+---
+
+# Principle of Least Privilege (PoLP)
+
+The Principle of Least Privilege states:
+
+> A user should receive only the permissions necessary to perform assigned duties.
+
+Benefits:
+
+- Reduced attack surface
+- Improved compliance
+- Lower risk of accidental changes
+- Better security
+
+---
+
+# Enterprise Example
+
+A multinational healthcare organization has:
+
+- System Administrators
+- Data Engineers
+- Data Quality Analysts
+- Business Analysts
+- Auditors
+
+Recommended role assignments:
+
+| Role | Responsibilities |
+|------|------------------|
+| Administrator | Complete administration |
+| Data Engineer | Develop mappings and integrations |
+| Analyst | Read reports and monitor jobs |
+| Auditor | Read-only access for compliance |
+
+---
+
+# User Roles vs User Groups
+
+| User Groups | User Roles |
+|-------------|------------|
+| Organize users | Define permissions |
+| Administrative grouping | Security mechanism |
+| Multiple memberships possible | Multiple roles can be assigned (as per policy) |
+| Simplify management | Control access |
+
+---
+
+# Best Practices
+
+- Follow the Principle of Least Privilege.
+- Use System-defined Roles whenever possible.
+- Create Custom Roles only when necessary.
+- Review role assignments periodically.
+- Document all custom roles.
+- Remove unnecessary permissions.
+
+---
+
+# Common Misconfigurations
+
+❌ Assigning Organization Administrator to every user.
+
+✔ Grant administrative privileges only to authorized personnel.
+
+---
+
+❌ Creating many overlapping Custom Roles.
+
+✔ Keep role definitions simple and well documented.
+
+---
+
+❌ Never reviewing permissions.
+
+✔ Perform periodic access reviews.
+
+---
+
+# Security Considerations
+
+Improper role assignments may result in:
+
+- Unauthorized access
+- Data leakage
+- Compliance violations
+- Accidental deletion of assets
+- Increased insider threats
+
+RBAC is therefore a critical component of enterprise cloud security.
+
+---
+
+# Classroom Activity
+
+Design role assignments for a university.
+
+Identify suitable roles for:
+
+- System Administrator
+- Faculty
+- Students
+- Examination Cell
+- Library Staff
+- Guest Users
+
+Explain why each role should have different permissions.
+
+---
+
+# Discussion Questions
+
+1. Why is RBAC preferred over assigning permissions individually?
+
+2. How does the Principle of Least Privilege improve cloud security?
+
+3. Under what circumstances should an organization create a Custom Role instead of using a System-defined Role?
+
+---
+
+# Faculty Tips
+
+Use familiar examples such as:
+
+- Windows Administrator vs Standard User
+- Google Workspace Admin vs Teacher vs Student
+- Moodle Administrator vs Faculty vs Student
+- Microsoft Teams Owner vs Member
+
+Students can quickly relate these examples to enterprise RBAC concepts.
+
+---
+
+# Interview Questions
+
+1. What is RBAC?
+2. Why are User Roles important?
+3. Differentiate User Groups and User Roles.
+4. What is the Principle of Least Privilege?
+5. When should Custom Roles be created?
+6. What are System-defined Roles?
+
+---
+
+# Examination Tips
+
+Students should be able to:
+
+- Define User Roles.
+- Explain RBAC with a diagram.
+- Compare User Groups and User Roles.
+- Discuss System-defined and Custom Roles.
+- Explain the Principle of Least Privilege with an example.
+
+---
+
+# Chapter Summary
+
+In this chapter, students learned:
+
+- User Roles
+- Role-Based Access Control (RBAC)
+- System-defined Roles
+- Custom Roles
+- Role Assignment
+- Principle of Least Privilege
+- Enterprise Applications
+- Security Best Practices
+
+A well-designed RBAC model strengthens security, simplifies administration, and supports compliance in enterprise cloud environments.
+
+---
+
+# End of Chapter 6
