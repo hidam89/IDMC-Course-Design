@@ -2989,3 +2989,989 @@ These concepts prepare students for the final section, where they will install a
 ---
 
 # End of Chapter 8 – Part B
+# Chapter 8
+
+# Informatica Cloud Secure Agent
+
+## Part C – Installation, Verification, Troubleshooting and Lab Activity
+
+---
+
+## Learning Objectives
+
+After completing this section, students will be able to:
+
+- Install Secure Agent on Windows.
+- Register Secure Agent with Informatica Cloud.
+- Verify a successful installation.
+- Troubleshoot common installation issues.
+- Maintain Secure Agent.
+- Apply best practices for enterprise deployment.
+
+---
+
+# Installing Secure Agent on Windows
+
+Secure Agent installation is straightforward and typically takes only a few minutes.
+
+The installation consists of:
+
+1. Download Secure Agent
+2. Launch Installer
+3. Authenticate with Informatica Cloud
+4. Register the Agent
+5. Verify Services
+6. Execute Test Connection
+
+---
+
+# Pre-Installation Checklist
+
+Before installation verify:
+
+✓ Windows operating system is supported
+
+✓ Administrator privileges available
+
+✓ Stable Internet connection
+
+✓ Minimum 8 GB RAM
+
+✓ 10 GB Free Disk Space
+
+✓ HTTPS Port (443) accessible
+
+✓ Antivirus exclusions configured (if required)
+
+✓ Proxy configuration available (if organization uses proxy)
+
+---
+
+# Installation Workflow
+
+```
+Download Secure Agent
+
+↓
+
+Run Installer
+
+↓
+
+Accept License Agreement
+
+↓
+
+Select Installation Directory
+
+↓
+
+Enter Informatica Credentials
+
+↓
+
+Register Secure Agent
+
+↓
+
+Download Components
+
+↓
+
+Start Services
+
+↓
+
+Verify Installation
+```
+
+---
+
+# Step 1 – Download Secure Agent
+
+Login to Informatica Intelligent Cloud Services.
+
+Navigate to:
+
+Administrator
+
+↓
+
+Runtime Environments
+
+↓
+
+Secure Agents
+
+↓
+
+Download Secure Agent
+
+Select the Windows installer.
+
+---
+
+# Step 2 – Launch Installer
+
+Double-click the installer.
+
+The installation wizard starts.
+
+Choose:
+
+Next
+
+↓
+
+Accept License
+
+↓
+
+Installation Folder
+
+↓
+
+Next
+
+---
+
+# Step 3 – Login to Informatica Cloud
+
+Enter
+
+- Username
+- Password
+- Organization
+
+The installer authenticates with Informatica Cloud.
+
+---
+
+# Step 4 – Register Secure Agent
+
+The installer automatically registers the Secure Agent.
+
+The organization now recognizes the new Runtime Environment.
+
+---
+
+# Step 5 – Download Runtime Components
+
+After registration
+
+Secure Agent downloads
+
+- Runtime Engine
+- Connectors
+- Services
+- Updates
+
+The duration depends on Internet speed.
+
+---
+
+# Step 6 – Start Services
+
+Windows starts
+
+Agent Manager
+
+↓
+
+Agent Core
+
+↓
+
+Runtime Services
+
+↓
+
+Connector Services
+
+↓
+
+Monitoring Services
+
+The Secure Agent status changes to:
+
+Running
+
+---
+
+# Verifying Installation
+
+Open Administrator Console.
+
+Navigate to
+
+Runtime Environments
+
+↓
+
+Secure Agent
+
+Verify:
+
+✔ Online Status
+
+✔ Running
+
+✔ Latest Version
+
+✔ Services Healthy
+
+---
+
+# Secure Agent Directory Structure
+
+Example
+
+```
+SecureAgent
+
+│
+
+├── apps
+
+├── conf
+
+├── logs
+
+├── downloads
+
+├── temp
+
+├── updates
+
+└── services
+```
+
+---
+
+# Important Folders
+
+### conf
+
+Configuration files.
+
+---
+
+### logs
+
+Execution logs.
+
+---
+
+### apps
+
+Installed runtime applications.
+
+---
+
+### temp
+
+Temporary files.
+
+---
+
+### updates
+
+Automatic software updates.
+
+---
+
+# Secure Agent Logs
+
+Logs are used for troubleshooting.
+
+Typical information:
+
+- Startup Events
+- Login Status
+- Job Execution
+- Errors
+- Warnings
+- Connector Messages
+
+Administrators should review logs regularly.
+
+---
+
+# Common Installation Errors
+
+## Error 1
+
+Secure Agent Offline
+
+Possible Causes
+
+- No Internet
+- Firewall Blocking
+- Proxy Configuration
+- Authentication Failure
+
+Resolution
+
+- Verify Internet
+- Check Firewall
+- Verify Proxy
+- Restart Agent
+
+---
+
+## Error 2
+
+Registration Failed
+
+Possible Causes
+
+- Invalid Credentials
+- Wrong Organization
+- Expired Password
+
+Resolution
+
+- Verify Login
+- Reset Password
+- Confirm Organization Name
+
+---
+
+## Error 3
+
+Service Failed to Start
+
+Possible Causes
+
+- Windows Service Error
+- Antivirus Blocking
+- Insufficient Permissions
+
+Resolution
+
+- Run as Administrator
+- Check Windows Services
+- Review Event Viewer
+
+---
+
+## Error 4
+
+Database Connection Failure
+
+Possible Causes
+
+- Database Offline
+- Incorrect Port
+- Wrong Credentials
+- Firewall
+
+Resolution
+
+- Verify Database
+- Test Connection
+- Validate Credentials
+
+---
+
+## Error 5
+
+Low Performance
+
+Possible Causes
+
+- Low RAM
+- High CPU
+- Heavy Workload
+- Large Data Volume
+
+Resolution
+
+- Increase RAM
+- Optimize Jobs
+- Separate Runtime Environments
+
+---
+
+# Troubleshooting Checklist
+
+Whenever Secure Agent fails
+
+Check:
+
+✔ Internet
+
+✔ Agent Status
+
+✔ Windows Service
+
+✔ Firewall
+
+✔ Proxy
+
+✔ Credentials
+
+✔ Logs
+
+✔ Runtime Version
+
+✔ Available Memory
+
+✔ CPU Usage
+
+---
+
+# Secure Agent Maintenance
+
+Administrators should
+
+- Review logs weekly
+- Monitor CPU
+- Monitor Memory
+- Remove unnecessary files
+- Install updates
+- Backup configuration
+- Review Runtime Health
+
+---
+
+# Enterprise Deployment Recommendation
+
+Large organizations should maintain separate Secure Agents for:
+
+Development
+
+↓
+
+Testing
+
+↓
+
+User Acceptance Testing
+
+↓
+
+Production
+
+This reduces operational risks.
+
+---
+
+# Lab Activity 1
+
+## Installing Secure Agent on Windows
+
+### Objective
+
+Install and verify Secure Agent.
+
+---
+
+### Requirements
+
+- Windows Computer
+- Internet
+- Informatica Account
+- Administrator Rights
+
+---
+
+### Procedure
+
+Step 1
+
+Login to Informatica Cloud.
+
+Step 2
+
+Download Secure Agent.
+
+Step 3
+
+Run Installer.
+
+Step 4
+
+Register Agent.
+
+Step 5
+
+Verify Runtime.
+
+Step 6
+
+Capture Screenshots.
+
+Step 7
+
+Submit Installation Report.
+
+---
+
+### Expected Outcome
+
+Students should observe
+
+✔ Secure Agent Running
+
+✔ Runtime Online
+
+✔ Successful Registration
+
+---
+
+# Lab Activity 2
+
+## Create Runtime Environment
+
+Students should
+
+- Identify Runtime
+- Verify Status
+- Explain Components
+- Describe Communication Flow
+
+---
+
+# Classroom Discussion
+
+A company reports that all integration jobs have stopped.
+
+Discuss:
+
+- What should the administrator verify first?
+- Which logs should be reviewed?
+- Which services are involved?
+
+---
+
+# Best Practices
+
+✔ Install on dedicated server
+
+✔ Use SSD storage
+
+✔ Allocate sufficient RAM
+
+✔ Use Network Service Account
+
+✔ Separate environments
+
+✔ Enable monitoring
+
+✔ Maintain backups
+
+✔ Keep software updated
+
+---
+
+# Security Best Practices
+
+- Never share administrator credentials.
+- Restrict Secure Agent server access.
+- Monitor audit logs.
+- Apply operating system security patches.
+- Follow Principle of Least Privilege.
+- Regularly rotate service account passwords.
+
+---
+
+# Faculty Tips
+
+During demonstration,
+
+explain
+
+```
+Design
+
+↓
+
+Runtime
+
+↓
+
+Execution
+
+↓
+
+Monitoring
+```
+
+Students often confuse designing mappings with executing mappings.
+
+Emphasize that **Secure Agent performs execution**, not design.
+
+---
+
+# Interview Questions
+
+1. What is Secure Agent?
+
+2. Explain Secure Agent Architecture.
+
+3. Describe Agent Manager.
+
+4. Explain Agent Core.
+
+5. How is Secure Agent installed?
+
+6. How do you verify installation?
+
+7. Where are Secure Agent logs stored?
+
+8. Explain Runtime Environment.
+
+9. What causes Secure Agent to go Offline?
+
+10. How would you troubleshoot installation failures?
+
+---
+
+# Examination Tips
+
+Students should be able to
+
+- Draw Secure Agent Architecture.
+- Explain installation steps.
+- Explain startup sequence.
+- Discuss troubleshooting.
+- Compare Local User and Network User.
+- Explain enterprise deployment.
+
+---
+
+# Chapter Summary
+
+This chapter covered
+
+- Secure Agent Overview
+- Architecture
+- Components
+- Agent Manager
+- Agent Core
+- Runtime Services
+- Startup Routine
+- Local User
+- Network User
+- Installation
+- Verification
+- Logs
+- Troubleshooting
+- Maintenance
+- Best Practices
+- Lab Activities
+
+The Secure Agent is the core execution component of Informatica Intelligent Cloud Services, enabling secure communication between cloud services and enterprise resources while supporting reliable, scalable, and secure data integration.
+
+---
+
+# End of Chapter 8
+# Chapter 9
+
+# Guided Classroom Activities and Demonstrations
+
+---
+
+## Course Outcome
+
+CO2
+
+---
+
+# Purpose
+
+This chapter provides instructor-guided demonstrations and classroom activities that reinforce the concepts of User Management and Secure Agent administration. These activities are designed for a theory course and can be conducted as instructor-led demonstrations, guided discussions, or simulated hands-on exercises.
+
+---
+
+# Activity 1
+
+# Create a User with Native Authentication
+
+## Learning Objective
+
+Students will understand how a user is created using Informatica's built-in authentication mechanism.
+
+---
+
+## Prerequisites
+
+- Access to Informatica Intelligent Cloud Services (IICS)
+- Organization Administrator privileges
+
+---
+
+## Demonstration Steps
+
+1. Log in to the IICS Administrator Console.
+2. Navigate to **Administrator → Users**.
+3. Click **New User**.
+4. Enter:
+   - User Name
+   - Email Address
+   - Authentication Type: Native
+5. Assign an appropriate role.
+6. Assign a license.
+7. Save the configuration.
+8. Explain the generated activation process.
+
+---
+
+## Classroom Discussion
+
+Discuss:
+
+- When should Native Authentication be used?
+- What are its advantages and limitations?
+- Is it suitable for large enterprises?
+
+---
+
+## Expected Learning Outcome
+
+Students should be able to:
+
+- Explain Native Authentication.
+- Identify scenarios where it is appropriate.
+- Describe the user creation process.
+
+---
+
+# Activity 2
+
+# Create a User with Salesforce Authentication
+
+---
+
+## Learning Objective
+
+Students will understand Single Sign-On (SSO) integration using Salesforce Authentication.
+
+---
+
+## Demonstration Steps
+
+1. Open **Administrator → Users**.
+2. Select **Create User**.
+3. Choose **Salesforce Authentication**.
+4. Enter user details.
+5. Assign the required role.
+6. Save the configuration.
+7. Explain how authentication is delegated to Salesforce.
+
+---
+
+## Comparison Activity
+
+Ask students to compare:
+
+| Native Authentication | Salesforce Authentication |
+|-----------------------|---------------------------|
+| Credentials stored in IICS | Credentials managed by Salesforce |
+| Separate login | Single Sign-On |
+| Easier setup | Better enterprise integration |
+| Suitable for small organizations | Suitable for large enterprises |
+
+---
+
+## Discussion Questions
+
+- Why do enterprises prefer SSO?
+- What are the security benefits of centralized authentication?
+
+---
+
+# Activity 3
+
+# Secure Agent Installation Demonstration
+
+---
+
+## Learning Objective
+
+Students will observe the installation and registration of a Secure Agent.
+
+---
+
+## Demonstration Requirements
+
+- Windows machine (or virtual machine)
+- Internet connection
+- Informatica Cloud account
+- Administrator privileges
+
+---
+
+## Demonstration Workflow
+
+1. Download Secure Agent.
+2. Launch the installer.
+3. Accept the license agreement.
+4. Enter Informatica Cloud credentials.
+5. Register the Secure Agent.
+6. Allow runtime components to download.
+7. Verify that the agent status changes to **Running**.
+
+---
+
+## Instructor Explanation
+
+During the demonstration, explain:
+
+- Runtime Environment
+- Agent Manager
+- Agent Core
+- Connector Services
+- Secure communication with Informatica Cloud
+
+---
+
+# Activity 4
+
+# Runtime Environment Analysis
+
+---
+
+## Scenario
+
+An organization has:
+
+- Oracle Database
+- Salesforce
+- SAP ERP
+- Local File Server
+
+Students should identify:
+
+1. Which Runtime Environment should be used?
+2. Why is Secure Agent required?
+3. Where should the Secure Agent be installed?
+
+---
+
+## Expected Answer
+
+Students should recommend:
+
+- Secure Agent
+- Installation inside the organization's private network
+- Communication using secure outbound HTTPS
+
+---
+
+# Activity 5
+
+# User Role Assignment Exercise
+
+---
+
+## Scenario
+
+Assign appropriate roles for:
+
+- Organization Administrator
+- Data Engineer
+- Business Analyst
+- Auditor
+- Operator
+
+Students should justify each role assignment based on responsibilities.
+
+---
+
+# Activity 6
+
+# Group Discussion
+
+## Topic
+
+"How do User Groups and User Roles improve security in enterprise cloud environments?"
+
+Students should discuss:
+
+- Administrative efficiency
+- Role-Based Access Control (RBAC)
+- Principle of Least Privilege
+- Scalability
+
+---
+
+# Activity 7
+
+# Case Study
+
+## XYZ Healthcare
+
+A healthcare organization operates hospitals in:
+
+- Bangalore
+- Chennai
+- Hyderabad
+
+Requirements:
+
+- Separate administrators for each hospital.
+- Shared central governance.
+- Secure access to patient records.
+- Hybrid cloud integration.
+
+### Questions
+
+1. Design the organization hierarchy.
+2. Recommend User Groups.
+3. Assign User Roles.
+4. Select the appropriate Runtime Environment.
+5. Explain why Secure Agent is necessary.
+
+---
+
+# Activity 8
+
+# Classroom Quiz
+
+Suggested topics:
+
+- Organization Hierarchy
+- Sub-Organizations
+- User Management
+- User Statistics
+- User Groups
+- User Roles
+- Runtime Environment
+- Secure Agent
+
+Recommended format:
+
+- 20 MCQs
+- 5 Scenario-based questions
+- 2 Discussion questions
+
+---
+
+# Faculty Notes
+
+Throughout these activities:
+
+- Encourage students to relate concepts to enterprise environments.
+- Use architecture diagrams wherever possible.
+- Compare IICS with familiar platforms such as Google Workspace or Microsoft 365.
+- Reinforce the relationship between Users, Groups, Roles, Runtime Environments, and Secure Agents.
+
+---
+
+# Learning Outcomes
+
+After completing these guided activities, students will be able to:
+
+- Create and manage users.
+- Explain authentication methods.
+- Organize users using groups and roles.
+- Recommend suitable Runtime Environments.
+- Explain Secure Agent architecture.
+- Describe Secure Agent installation and verification.
+- Analyze enterprise administration scenarios.
+
+---
+
+# End of Chapter 9
