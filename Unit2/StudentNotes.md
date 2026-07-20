@@ -192,3 +192,293 @@ In this chapter, we learned:
 ---
 
 # End of Chapter 1
+# Chapter 2
+
+# IICS Sub-Organizations
+
+---
+
+## Introduction
+
+Large organizations often have multiple departments, branches, regional offices, or business units. Managing all users and resources under a single organization becomes difficult as the enterprise grows.
+
+To overcome this challenge, Informatica Intelligent Cloud Services (IICS) provides **Sub-Organizations**, allowing administrators to divide an organization into smaller, independently managed units while maintaining centralized governance.
+
+---
+
+# Learning Objectives
+
+After studying this chapter, students will be able to:
+
+- Define a Sub-Organization.
+- Explain the Organization Hierarchy.
+- Describe the Parent–Child relationship.
+- Explain Sub-Organization licenses.
+- Identify enterprise use cases.
+- Explain the benefits of Sub-Organizations.
+
+---
+
+# What is a Sub-Organization?
+
+A **Sub-Organization** is a child administrative unit created under a parent organization.
+
+It allows enterprises to:
+
+- Separate departments
+- Separate geographical locations
+- Delegate administration
+- Allocate licenses
+- Improve governance
+- Strengthen security
+
+---
+
+# Organization Structure
+
+```
+Enterprise Organization
+
+│
+
+├── India
+
+│      ├── Bangalore
+
+│      ├── Chennai
+
+│      └── Delhi
+
+│
+
+├── USA
+
+│      ├── New York
+
+│      └── California
+
+│
+
+└── Europe
+
+       ├── Germany
+
+       └── France
+```
+
+Each branch can function as an independent Sub-Organization.
+
+---
+
+# Why are Sub-Organizations Required?
+
+Without Sub-Organizations:
+
+- Difficult administration
+- Complex user management
+- Poor scalability
+- Resource conflicts
+- Security risks
+
+With Sub-Organizations:
+
+- Better organization
+- Easier administration
+- Department-wise control
+- Regional management
+- Improved governance
+
+---
+
+# Characteristics
+
+A Sub-Organization:
+
+- Belongs to one parent organization.
+- Has its own users.
+- Has its own administrators.
+- Uses allocated licenses.
+- Can manage its own assets.
+
+---
+
+# Creating a Sub-Organization
+
+General Steps:
+
+1. Log in as Organization Administrator.
+2. Open the **Administrator Console**.
+3. Select **Sub-Organizations**.
+4. Click **Create**.
+5. Enter:
+   - Name
+   - Description
+   - Parent Organization
+6. Save the configuration.
+7. Allocate licenses.
+8. Add users.
+
+---
+
+# Parent–Child Relationship
+
+```
+Corporate Organization
+
+↓
+
+Regional Office
+
+↓
+
+Department
+
+↓
+
+Users
+```
+
+Each Sub-Organization inherits governance from the parent while managing its own resources.
+
+---
+
+# Sub-Organization Licenses
+
+Licenses are assigned by the parent organization.
+
+Examples include:
+
+- Data Integration licenses
+- API Integration licenses
+- Data Quality licenses
+- Administrator licenses
+
+Administrators should allocate licenses based on actual business requirements.
+
+---
+
+# Working with Sub-Organizations
+
+Common administrative tasks include:
+
+- Create Sub-Organization
+- Modify details
+- Allocate licenses
+- Create users
+- Assign administrators
+- Monitor usage
+- Remove unused organizations
+
+---
+
+# Advantages
+
+- Better scalability
+- Improved administration
+- Easier user management
+- Enhanced security
+- Flexible license allocation
+- Department-level control
+
+---
+
+# Limitations
+
+- Requires planning
+- Poor hierarchy design increases complexity
+- License allocation must be monitored
+
+---
+
+# Real-World Example
+
+**XYZ University**
+
+```
+University
+
+│
+
+├── School of Computing
+
+├── School of Management
+
+├── School of Law
+
+└── School of Architecture
+```
+
+Each school can be managed as a Sub-Organization with its own faculty, students, and administrators.
+
+---
+
+# Comparison
+
+| Organization | Sub-Organization |
+|--------------|------------------|
+| Highest administrative unit | Child administrative unit |
+| Created during organization setup | Created by Administrator |
+| Controls overall governance | Manages departmental resources |
+| Allocates licenses | Uses allocated licenses |
+
+---
+
+# Important Points
+
+✔ A Sub-Organization always belongs to a parent organization.
+
+✔ It simplifies administration in large enterprises.
+
+✔ Licenses are allocated by the parent organization.
+
+✔ Each Sub-Organization can have its own users and administrators.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+Define Sub-Organization.
+
+---
+
+### 5 Marks
+
+Explain the Parent–Child relationship in IICS.
+
+---
+
+### 10 Marks
+
+Explain Sub-Organizations with a suitable architecture diagram.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| Child administrative unit |
+| Improves scalability |
+| Parent allocates licenses |
+| Supports independent administration |
+| Used by large enterprises |
+
+---
+
+# Chapter Summary
+
+In this chapter, we studied:
+
+- Sub-Organizations
+- Parent–Child hierarchy
+- License allocation
+- Enterprise examples
+- Advantages and limitations
+
+Sub-Organizations help enterprises organize users, resources, and administration efficiently while maintaining centralized governance.
+
+---
+
+# End of Chapter 2
