@@ -559,3 +559,277 @@ Sub-Organizations provide a scalable and secure way to manage users, resources, 
 ---
 
 # End of Session 2
+
+# Chapter 3
+
+# User Management
+
+---
+
+## Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Explain user management in IICS.
+- Describe different authentication methods.
+- Create and manage users.
+- Edit user profiles.
+- Perform user administration tasks.
+- Apply security best practices.
+
+---
+
+# Introduction
+
+User Management is one of the most important administrative functions in Informatica Intelligent Cloud Services (IICS).
+
+Every user who accesses the platform must be authenticated, assigned appropriate roles, and granted only the permissions required to perform assigned tasks.
+
+Proper user management ensures:
+
+- Secure access
+- Accountability
+- Regulatory compliance
+- Efficient administration
+
+---
+
+# What is User Management?
+
+User Management refers to the process of:
+
+- Creating users
+- Authenticating users
+- Assigning roles
+- Managing permissions
+- Monitoring activity
+- Disabling or deleting users
+
+---
+
+# User Lifecycle
+
+```
+Request User
+
+↓
+
+Create User
+
+↓
+
+Assign Role
+
+↓
+
+Assign Group
+
+↓
+
+User Login
+
+↓
+
+Perform Tasks
+
+↓
+
+Monitor Activity
+
+↓
+
+Deactivate User
+```
+
+---
+
+# User Authentication
+
+Authentication verifies the identity of a user before granting access to IICS.
+
+IICS supports multiple authentication mechanisms.
+
+---
+
+## Native Authentication
+
+In Native Authentication, user credentials are stored within Informatica Cloud.
+
+### Characteristics
+
+- Username and password managed by IICS.
+- Simple to configure.
+- Suitable for small organizations.
+- Independent of external identity providers.
+
+### Advantages
+
+- Easy setup
+- Minimal configuration
+- Quick onboarding
+
+### Limitations
+
+- Separate password management
+- Additional administrative effort
+- Not ideal for large enterprises
+
+---
+
+## Salesforce Authentication
+
+Salesforce Authentication enables users to log in using Salesforce credentials.
+
+### Benefits
+
+- Single Sign-On (SSO)
+- Centralized identity management
+- Reduced password fatigue
+- Improved user experience
+
+---
+
+## Authentication Comparison
+
+| Feature | Native | Salesforce |
+|----------|--------|------------|
+| Password Stored In | IICS | Salesforce |
+| SSO Support | No | Yes |
+| Enterprise Ready | Moderate | High |
+| Administration | Simple | Centralized |
+
+---
+
+# Creating a User
+
+General Procedure:
+
+1. Open Administrator Console.
+2. Navigate to **Users**.
+3. Click **New User**.
+4. Enter:
+   - Username
+   - Email Address
+   - Authentication Type
+   - Role
+   - License
+5. Save the configuration.
+6. Notify the user.
+
+---
+
+# User Actions
+
+Administrators can perform several actions:
+
+- Create User
+- Edit User
+- Reset Password
+- Lock User
+- Unlock User
+- Activate User
+- Deactivate User
+- Delete User
+
+---
+
+# Editing a User
+
+User properties that can be modified include:
+
+- Name
+- Email
+- Authentication Method
+- Role
+- Group Membership
+- Status
+
+Changes should be documented according to organizational policies.
+
+---
+
+# Security Best Practices
+
+- Use Multi-Factor Authentication (MFA) where available.
+- Follow the Principle of Least Privilege.
+- Remove inactive accounts regularly.
+- Review user permissions periodically.
+- Use strong password policies for Native Authentication.
+
+---
+
+# Enterprise Example
+
+A multinational bank has:
+
+- 5 Administrators
+- 20 Developers
+- 150 Business Users
+- 50 Analysts
+
+Each user category receives different permissions based on their responsibilities.
+
+This minimizes security risks and ensures compliance.
+
+---
+
+# Classroom Activity
+
+Design a user management plan for a university.
+
+Identify:
+
+- Administrator
+- Faculty
+- Students
+- External Users
+
+Specify authentication methods and access permissions.
+
+---
+
+# Discussion Question
+
+Should every employee have Administrator privileges?
+
+Justify your answer based on security and operational efficiency.
+
+---
+
+# Common Mistakes
+
+❌ Assigning Administrator role to all users.
+
+✔ Assign only the minimum required privileges.
+
+---
+
+❌ Leaving inactive accounts enabled.
+
+✔ Disable or remove inactive accounts promptly.
+
+---
+
+❌ Sharing login credentials.
+
+✔ Every user must have an individual account.
+
+---
+
+# Summary
+
+This chapter covered:
+
+- User Management
+- User Authentication
+- Native Authentication
+- Salesforce Authentication
+- User Creation
+- User Administration
+- Security Best Practices
+
+Effective user management is fundamental to maintaining a secure and well-governed IICS environment.
+
+---
+
+# End of Chapter 3
