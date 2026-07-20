@@ -1525,3 +1525,434 @@ These concepts form the foundation for integrating IDMC with enterprise database
 ---
 
 # End of Session 4
+# Session 5
+
+# Asset Management and Source Control
+
+**Duration:** 2 Hours
+
+---
+
+# Learning Objectives
+
+After completing this session, students will be able to:
+
+- Explain Assets in IDMC.
+- Classify different types of assets.
+- Manage assets throughout their lifecycle.
+- Configure privileges and permissions.
+- Enable and configure Source Control.
+- Apply best practices for enterprise asset governance.
+
+---
+
+# Introduction
+
+Everything created in Informatica Intelligent Data Management Cloud (IDMC) is stored as an **Asset**.
+
+Examples include:
+
+- Connections
+- Mappings
+- Mapping Tasks
+- Workflows
+- Schedules
+- Runtime Environments
+- Secure Agent Configurations
+
+Proper asset management ensures maintainability, security, collaboration, and governance across enterprise integration projects.
+
+---
+
+# What is an Asset?
+
+An **Asset** is any reusable object created within IDMC.
+
+Assets can represent:
+
+- Integration logic
+- Configuration
+- Metadata
+- Scheduling information
+- Administrative settings
+
+Assets are reusable and can be shared across projects.
+
+---
+
+# Asset Architecture
+
+```
+                IDMC Organization
+
+                       │
+
+                 Project / Folder
+
+                       │
+
+     ┌──────────┬──────────┬──────────┐
+
+ Connections  Mappings  Tasks  Workflows
+
+                       │
+
+                  Runtime Assets
+
+                       │
+
+               Secure Agent Group
+```
+
+---
+
+# Common Asset Types
+
+| Asset Type | Purpose |
+|------------|---------|
+| Connection | Connect to external systems |
+| Mapping | Define data transformation logic |
+| Mapping Task | Execute mappings |
+| Workflow | Orchestrate multiple tasks |
+| Schedule | Automate execution |
+| Runtime Environment | Execute integration jobs |
+| Secure Agent | Communicate with enterprise systems |
+
+---
+
+# Asset Lifecycle
+
+Every asset typically follows this lifecycle:
+
+```
+Create
+
+↓
+
+Develop
+
+↓
+
+Test
+
+↓
+
+Deploy
+
+↓
+
+Maintain
+
+↓
+
+Archive
+
+↓
+
+Delete
+```
+
+---
+
+# Managing Assets
+
+Administrators can perform the following operations:
+
+- Create
+- View
+- Edit
+- Copy
+- Move
+- Rename
+- Export
+- Import
+- Archive
+- Delete
+
+Proper asset management simplifies maintenance and improves collaboration.
+
+---
+
+# Organizing Assets
+
+Recommended practices include:
+
+- Create project-specific folders.
+- Use meaningful naming conventions.
+- Separate Development, Testing, and Production assets.
+- Group related assets together.
+- Archive obsolete assets.
+
+---
+
+# Privileges and Permissions
+
+Asset security is controlled using permissions.
+
+Permissions determine what actions a user can perform on an asset.
+
+Common permission levels include:
+
+- Read
+- Create
+- Modify
+- Execute
+- Delete
+- Share
+- Manage
+
+---
+
+# Role-Based Permissions
+
+| Role | Typical Permissions |
+|------|---------------------|
+| Organization Administrator | Full Control |
+| Developer | Create, Modify, Execute |
+| Operator | Execute, Monitor |
+| Business User | Read Only |
+| Auditor | View Reports |
+
+---
+
+# Why Permissions Matter
+
+Proper permissions help:
+
+- Protect critical assets
+- Prevent accidental modifications
+- Support compliance
+- Improve accountability
+- Enforce governance
+
+---
+
+# Source Control
+
+Source Control tracks changes made to assets.
+
+It enables:
+
+- Version history
+- Collaboration
+- Rollback
+- Audit trail
+
+In enterprise projects, Source Control integrates IDMC with systems such as Git.
+
+---
+
+# Source Control Workflow
+
+```
+Create Asset
+
+↓
+
+Modify Asset
+
+↓
+
+Commit Changes
+
+↓
+
+Version Repository
+
+↓
+
+Review
+
+↓
+
+Deploy
+```
+
+---
+
+# Benefits of Source Control
+
+- Version management
+- Team collaboration
+- Rollback capability
+- Audit history
+- Controlled deployment
+
+---
+
+# Configuring Source Control
+
+General steps:
+
+1. Open **Administrator Console**.
+2. Navigate to **Source Control Settings**.
+3. Configure repository details.
+4. Authenticate.
+5. Enable Source Control.
+6. Assign permissions.
+7. Save configuration.
+
+---
+
+# Enterprise Example
+
+A software company has:
+
+- 20 Developers
+- 10 Test Engineers
+- 5 Administrators
+
+Developers create mappings and commit changes to Git.
+
+Test Engineers validate new versions.
+
+Administrators approve deployment to production.
+
+Benefits:
+
+- Version tracking
+- Team collaboration
+- Controlled deployment
+- Easy rollback
+
+---
+
+# Demonstration
+
+Perform the following:
+
+1. Open Administrator Console.
+2. Navigate to Assets.
+3. Create a sample folder.
+4. Create a Connection asset.
+5. Assign permissions.
+6. Enable Source Control.
+7. Verify repository configuration.
+
+---
+
+# Best Practices
+
+- Follow consistent naming conventions.
+- Apply the Principle of Least Privilege.
+- Organize assets into folders.
+- Enable Source Control for all development projects.
+- Review permissions periodically.
+- Archive obsolete assets instead of deleting them immediately.
+
+---
+
+# Troubleshooting
+
+| Problem | Possible Cause | Solution |
+|----------|----------------|----------|
+| User cannot edit asset | Insufficient permission | Assign Modify permission |
+| Asset not visible | Folder restriction | Verify folder permissions |
+| Source Control unavailable | Repository not configured | Configure repository settings |
+| Version conflict | Concurrent modifications | Merge changes and resolve conflicts |
+| Accidental deletion | Missing backup | Restore from repository/version history |
+
+---
+
+# Teaching Tips
+
+Ask students:
+
+> "Why should organizations use Source Control even when only a few developers are working on a project?"
+
+Discuss:
+
+- Collaboration
+- Backup
+- Version history
+- Auditability
+
+---
+
+# Classroom Discussion
+
+Discuss the advantages and disadvantages of:
+
+- Manual asset management
+- Source-controlled asset management
+
+Should every enterprise integration project use Source Control? Why?
+
+---
+
+# Lab Activity
+
+1. Create a sample asset.
+2. Organize it into a folder.
+3. Assign permissions.
+4. Enable Source Control.
+5. Record the configuration steps.
+6. Discuss how version control improves collaboration.
+
+---
+
+# Interview Questions
+
+1. What is an Asset in IDMC?
+2. Explain the Asset Lifecycle.
+3. Why are permissions important?
+4. What are the advantages of Source Control?
+5. How does Source Control support collaboration?
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. Define Asset.
+2. What is Source Control?
+3. State two benefits of Asset Management.
+
+---
+
+### 5 Marks
+
+1. Explain the Asset Lifecycle.
+2. Discuss Privileges and Permissions in IDMC.
+
+---
+
+### 10 Marks
+
+Explain Asset Management in IDMC, including asset types, permissions, Source Control configuration, enterprise applications, and best practices.
+
+---
+
+# Key Points
+
+✔ Assets are reusable objects within IDMC.
+
+✔ Proper organization improves maintainability.
+
+✔ Permissions protect enterprise resources.
+
+✔ Source Control enables version management and collaboration.
+
+✔ Asset governance is essential for enterprise deployments.
+
+---
+
+# Summary
+
+In this session, students learned:
+
+- Asset Management
+- Asset Types
+- Asset Lifecycle
+- Managing Assets
+- Privileges and Permissions
+- Source Control
+- Enterprise Governance
+- Best Practices
+
+Effective asset management ensures secure, organized, and maintainable enterprise integration projects while supporting collaboration and version control.
+
+---
+
+# End of Session 5
