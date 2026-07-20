@@ -278,3 +278,340 @@ Secure Agent Groups improve the reliability, scalability, and efficiency of ente
 ---
 
 # End of Chapter 1
+# Chapter 2
+
+# Working with Secure Agent
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- View Secure Agent details.
+- Explain different Secure Agent statuses.
+- Describe Secure Agent services.
+- Understand Upgrade Settings.
+- Explain service monitoring.
+- Apply Secure Agent administration best practices.
+
+---
+
+# Introduction
+
+After installing a Secure Agent, administrators are responsible for monitoring and maintaining it. A healthy Secure Agent ensures reliable execution of mappings, workflows, synchronization tasks, and other integration processes.
+
+The Administrator Console provides detailed information about every Secure Agent, allowing administrators to monitor health, configure services, and manage software upgrades.
+
+---
+
+# Viewing Secure Agent Details
+
+Administrators can access detailed information about each Secure Agent through the **Administrator Console**.
+
+Typical details include:
+
+- Agent Name
+- Agent Version
+- Runtime Environment
+- Operating System
+- Installed Services
+- Agent Status
+- Last Communication Time
+- Upgrade Status
+
+---
+
+# Steps to View Secure Agent Details
+
+1. Log in to IDMC.
+2. Open **Administrator**.
+3. Navigate to **Runtime Environments**.
+4. Select the required Secure Agent.
+5. Review the displayed information.
+
+---
+
+# Secure Agent Information
+
+| Property | Description |
+|-----------|-------------|
+| Agent Name | Name of the Secure Agent |
+| Version | Installed software version |
+| Runtime Environment | Assigned runtime |
+| Status | Operational condition |
+| Services | Installed runtime services |
+| Last Communication | Last successful communication with IDMC |
+| Upgrade Status | Current upgrade information |
+
+---
+
+# Secure Agent Statuses
+
+The status of a Secure Agent indicates its operational condition.
+
+Common statuses include:
+
+### Running
+
+The Secure Agent is online and ready to execute integration jobs.
+
+---
+
+### Starting
+
+The Secure Agent is initializing its services.
+
+---
+
+### Stopping
+
+The Secure Agent is shutting down and completing active tasks.
+
+---
+
+### Stopped
+
+The Secure Agent is inactive and cannot process jobs.
+
+---
+
+### Offline
+
+The Secure Agent is unable to communicate with IDMC.
+
+Possible causes:
+
+- Network failure
+- Service stopped
+- Firewall restrictions
+- System shutdown
+
+---
+
+### Upgrading
+
+The Secure Agent is currently installing a software update.
+
+During this time, some services may be temporarily unavailable.
+
+---
+
+# Status Lifecycle
+
+```
+Installed
+
+↓
+
+Starting
+
+↓
+
+Running
+
+↓
+
+Stopping
+
+↓
+
+Stopped
+
+↓
+
+Restart
+
+↓
+
+Running
+```
+
+---
+
+# Secure Agent Services
+
+A Secure Agent is composed of multiple services that work together to execute integration tasks.
+
+Common services include:
+
+- Data Integration Service
+- Application Integration Service
+- Process Server
+- Metadata Service
+- Connector Services
+- Logging Service
+
+Each service has a specific responsibility.
+
+---
+
+# Service Responsibilities
+
+| Service | Purpose |
+|----------|---------|
+| Data Integration | Executes mappings and synchronization tasks |
+| Application Integration | Supports application and API integrations |
+| Process Server | Executes workflow processes |
+| Metadata Service | Manages metadata communication |
+| Connector Services | Connect to databases and cloud applications |
+| Logging Service | Stores execution logs |
+
+---
+
+# Monitoring Secure Agent Services
+
+Administrators should regularly monitor:
+
+- Service status
+- CPU utilization
+- Memory usage
+- Network connectivity
+- Error logs
+- Failed jobs
+
+Continuous monitoring helps identify issues before they affect production systems.
+
+---
+
+# Upgrade Settings
+
+Secure Agent software is updated periodically to provide:
+
+- New features
+- Security enhancements
+- Bug fixes
+- Performance improvements
+
+Administrators can configure how updates are applied.
+
+---
+
+# Upgrade Options
+
+### Automatic Upgrade
+
+- Updates are installed automatically.
+- Suitable for development or test environments.
+
+---
+
+### Manual Upgrade
+
+- Administrators choose when to install updates.
+- Recommended for production environments.
+
+---
+
+# Best Practices
+
+- Review release notes before upgrading.
+- Upgrade during maintenance windows.
+- Test updates in a non-production environment.
+- Verify all services after an upgrade.
+- Maintain regular backups of configurations.
+
+---
+
+# Enterprise Example
+
+A financial organization operates Secure Agents in a production environment.
+
+To avoid disruption:
+
+- Automatic upgrades are disabled.
+- Updates are first tested in a staging environment.
+- Production upgrades are performed during scheduled maintenance.
+
+This approach minimizes operational risk and ensures business continuity.
+
+---
+
+# Advantages
+
+✔ Easy monitoring of Secure Agent health.
+
+✔ Centralized administration.
+
+✔ Improved reliability.
+
+✔ Better operational control.
+
+✔ Simplified maintenance.
+
+---
+
+# Common Problems
+
+| Problem | Possible Cause | Solution |
+|----------|----------------|----------|
+| Agent Offline | Network issue | Verify connectivity and firewall settings |
+| Service Not Running | Service stopped | Restart Secure Agent services |
+| Upgrade Failed | Interrupted download | Retry upgrade after verifying connectivity |
+| Jobs Not Executing | Data Integration Service stopped | Restart the required service |
+
+---
+
+# Important Points
+
+✔ Secure Agent Details provide runtime information.
+
+✔ Status indicates operational health.
+
+✔ Multiple services work together to execute jobs.
+
+✔ Production environments usually prefer manual upgrades.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. What is a Secure Agent Status?
+2. Define Upgrade Settings.
+3. List any two Secure Agent services.
+
+---
+
+### 5 Marks
+
+1. Explain different Secure Agent statuses.
+2. Differentiate Automatic and Manual Upgrade.
+
+---
+
+### 10 Marks
+
+Explain the Secure Agent administration process, including viewing agent details, statuses, services, upgrade settings, and monitoring.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| Secure Agent Details provide runtime information |
+| Running status indicates the agent is operational |
+| Offline status indicates communication problems |
+| Data Integration Service executes mappings |
+| Manual upgrades are preferred for production |
+
+---
+
+# Chapter Summary
+
+In this chapter, we studied:
+
+- Secure Agent Details
+- Secure Agent Statuses
+- Secure Agent Services
+- Service Monitoring
+- Upgrade Settings
+- Best Practices
+
+Understanding Secure Agent administration enables organizations to maintain reliable, secure, and efficient enterprise integration environments.
+
+---
+
+# End of Chapter 2
