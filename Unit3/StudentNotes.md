@@ -2549,3 +2549,289 @@ These monitoring capabilities enable administrators to maintain secure, reliable
 ---
 
 # End of Chapter 7
+# Chapter 8
+
+# Unit Summary and Quick Revision
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students should be able to:
+
+- Review all Unit 3 concepts.
+- Relate different administrative components of IDMC.
+- Revise important examination topics.
+- Prepare for viva voce and interviews.
+- Assess their achievement of Course Outcome CO3.
+
+---
+
+# Unit Concept Map
+
+```
+                 UNIT 3
+
+                     │
+
+       Secure Agent Administration
+
+                     │
+
+      ┌──────────────┼──────────────┐
+
+ Secure Agent Groups     Performance Tuning
+
+                     │
+
+         Connections & Connectors
+
+                     │
+
+         Asset Management
+
+                     │
+
+      Source Control & CLI Utility
+
+                     │
+
+     Bundle Management & Scheduling
+
+                     │
+
+     Monitoring & Operational Insights
+```
+
+---
+
+# Complete Workflow of Unit 3
+
+```
+Secure Agent Installation
+
+↓
+
+Secure Agent Groups
+
+↓
+
+Runtime Configuration
+
+↓
+
+Connection Configuration
+
+↓
+
+Asset Development
+
+↓
+
+Source Control
+
+↓
+
+Asset Import / Export
+
+↓
+
+Bundle Management
+
+↓
+
+Scheduling
+
+↓
+
+Monitoring
+
+↓
+
+Operational Insights
+```
+
+---
+
+# Comparison Tables
+
+## Secure Agent vs Serverless Runtime
+
+| Feature | Secure Agent | Serverless Runtime |
+|----------|--------------|--------------------|
+| Installation | Required | Not Required |
+| Infrastructure | Customer Managed | Informatica Managed |
+| Scaling | Manual | Automatic |
+| Maintenance | Customer | Informatica |
+| On-Premises Access | Supported | Limited |
+
+---
+
+## Connection vs Connector
+
+| Connection | Connector |
+|------------|-----------|
+| Stores configuration details | Provides communication capability |
+| Created by administrator | Built into IDMC |
+| Reusable object | Technology-specific adapter |
+
+---
+
+## Manual Execution vs Scheduling
+
+| Manual Execution | Scheduling |
+|------------------|------------|
+| Started by user | Automatic execution |
+| Suitable for testing | Suitable for production |
+| Time-consuming | Saves administrative effort |
+
+---
+
+## GUI vs CLI
+
+| GUI | CLI |
+|-----|-----|
+| Easy to use | Automation-friendly |
+| Manual operation | Script-based operation |
+| Suitable for beginners | Suitable for enterprise deployment |
+
+---
+
+# 20 Important Examination Points
+
+Students should remember the following:
+
+1. Secure Agent Groups improve scalability.
+2. High Availability reduces downtime.
+3. Load Balancing distributes workloads.
+4. Secure Agent Details show runtime information.
+5. Secure Agent Status indicates operational health.
+6. Data Integration Service executes mappings.
+7. JVM Heap Size affects runtime performance.
+8. Concurrent Jobs determine execution throughput.
+9. Serverless Runtime is managed by Informatica.
+10. A Connection stores configuration information.
+11. A Connector enables communication with external systems.
+12. Assets are reusable objects.
+13. Source Control maintains version history.
+14. Asset Management CLI supports automation.
+15. Bundles simplify deployment.
+16. Scheduling automates job execution.
+17. RunAJob executes tasks programmatically.
+18. Event Monitoring records runtime events.
+19. Operational Insights provides monitoring dashboards.
+20. Continuous monitoring improves system reliability.
+
+---
+
+# Frequently Asked Viva Questions
+
+1. What is a Secure Agent Group?
+2. Why is High Availability important?
+3. What information is available in Secure Agent Details?
+4. Explain Secure Agent Services.
+5. What is JVM Heap Size?
+6. Explain Serverless Runtime.
+7. Differentiate Connection and Connector.
+8. What is Source Control?
+9. Explain Bundle Management.
+10. What is the Asset Management CLI?
+11. Why is Scheduling important?
+12. What is the RunAJob Utility?
+13. What is Event Monitoring?
+14. Explain Operational Insights.
+15. How would you troubleshoot a failed integration job?
+
+---
+
+# Interview Preparation Questions
+
+1. How would you design an IDMC environment for a multinational organization?
+2. How do Secure Agent Groups improve enterprise deployments?
+3. How would you optimize Secure Agent performance?
+4. How do you migrate assets between environments?
+5. Why should Source Control be enabled?
+6. How would you secure database connections?
+7. Explain the purpose of Bundle Management.
+8. How would you monitor production integration jobs?
+9. Which performance metrics would you monitor?
+10. What are the benefits of Operational Insights?
+
+---
+
+# Glossary
+
+| Term | Meaning |
+|------|---------|
+| Secure Agent | Runtime software that executes integration jobs |
+| Secure Agent Group | Logical collection of Secure Agents |
+| Runtime Environment | Environment where integration jobs execute |
+| Connection | Configuration object for external systems |
+| Connector | Technology-specific communication adapter |
+| Asset | Reusable object within IDMC |
+| Source Control | Version management system |
+| Bundle | Package of related assets |
+| Schedule | Automated execution plan |
+| RunAJob | Utility for programmatic execution |
+| Event Monitoring | Monitoring of runtime events |
+| Operational Insights | Dashboard for operational analytics |
+
+---
+
+# CO3 Achievement Checklist
+
+After completing Unit 3, you should be able to:
+
+| Skill | Yes | No |
+|--------|:---:|:--:|
+| Explain Secure Agent Groups | ☐ | ☐ |
+| Manage Secure Agent Services | ☐ | ☐ |
+| Configure Runtime Properties | ☐ | ☐ |
+| Configure Connections | ☐ | ☐ |
+| Manage Assets | ☐ | ☐ |
+| Configure Source Control | ☐ | ☐ |
+| Use Asset Management CLI | ☐ | ☐ |
+| Deploy Bundles | ☐ | ☐ |
+| Create Schedules | ☐ | ☐ |
+| Monitor Jobs | ☐ | ☐ |
+| Interpret Operational Insights | ☐ | ☐ |
+
+---
+
+# Revision Strategy
+
+Before examinations:
+
+1. Review all chapter summaries.
+2. Practice laboratory exercises.
+3. Revise comparison tables.
+4. Attempt MCQs.
+5. Solve descriptive questions.
+6. Prepare architecture diagrams.
+7. Practice viva questions.
+
+---
+
+# Unit Summary
+
+In Unit 3, we learned how to administer and optimize enterprise IDMC environments.
+
+Major topics included:
+
+- Secure Agent Groups
+- Secure Agent Administration
+- Performance Tuning
+- Connections and Connectors
+- Asset Management
+- Source Control
+- Asset Management CLI
+- Bundle Management
+- Scheduling
+- Monitoring
+- Operational Insights
+
+These concepts provide the administrative and operational foundation required to deploy, manage, monitor, and optimize enterprise data integration solutions using Informatica Intelligent Data Management Cloud.
+
+---
+
+# End of Unit 3 Student Notes
