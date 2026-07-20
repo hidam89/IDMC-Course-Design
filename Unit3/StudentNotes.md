@@ -992,3 +992,401 @@ These concepts help administrators optimize IDMC environments for better speed, 
 ---
 
 # End of Chapter 3
+# Chapter 4
+
+# Connections and File Transfer Settings
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Define a Connection in IDMC.
+- Differentiate between Connections and Connectors.
+- Configure common enterprise connections.
+- Understand File Transfer settings.
+- Apply best practices for secure connection management.
+- Troubleshoot common connection problems.
+
+---
+
+# Introduction
+
+Every integration task in IDMC requires communication with external systems such as databases, cloud applications, APIs, or file servers.
+
+This communication is established through **Connections**.
+
+A properly configured connection allows IDMC to securely access source and target systems, while reusable connection objects simplify administration and improve security.
+
+---
+
+# What is a Connection?
+
+A **Connection** is a reusable configuration object that stores the information required to communicate with an external system.
+
+It contains details such as:
+
+- Connection Name
+- Connector Type
+- Host Name
+- Port Number
+- Username
+- Password
+- Runtime Environment
+- Security Settings
+
+Once created, a connection can be reused across multiple mappings, tasks, and workflows.
+
+---
+
+# Why are Connections Important?
+
+Connections provide several advantages:
+
+- Secure communication
+- Reusability
+- Simplified administration
+- Centralized configuration
+- Better governance
+
+Instead of entering credentials repeatedly, one reusable connection can be shared by many assets.
+
+---
+
+# Connection Architecture
+
+```
+                  IDMC
+
+                    │
+
+           Connection Object
+
+                    │
+
+            Secure Agent
+
+                    │
+
+    ┌────────┬────────┬────────┐
+
+ Oracle   Salesforce   FTP Server
+
+                    │
+
+          Source / Target Systems
+```
+
+---
+
+# What is a Connector?
+
+A **Connector** is a software component that enables IDMC to communicate with a particular technology or application.
+
+Each Connector understands the communication protocol of a specific system.
+
+For example:
+
+- Oracle Connector
+- SQL Server Connector
+- Salesforce Connector
+- SAP Connector
+- REST Connector
+
+---
+
+# Difference Between Connection and Connector
+
+| Connection | Connector |
+|------------|-----------|
+| Stores configuration details | Provides communication capability |
+| Created by the administrator | Built into IDMC |
+| Reusable object | Technology-specific adapter |
+| Uses a connector | Connects to applications or databases |
+
+---
+
+# Categories of Connectors
+
+## Database Connectors
+
+Used to connect relational databases.
+
+Examples:
+
+- Oracle
+- SQL Server
+- MySQL
+- PostgreSQL
+- Snowflake
+
+---
+
+## Cloud Application Connectors
+
+Used for SaaS applications.
+
+Examples:
+
+- Salesforce
+- Workday
+- ServiceNow
+- Microsoft Dynamics
+
+---
+
+## File Connectors
+
+Used to access files stored locally or in cloud storage.
+
+Examples:
+
+- Flat File
+- FTP
+- SFTP
+- Amazon S3
+- Azure Blob Storage
+- Google Cloud Storage
+
+---
+
+## API Connectors
+
+Used to communicate with web services.
+
+Examples:
+
+- REST API
+- SOAP Web Services
+
+---
+
+# Connection Configuration
+
+General steps to create a connection:
+
+1. Open **Administrator Console**.
+2. Navigate to **Connections**.
+3. Select **New Connection**.
+4. Choose the Connector Type.
+5. Enter connection details.
+6. Select the Runtime Environment.
+7. Test the connection.
+8. Save the connection.
+
+---
+
+# Common Connection Parameters
+
+| Parameter | Description |
+|-----------|-------------|
+| Connection Name | Unique name for the connection |
+| Connector Type | Oracle, Salesforce, etc. |
+| Host | Server name or IP address |
+| Port | Communication port |
+| Username | Login account |
+| Password | Authentication credential |
+| Runtime Environment | Hosted Agent or Secure Agent |
+
+---
+
+# Commonly Used Connections
+
+## Oracle Connection
+
+Required Information:
+
+- Host
+- Port
+- Service Name
+- Username
+- Password
+- Secure Agent
+
+---
+
+## SQL Server Connection
+
+Required Information:
+
+- Server Name
+- Database Name
+- Authentication Method
+- Runtime Environment
+
+---
+
+## Salesforce Connection
+
+Required Information:
+
+- Username
+- Password
+- Security Token
+- OAuth (if applicable)
+
+---
+
+## REST API Connection
+
+Required Information:
+
+- Endpoint URL
+- Authentication Method
+- HTTP Method
+- Request Headers
+
+---
+
+## Amazon S3 Connection
+
+Required Information:
+
+- Bucket Name
+- Access Key
+- Secret Key
+- Region
+
+---
+
+# File Transfer Settings
+
+IDMC supports secure transfer of files between local systems and cloud storage.
+
+Supported file locations include:
+
+- Local File System
+- FTP
+- SFTP
+- Amazon S3
+- Azure Blob Storage
+- Google Cloud Storage
+
+Common operations include:
+
+- Upload
+- Download
+- Copy
+- Move
+- Delete
+- Archive
+
+---
+
+# Enterprise Example
+
+A healthcare organization integrates patient information from multiple systems.
+
+Connections used include:
+
+- Oracle Database
+- Salesforce
+- SFTP Server
+- REST API
+
+The same connection objects are reused across several mappings, reducing administrative effort and improving consistency.
+
+---
+
+# Best Practices
+
+- Use meaningful connection names.
+- Test every connection before deployment.
+- Store credentials securely.
+- Reuse existing connections where possible.
+- Apply the Principle of Least Privilege.
+- Monitor connection health regularly.
+
+---
+
+# Common Connection Problems
+
+| Problem | Possible Cause | Solution |
+|----------|----------------|----------|
+| Connection Failed | Incorrect credentials | Verify username and password |
+| Database Not Reachable | Network issue | Check host, port, and firewall |
+| Authentication Error | Invalid token | Regenerate authentication token |
+| Timeout | Slow network | Increase timeout and verify connectivity |
+| Runtime Error | Incorrect Runtime Environment | Select the appropriate Secure Agent |
+
+---
+
+# Advantages
+
+✔ Secure communication
+
+✔ Reusable configurations
+
+✔ Simplified administration
+
+✔ Better governance
+
+✔ Easier maintenance
+
+---
+
+# Important Points
+
+✔ A Connection stores configuration information.
+
+✔ A Connector enables communication with a specific technology.
+
+✔ Connections are reusable across multiple assets.
+
+✔ Always test a connection before using it.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. Define a Connection.
+2. What is a Connector?
+3. Name any two database connectors available in IDMC.
+
+---
+
+### 5 Marks
+
+1. Differentiate between Connection and Connector.
+2. Explain the steps involved in creating a Connection.
+
+---
+
+### 10 Marks
+
+Explain Connections and Connectors in IDMC, including configuration steps, common connection types, file transfer settings, and best practices.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| Connection stores configuration details. |
+| Connector provides communication capability. |
+| Connections are reusable. |
+| Always test connections before deployment. |
+| File Transfer supports FTP, SFTP, and cloud storage. |
+
+---
+
+# Chapter Summary
+
+In this chapter, we learned:
+
+- Connections
+- Connectors
+- Connection Configuration
+- Common Connection Types
+- File Transfer Settings
+- Best Practices
+- Troubleshooting
+
+These concepts are fundamental for integrating IDMC with enterprise databases, cloud applications, APIs, and file storage systems.
+
+---
+
+# End of Chapter 4
