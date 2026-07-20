@@ -2696,3 +2696,448 @@ In this chapter, you learned:
 - Enterprise applications of governance.
 
 Cloud Data Governance & Catalog enables organizations to manage enterprise data responsibly by improving trust, compliance, transparency, and collaboration across the organization.
+---
+
+# Chapter 8
+
+# Cloud Integration Hub (CIH) and Cloud Data Marketplace (CDMP)
+
+---
+
+## Learning Objectives
+
+After studying this chapter, you should be able to:
+
+- Define Cloud Integration Hub (CIH).
+- Explain the Publish–Subscribe integration model.
+- Describe the purpose of Cloud Data Marketplace (CDMP).
+- Explain governed data sharing.
+- Differentiate CIH and CDMP.
+- Identify enterprise use cases of CIH and CDMP.
+
+---
+
+# Introduction
+
+After data has been integrated, cleansed, standardized, and governed, organizations must distribute trusted data efficiently to multiple applications and business users.
+
+Cloud Integration Hub (CIH) enables efficient data distribution, while Cloud Data Marketplace (CDMP) enables business users to discover and access trusted datasets through a governed self-service platform.
+
+Together, these services improve enterprise collaboration and accelerate data-driven decision making.
+
+---
+
+# Cloud Integration Hub (CIH)
+
+## What is CIH?
+
+Cloud Integration Hub (CIH) is an Informatica Intelligent Data Management Cloud (IDMC) service that distributes trusted enterprise data using a **Publish–Subscribe architecture**, reducing complex point-to-point integrations.
+
+Instead of connecting every application directly to every other application, data is published once and consumed by multiple subscribers.
+
+---
+
+# Why is CIH Required?
+
+Without CIH:
+
+- Multiple point-to-point integrations
+- High maintenance effort
+- Duplicate data movement
+- Increased development cost
+- Difficult scalability
+
+With CIH:
+
+- Publish once
+- Consume many times
+- Centralized data distribution
+- Easier maintenance
+- Better scalability
+
+---
+
+# Traditional Point-to-Point Integration
+
+```
+System A → System B
+
+System A → System C
+
+System A → System D
+
+System B → System D
+
+System C → System D
+```
+
+As the number of systems grows, integration becomes increasingly complex.
+
+---
+
+# Publish–Subscribe Architecture
+
+```
+              Cloud Integration Hub
+
+                     │
+
+      ┌──────────────┼──────────────┐
+
+      │              │              │
+
+   Sales         Marketing      Finance
+
+      │              │              │
+
+      └──────────────┼──────────────┘
+
+                Analytics
+```
+
+The producer publishes trusted data once.
+
+Multiple subscribers consume the same trusted data.
+
+---
+
+# CIH Workflow
+
+```
+Enterprise Data
+
+↓
+
+Cloud Data Integration
+
+↓
+
+Cloud Data Quality
+
+↓
+
+Master Data Management
+
+↓
+
+Cloud Integration Hub
+
+↓
+
+Sales
+
+Marketing
+
+Finance
+
+Analytics
+
+Mobile App
+```
+
+---
+
+# Enterprise Example
+
+## Retail Company
+
+Trusted product information is published through CIH.
+
+Subscribers include:
+
+- E-commerce Website
+- Mobile Application
+- Marketing Team
+- Sales Team
+- Analytics Platform
+
+Whenever product information changes, every subscriber automatically receives the updated information.
+
+---
+
+# Advantages of CIH
+
+- Simplified integration
+- Reduced maintenance
+- Improved scalability
+- Faster data distribution
+- Consistent enterprise information
+- Lower operational cost
+
+---
+
+# Cloud Data Marketplace (CDMP)
+
+## What is CDMP?
+
+Cloud Data Marketplace (CDMP) is an Informatica Intelligent Data Management Cloud (IDMC) service that enables business users to discover, request, and access certified enterprise datasets through a governed self-service marketplace.
+
+---
+
+# Why is CDMP Required?
+
+Without CDMP:
+
+- Users depend on IT teams.
+- Duplicate datasets are created.
+- Untrusted reports are generated.
+- Data discovery is slow.
+
+With CDMP:
+
+- Self-service access
+- Certified datasets
+- Faster analytics
+- Better governance
+- Improved collaboration
+
+---
+
+# CDMP Workflow
+
+```
+Business User
+
+↓
+
+Search Dataset
+
+↓
+
+Certified Data Catalog
+
+↓
+
+Approval
+
+↓
+
+Access Granted
+
+↓
+
+Business Analytics
+```
+
+---
+
+# Enterprise Example
+
+## Marketing Department
+
+Requirement:
+
+Sales data for the last three years.
+
+Without CDMP:
+
+- Send email to IT.
+- Wait for approval.
+- Multiple versions of reports.
+
+With CDMP:
+
+- Search certified dataset.
+- Request access.
+- Manager approves.
+- Download trusted dataset.
+- Begin analysis immediately.
+
+---
+
+# CIH vs CDMP
+
+| Cloud Integration Hub (CIH) | Cloud Data Marketplace (CDMP) |
+|-----------------------------|-------------------------------|
+| Distributes trusted data | Provides governed access to trusted datasets |
+| Publish–Subscribe model | Self-service data discovery |
+| System-to-System communication | User-to-Data interaction |
+| Supports applications | Supports business users |
+
+---
+
+# CIH + CDMP Together
+
+```
+Enterprise Systems
+
+↓
+
+CDI
+
+↓
+
+CDQ
+
+↓
+
+MDM
+
+↓
+
+CDGC
+
+↓
+
+CIH
+
+↓
+
+Trusted Enterprise Data
+
+↓
+
+Cloud Data Marketplace
+
+↓
+
+Business Users
+
+↓
+
+Analytics & Decision Making
+```
+
+This architecture shows how trusted data flows from operational systems to business users through governed enterprise services.
+
+---
+
+# Advantages of CDMP
+
+- Faster data discovery
+- Reduced dependency on IT
+- Certified datasets
+- Improved governance
+- Better collaboration
+- Increased productivity
+
+---
+
+# Limitations
+
+- Requires governance policies
+- Requires metadata management
+- User permissions must be maintained
+- Dataset owners must keep information updated
+
+---
+
+# Remember
+
+**CIH distributes trusted data.**
+
+**CDMP helps users discover and access trusted data.**
+
+Both services complement Cloud Data Governance.
+
+---
+
+# Exam Tips
+
+Frequently asked university questions:
+
+1. Define Cloud Integration Hub.
+2. Explain Publish–Subscribe architecture.
+3. Define Cloud Data Marketplace.
+4. Differentiate CIH and CDMP.
+5. Explain how CIH supports enterprise integration.
+
+---
+
+# Frequently Asked Questions
+
+### Q1. Why is Publish–Subscribe better than point-to-point integration?
+
+**Answer:**
+
+Publish–Subscribe reduces the number of integration connections, making enterprise systems easier to maintain, scale, and manage.
+
+---
+
+### Q2. Does CDMP store enterprise data?
+
+**Answer:**
+
+No.
+
+CDMP provides governed access to certified datasets. The actual data remains in enterprise storage systems.
+
+---
+
+### Q3. Who benefits from CDMP?
+
+**Answer:**
+
+Business analysts, data scientists, managers, auditors, and other authorized users who need trusted enterprise data.
+
+---
+
+# Practice Questions
+
+## Multiple Choice
+
+1. Which IDMC service uses the Publish–Subscribe model?
+2. Which service enables self-service access to datasets?
+3. Which service distributes trusted data to multiple applications?
+
+---
+
+## Short Answer
+
+1. Define Cloud Integration Hub.
+2. Define Cloud Data Marketplace.
+3. Explain Publish–Subscribe architecture.
+
+---
+
+## Descriptive Questions
+
+1. Explain the architecture of Cloud Integration Hub.
+2. Differentiate CIH and CDMP.
+3. Explain how CIH and CDMP support enterprise data management.
+
+---
+
+## Scenario-Based Question
+
+A multinational retail company wants to:
+
+- Publish trusted product information once.
+- Share it with multiple business applications.
+- Allow analysts to discover certified sales datasets without requesting data from the IT department.
+
+Answer the following:
+
+1. Which IDMC service should distribute the data?
+2. Which IDMC service should provide self-service access?
+3. Explain how these services improve enterprise efficiency.
+
+---
+
+# Quick Revision
+
+✔ Publish–Subscribe
+
+✔ Data Distribution
+
+✔ Certified Dataset
+
+✔ Self-Service Analytics
+
+✔ Governed Data Sharing
+
+✔ Enterprise Collaboration
+
+---
+
+# Chapter Summary
+
+In this chapter, you learned:
+
+- The purpose of Cloud Integration Hub (CIH).
+- The Publish–Subscribe architecture.
+- The role of Cloud Data Marketplace (CDMP).
+- How trusted enterprise data is distributed and consumed.
+- The relationship between CIH, CDMP, and Cloud Data Governance.
+
+CIH and CDMP complete the enterprise data management lifecycle by ensuring that trusted data reaches the right applications and users in a secure, governed, and scalable manner.
