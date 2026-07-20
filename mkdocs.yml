@@ -1,31 +1,37 @@
 site_name: Informatica Intelligent Data Management Cloud (IDMC)
-
 site_description: Complete Open Source IDMC Course Repository
-
 site_author: Hidam Rameshwar Singh
-
-repo_url: https://github.com/<your-github-username>/IDMC-Course-Design
 
 theme:
   name: material
+  language: en
 
   palette:
     - scheme: default
       primary: blue
-      accent: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
 
     - scheme: slate
       primary: blue
-      accent: blue
+      accent: light blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.instant
+    - navigation.expand
+    - toc.integrate
     - search.highlight
     - search.share
     - content.code.copy
-    - toc.integrate
+    - content.tabs.link
 
 plugins:
   - search
@@ -38,3 +44,19 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Getting Started: getting-started.md
+  - Course Outcomes: course-outcomes.md
+
+  - Unit 1:
+      - Overview: unit1.md
+
+  - Unit 2:
+      - Overview: unit2.md
+
+  - Unit 3:
+      - Overview: unit3.md
+
+  - Unit 4:
+      - Overview: unit4.md
+
+  - References: references.md
