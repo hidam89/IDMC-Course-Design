@@ -1070,3 +1070,277 @@ User Statistics enable administrators to monitor users effectively, improve secu
 ---
 
 # End of Chapter 4
+# Chapter 5
+
+# User Groups
+
+---
+
+## Introduction
+
+As organizations grow, the number of users increases significantly. Managing permissions individually for every user becomes difficult and time-consuming.
+
+To simplify administration, Informatica Intelligent Cloud Services (IICS) provides **User Groups**. A User Group is a logical collection of users with similar responsibilities, allowing administrators to manage multiple users together.
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Define User Groups.
+- Explain the purpose of User Groups.
+- Describe the process of creating User Groups.
+- Explain how User Groups simplify administration.
+- Differentiate User Groups from User Roles.
+
+---
+
+# What is a User Group?
+
+A **User Group** is a collection of users who perform similar tasks or require similar access within an organization.
+
+Instead of assigning permissions to each individual user, administrators manage users collectively through groups.
+
+---
+
+# Why are User Groups Required?
+
+Consider an organization with:
+
+- 100 Developers
+- 50 Business Analysts
+- 20 Data Engineers
+- 10 Administrators
+
+Assigning permissions individually to every employee would be difficult.
+
+Instead, administrators create groups such as:
+
+- Developers
+- Business Analysts
+- Data Engineers
+- Administrators
+
+Users are simply added to the appropriate group.
+
+---
+
+# User Group Structure
+
+```
+Organization
+
+│
+
+├── Administrators
+
+├── Developers
+
+├── Data Engineers
+
+├── Business Analysts
+
+└── Auditors
+```
+
+Each group contains users with similar responsibilities.
+
+---
+
+# Benefits of User Groups
+
+- Simplifies administration
+- Reduces repetitive configuration
+- Improves consistency
+- Supports scalability
+- Makes permission management easier
+- Facilitates auditing
+
+---
+
+# Creating a User Group
+
+General procedure:
+
+1. Open **Administrator Console**.
+2. Navigate to **User Groups**.
+3. Select **Create User Group**.
+4. Enter:
+   - Group Name
+   - Description
+5. Save the group.
+6. Add users.
+7. Verify membership.
+
+---
+
+# Managing User Groups
+
+Administrators can:
+
+- Create groups
+- Rename groups
+- Edit group details
+- Add users
+- Remove users
+- Delete groups
+
+---
+
+# Group Membership
+
+A user may belong to:
+
+- One group
+- Multiple groups
+
+Example:
+
+**Rahul**
+
+- Developers
+- API Development Team
+- Cloud Migration Team
+
+This provides flexibility in managing users.
+
+---
+
+# Enterprise Example
+
+ABC Bank has the following departments:
+
+- Retail Banking
+- Corporate Banking
+- Loans
+- Information Technology
+- Human Resources
+
+Each department is represented by a separate User Group.
+
+When a new employee joins the IT department, the administrator only needs to add the user to the **IT Group**.
+
+---
+
+# User Groups vs User Roles
+
+| User Groups | User Roles |
+|--------------|------------|
+| Organize users | Define permissions |
+| Administrative convenience | Security control |
+| Logical grouping | Access control |
+| Simplifies management | Controls system access |
+
+---
+
+# Advantages
+
+- Easy administration
+- Better organization
+- Reduced configuration effort
+- Consistent user management
+- Improved scalability
+
+---
+
+# Limitations
+
+- Groups alone do not define permissions.
+- Poor group design increases management complexity.
+- Periodic review of memberships is necessary.
+
+---
+
+# Best Practices
+
+- Create groups based on business functions.
+- Use meaningful group names.
+- Review memberships regularly.
+- Remove inactive users.
+- Avoid duplicate groups.
+
+---
+
+# Common Mistakes
+
+❌ Creating unnecessary groups.
+
+✔ Create groups only when required.
+
+---
+
+❌ Adding all users to the same group.
+
+✔ Organize users according to their responsibilities.
+
+---
+
+❌ Never reviewing group memberships.
+
+✔ Perform periodic membership reviews.
+
+---
+
+# Important Points
+
+✔ User Groups simplify administration.
+
+✔ A user may belong to multiple groups.
+
+✔ User Groups organize users but do not directly assign permissions.
+
+✔ Groups improve scalability and consistency.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. Define User Group.
+2. State two benefits of User Groups.
+
+---
+
+### 5 Marks
+
+1. Explain the process of creating a User Group.
+2. Differentiate User Groups and User Roles.
+
+---
+
+### 10 Marks
+
+Explain User Groups in IICS with suitable examples and architecture.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| Logical collection of users |
+| Simplifies administration |
+| Users can belong to multiple groups |
+| Does not directly define permissions |
+| Supports enterprise scalability |
+
+---
+
+# Chapter Summary
+
+In this chapter, we studied:
+
+- User Groups
+- Group creation
+- Group management
+- Group membership
+- Enterprise applications
+- Benefits and limitations
+
+User Groups help administrators manage large numbers of users efficiently while maintaining an organized and scalable administrative structure.
+
+---
+
+# End of Chapter 5
