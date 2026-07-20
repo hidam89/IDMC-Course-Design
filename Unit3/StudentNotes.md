@@ -615,3 +615,380 @@ Understanding Secure Agent administration enables organizations to maintain reli
 ---
 
 # End of Chapter 2
+# Chapter 3
+
+# Performance Tuning
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Explain the importance of performance tuning.
+- Configure Secure Agent Service Properties.
+- Understand Data Integration Server optimization.
+- Explain the Serverless Runtime Environment.
+- Identify factors affecting runtime performance.
+- Apply performance optimization best practices.
+
+---
+
+# Introduction
+
+In enterprise environments, thousands of integration jobs may execute every day. If the Secure Agent is not configured properly, jobs may run slowly, consume excessive resources, or even fail.
+
+Performance tuning is the process of optimizing the Secure Agent and Runtime Environment to improve speed, scalability, and reliability.
+
+Proper tuning ensures that integration jobs execute efficiently while making the best use of available system resources.
+
+---
+
+# What is Performance Tuning?
+
+Performance tuning refers to the process of configuring runtime parameters to improve the execution efficiency of IDMC integration jobs.
+
+The main objectives are:
+
+- Improve execution speed
+- Increase throughput
+- Reduce execution failures
+- Optimize CPU and memory usage
+- Enhance scalability
+
+---
+
+# Performance Tuning Architecture
+
+```
+              Integration Job
+
+                     │
+
+             Secure Agent Runtime
+
+                     │
+
+        ┌────────────┼────────────┐
+
+     CPU Usage   Memory Usage   Threads
+
+                     │
+
+         Optimized Job Execution
+
+                     │
+
+          Faster and Stable Results
+```
+
+---
+
+# Secure Agent Service Properties
+
+Secure Agent Service Properties determine how runtime services utilize system resources.
+
+Important properties include:
+
+- Maximum Concurrent Jobs
+- JVM Heap Size
+- Thread Count
+- Cache Size
+- Temporary Directory
+- Logging Level
+
+Proper configuration improves both performance and reliability.
+
+---
+
+# Maximum Concurrent Jobs
+
+This property specifies how many integration jobs can execute simultaneously.
+
+### Lower Value
+
+Advantages:
+
+- Lower CPU usage
+- Lower memory consumption
+
+Disadvantages:
+
+- Longer job queue
+- Reduced throughput
+
+### Higher Value
+
+Advantages:
+
+- Faster processing
+- Improved throughput
+
+Disadvantages:
+
+- Higher CPU usage
+- Greater memory consumption
+
+The value should match the server's hardware capacity.
+
+---
+
+# JVM Heap Size
+
+The Java Virtual Machine (JVM) Heap Size controls the amount of memory allocated to runtime services.
+
+### If Heap Size is Too Small
+
+- OutOfMemory errors
+- Frequent garbage collection
+- Slow execution
+
+### If Heap Size is Too Large
+
+- Wasted memory
+- Longer startup time
+
+Proper sizing improves application stability and performance.
+
+---
+
+# Thread Management
+
+Threads allow multiple tasks to execute simultaneously.
+
+Increasing thread count can improve performance through parallel execution.
+
+However, excessive threads may lead to:
+
+- CPU contention
+- Context switching
+- Reduced efficiency
+
+Thread settings should be tuned according to workload and available CPU resources.
+
+---
+
+# Logging Level
+
+Logging records information about runtime execution.
+
+Common logging levels are:
+
+- ERROR
+- WARNING
+- INFO
+- DEBUG
+
+### Recommended Settings
+
+| Environment | Logging Level |
+|-------------|---------------|
+| Development | DEBUG |
+| Testing | INFO |
+| Production | ERROR / WARNING |
+
+Using detailed logging in production can negatively impact performance.
+
+---
+
+# Data Integration Server
+
+The Data Integration Server is responsible for executing integration tasks such as:
+
+- Mappings
+- Synchronization Tasks
+- Data Transformations
+- Replication Jobs
+
+Its performance directly affects the overall execution speed of IDMC.
+
+---
+
+# Factors Affecting Performance
+
+Several factors influence runtime performance:
+
+- CPU speed
+- Available RAM
+- Disk I/O
+- Network latency
+- Database response time
+- Source system performance
+- Target system performance
+
+A bottleneck in any of these areas can slow down integration jobs.
+
+---
+
+# Performance Optimization Techniques
+
+Administrators can improve performance by:
+
+- Increasing available memory
+- Optimizing SQL queries
+- Reducing unnecessary logging
+- Configuring suitable concurrent job limits
+- Scheduling large jobs during off-peak hours
+- Monitoring CPU and memory utilization
+- Using efficient transformations
+
+---
+
+# Serverless Runtime Environment
+
+A Serverless Runtime Environment is a cloud-managed execution platform provided by Informatica.
+
+Administrators do not manage infrastructure such as servers or operating systems.
+
+Instead, Informatica automatically handles:
+
+- Scaling
+- Maintenance
+- Updates
+- Resource allocation
+
+This allows developers to focus on integration logic rather than infrastructure management.
+
+---
+
+# Secure Agent vs Serverless Runtime
+
+| Feature | Secure Agent | Serverless Runtime |
+|----------|--------------|--------------------|
+| Installation | Required | Not Required |
+| Infrastructure | Customer Managed | Informatica Managed |
+| Scaling | Manual | Automatic |
+| Maintenance | Customer | Informatica |
+| On-Premises Access | Supported | Limited |
+
+---
+
+# Enterprise Example
+
+An e-commerce company processes millions of customer transactions daily.
+
+Initially, the Secure Agent experienced:
+
+- High CPU utilization
+- Long execution times
+- Frequent job failures
+
+The administrator:
+
+- Increased JVM Heap Size
+- Optimized concurrent job settings
+- Reduced unnecessary logging
+- Scheduled batch jobs overnight
+
+As a result:
+
+- Job execution time decreased
+- System stability improved
+- Resource utilization became more efficient
+
+---
+
+# Best Practices
+
+- Monitor system resources regularly.
+- Tune one parameter at a time.
+- Test changes in a non-production environment.
+- Keep runtime software updated.
+- Schedule resource-intensive jobs during low-traffic periods.
+- Maintain baseline performance metrics for comparison.
+
+---
+
+# Common Performance Issues
+
+| Issue | Possible Cause | Solution |
+|--------|----------------|----------|
+| Slow Job Execution | High system load | Optimize runtime configuration |
+| OutOfMemory Error | Insufficient JVM Heap | Increase heap size |
+| High CPU Usage | Too many concurrent jobs | Reduce concurrency or upgrade hardware |
+| Long Queue Time | Limited resources | Increase available resources |
+| Frequent Job Failures | Poor tuning | Review runtime configuration |
+
+---
+
+# Advantages
+
+✔ Faster job execution
+
+✔ Better resource utilization
+
+✔ Improved scalability
+
+✔ Reduced execution failures
+
+✔ Stable runtime performance
+
+---
+
+# Important Points
+
+✔ Performance tuning improves runtime efficiency.
+
+✔ JVM Heap Size significantly impacts performance.
+
+✔ Concurrent job settings affect throughput.
+
+✔ Serverless Runtime reduces infrastructure management.
+
+✔ Monitoring is essential for continuous optimization.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. Define Performance Tuning.
+2. What is JVM Heap Size?
+3. What is a Serverless Runtime Environment?
+
+---
+
+### 5 Marks
+
+1. Explain Secure Agent Service Properties.
+2. Compare Secure Agent and Serverless Runtime.
+
+---
+
+### 10 Marks
+
+Explain Performance Tuning in IDMC, including Secure Agent Service Properties, Data Integration Server optimization, Serverless Runtime Environment, and best practices.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| Performance tuning optimizes execution efficiency. |
+| JVM Heap Size controls memory allocation. |
+| Concurrent Jobs determine parallel execution. |
+| Serverless Runtime is managed by Informatica. |
+| Logging level affects runtime performance. |
+
+---
+
+# Chapter Summary
+
+In this chapter, we learned:
+
+- Performance Tuning
+- Secure Agent Service Properties
+- JVM Heap Size
+- Thread Management
+- Logging Levels
+- Data Integration Server
+- Serverless Runtime Environment
+- Performance Optimization Techniques
+
+These concepts help administrators optimize IDMC environments for better speed, scalability, and reliability.
+
+---
+
+# End of Chapter 3
