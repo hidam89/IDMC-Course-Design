@@ -1100,3 +1100,256 @@ Effective use of User Statistics enables administrators to improve security, opt
 ---
 
 # End of Chapter 4
+# Chapter 5
+
+# User Groups
+
+---
+
+## Course Outcome
+
+CO2
+
+---
+
+## Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Explain the purpose of User Groups in IICS.
+- Create and manage User Groups.
+- Assign users to groups.
+- Differentiate between User Groups and User Roles.
+- Apply User Groups in enterprise environments.
+
+---
+
+# Introduction
+
+As organizations grow, managing permissions for hundreds or thousands of individual users becomes increasingly difficult. Assigning permissions to each user separately is time-consuming and prone to errors.
+
+IICS addresses this challenge through **User Groups**, which allow administrators to organize users with similar responsibilities and manage them collectively.
+
+---
+
+# What is a User Group?
+
+A **User Group** is a logical collection of users who share similar responsibilities or require similar access privileges.
+
+Instead of assigning permissions individually, administrators can assign permissions to a group, and every member of that group inherits the assigned access.
+
+---
+
+# Why are User Groups Required?
+
+Consider an organization with:
+
+- 50 Data Engineers
+- 20 Data Analysts
+- 10 Administrators
+- 30 Business Users
+
+Assigning permissions individually to 110 users is inefficient.
+
+Instead, the administrator creates groups:
+
+- Data Engineers
+- Data Analysts
+- Administrators
+- Business Users
+
+Permissions are then managed at the group level.
+
+---
+
+# User Group Architecture
+
+```
+Organization
+
+│
+
+├── Administrators
+
+├── Developers
+
+├── Analysts
+
+├── Business Users
+
+└── Auditors
+```
+
+Each group contains multiple users who perform similar tasks.
+
+---
+
+# Advantages of User Groups
+
+- Simplifies administration.
+- Reduces repetitive configuration.
+- Supports scalability.
+- Improves consistency.
+- Minimizes configuration errors.
+- Simplifies auditing.
+
+---
+
+# Creating a User Group
+
+General procedure:
+
+1. Open the **Administrator** console.
+2. Navigate to **User Groups**.
+3. Select **Create User Group**.
+4. Enter:
+   - Group Name
+   - Description
+5. Save the group.
+6. Add users.
+7. Verify membership.
+
+---
+
+# Managing User Groups
+
+Administrators can:
+
+- Create groups
+- Edit groups
+- Rename groups
+- Add members
+- Remove members
+- Delete groups
+
+---
+
+# Group Membership
+
+A user may belong to:
+
+- One group
+- Multiple groups
+
+Example:
+
+John belongs to:
+
+- Developers
+- API Team
+- Cloud Migration Project
+
+This enables flexible access management.
+
+---
+
+# Enterprise Example
+
+ABC Bank has:
+
+- Retail Banking
+- Corporate Banking
+- Loan Department
+- Digital Banking
+- IT Department
+
+Each department becomes a separate User Group.
+
+When a new employee joins the Loan Department, the administrator simply adds the user to the Loan Department group instead of configuring permissions manually.
+
+---
+
+# User Groups vs User Roles
+
+| User Groups | User Roles |
+|-------------|------------|
+| Organize users | Define permissions |
+| Administrative convenience | Access control |
+| Users can belong to multiple groups | Users receive privileges through assigned roles |
+| Logical grouping | Security implementation |
+
+---
+
+# Best Practices
+
+- Create groups based on business functions.
+- Use meaningful naming conventions.
+- Review memberships regularly.
+- Remove inactive members.
+- Avoid creating unnecessary groups.
+
+---
+
+# Common Mistakes
+
+❌ Creating duplicate groups.
+
+✔ Maintain one group for each business function.
+
+---
+
+❌ Adding every user to every group.
+
+✔ Add users only where necessary.
+
+---
+
+❌ Ignoring periodic reviews.
+
+✔ Review memberships regularly.
+
+---
+
+# Classroom Activity
+
+Design User Groups for a university.
+
+Possible groups:
+
+- Faculty
+- Students
+- Research Scholars
+- Administration
+- Library Staff
+
+Discuss how grouping simplifies administration.
+
+---
+
+# Discussion Question
+
+Is creating User Groups better than assigning permissions individually?
+
+Justify your answer using a large enterprise example.
+
+---
+
+# Faculty Tips
+
+Explain User Groups using:
+
+- Microsoft Teams
+- WhatsApp Groups
+- Google Classroom
+
+Students immediately understand grouping concepts because they already use these platforms.
+
+---
+
+# Chapter Summary
+
+This chapter introduced:
+
+- User Groups
+- Group Creation
+- Group Management
+- Group Membership
+- Enterprise Applications
+- Best Practices
+- Administrative Benefits
+
+User Groups simplify administration while improving consistency and scalability.
+
+---
+
+# End of Chapter 5
