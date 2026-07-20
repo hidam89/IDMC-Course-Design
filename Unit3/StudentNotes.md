@@ -1390,3 +1390,395 @@ These concepts are fundamental for integrating IDMC with enterprise databases, c
 ---
 
 # End of Chapter 4
+# Chapter 5
+
+# Asset Management and Source Control
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Define an Asset in IDMC.
+- Identify different types of assets.
+- Explain the Asset Lifecycle.
+- Manage assets effectively.
+- Configure privileges and permissions.
+- Understand Source Control concepts.
+- Apply best practices for enterprise asset governance.
+
+---
+
+# Introduction
+
+In Informatica Intelligent Data Management Cloud (IDMC), every object created for integration is known as an **Asset**.
+
+Examples include:
+
+- Connections
+- Mappings
+- Mapping Tasks
+- Workflows
+- Schedules
+- Runtime Environments
+- Secure Agent Configurations
+
+As organizations grow, managing these assets efficiently becomes essential for maintaining security, collaboration, and consistency across development teams.
+
+---
+
+# What is an Asset?
+
+An **Asset** is a reusable object created and managed within IDMC.
+
+Assets define:
+
+- Integration logic
+- Configuration settings
+- Metadata
+- Runtime information
+- Scheduling information
+
+Since assets are reusable, they help reduce duplication and improve development efficiency.
+
+---
+
+# Asset Architecture
+
+```
+                 IDMC Organization
+
+                        │
+
+                  Project / Folder
+
+                        │
+
+    ┌──────────┬──────────┬──────────┐
+
+ Connections  Mappings  Tasks  Workflows
+
+                        │
+
+                  Runtime Assets
+
+                        │
+
+                 Secure Agent Group
+```
+
+---
+
+# Types of Assets
+
+| Asset Type | Purpose |
+|------------|---------|
+| Connection | Connects to external systems |
+| Mapping | Defines data transformation logic |
+| Mapping Task | Executes a mapping |
+| Workflow | Coordinates multiple tasks |
+| Schedule | Automates task execution |
+| Runtime Environment | Executes integration jobs |
+| Secure Agent | Connects IDMC to enterprise systems |
+
+---
+
+# Asset Lifecycle
+
+Every asset passes through several stages during its lifetime.
+
+```
+Create
+
+↓
+
+Develop
+
+↓
+
+Test
+
+↓
+
+Deploy
+
+↓
+
+Maintain
+
+↓
+
+Archive
+
+↓
+
+Delete
+```
+
+### Explanation of Each Stage
+
+**Create:**  
+The asset is initially created.
+
+**Develop:**  
+Configuration and business logic are added.
+
+**Test:**  
+The asset is validated in a test environment.
+
+**Deploy:**  
+The validated asset is moved to production.
+
+**Maintain:**  
+Updates and improvements are applied as business needs change.
+
+**Archive:**  
+Unused assets are preserved for future reference.
+
+**Delete:**  
+Assets that are no longer required are permanently removed.
+
+---
+
+# Managing Assets
+
+Administrators can perform the following operations:
+
+- Create
+- Edit
+- View
+- Copy
+- Move
+- Rename
+- Import
+- Export
+- Archive
+- Delete
+
+Proper asset management improves maintainability and collaboration.
+
+---
+
+# Organizing Assets
+
+Recommended practices include:
+
+- Create folders based on projects.
+- Use meaningful naming conventions.
+- Separate Development, Testing, and Production assets.
+- Group related assets together.
+- Archive obsolete assets rather than deleting them immediately.
+
+---
+
+# Privileges and Permissions
+
+Permissions determine what actions users can perform on assets.
+
+Common permission levels include:
+
+- Read
+- Create
+- Modify
+- Execute
+- Delete
+- Share
+- Manage
+
+Proper permission management improves security and prevents unauthorized changes.
+
+---
+
+# Role-Based Permissions
+
+| Role | Typical Permissions |
+|------|---------------------|
+| Organization Administrator | Full Control |
+| Developer | Create, Modify, Execute |
+| Operator | Execute and Monitor |
+| Business User | Read Only |
+| Auditor | View Reports |
+
+---
+
+# Why Permissions are Important
+
+Permissions help organizations to:
+
+- Protect important assets.
+- Prevent accidental modifications.
+- Support regulatory compliance.
+- Improve accountability.
+- Maintain secure development practices.
+
+---
+
+# What is Source Control?
+
+Source Control is a system that records and manages changes made to assets over time.
+
+It allows multiple developers to work together while maintaining a complete history of changes.
+
+IDMC can integrate with external version control systems such as Git.
+
+---
+
+# Source Control Workflow
+
+```
+Create Asset
+
+↓
+
+Modify Asset
+
+↓
+
+Commit Changes
+
+↓
+
+Version Repository
+
+↓
+
+Review
+
+↓
+
+Deploy
+```
+
+---
+
+# Benefits of Source Control
+
+- Version history
+- Team collaboration
+- Easy rollback
+- Change tracking
+- Controlled deployment
+- Better software quality
+
+---
+
+# Enterprise Example
+
+A software company develops multiple integration projects.
+
+Developers create mappings and commit their changes to a Git repository.
+
+Before deployment:
+
+- Code is reviewed.
+- Assets are tested.
+- Approved versions are deployed to production.
+
+This process improves quality and reduces deployment errors.
+
+---
+
+# Best Practices
+
+- Use clear naming conventions.
+- Organize assets into logical folders.
+- Apply the Principle of Least Privilege.
+- Enable Source Control for all projects.
+- Review permissions periodically.
+- Archive inactive assets instead of deleting them.
+
+---
+
+# Common Issues
+
+| Problem | Possible Cause | Solution |
+|----------|----------------|----------|
+| User cannot modify an asset | Insufficient permissions | Assign Modify permission |
+| Asset not visible | Folder restrictions | Verify folder permissions |
+| Source Control unavailable | Repository not configured | Configure repository settings |
+| Version conflict | Simultaneous changes | Merge and resolve conflicts |
+
+---
+
+# Advantages
+
+✔ Reusable assets
+
+✔ Better organization
+
+✔ Improved collaboration
+
+✔ Strong security
+
+✔ Simplified maintenance
+
+---
+
+# Important Points
+
+✔ Assets are reusable objects within IDMC.
+
+✔ Proper organization improves maintainability.
+
+✔ Permissions protect enterprise resources.
+
+✔ Source Control maintains version history and supports collaboration.
+
+✔ Asset governance is essential for enterprise-scale deployments.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. Define an Asset in IDMC.
+2. What is Source Control?
+3. State any two benefits of Asset Management.
+
+---
+
+### 5 Marks
+
+1. Explain the Asset Lifecycle.
+2. Discuss Privileges and Permissions in IDMC.
+
+---
+
+### 10 Marks
+
+Explain Asset Management in IDMC, including asset types, lifecycle, permissions, Source Control, and enterprise best practices.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| Assets are reusable objects. |
+| Every asset follows a lifecycle. |
+| Permissions control user actions. |
+| Source Control tracks changes. |
+| Organized assets simplify administration. |
+
+---
+
+# Chapter Summary
+
+In this chapter, we learned:
+
+- Asset Management
+- Types of Assets
+- Asset Lifecycle
+- Managing Assets
+- Privileges and Permissions
+- Source Control
+- Enterprise Governance
+- Best Practices
+
+Effective asset management ensures that enterprise integration projects remain secure, organized, maintainable, and easy to collaborate on.
+
+---
+
+# End of Chapter 5
