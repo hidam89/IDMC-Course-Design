@@ -1745,3 +1745,393 @@ A well-designed RBAC model strengthens security, simplifies administration, and 
 ---
 
 # End of Chapter 6
+# Chapter 7
+
+# IICS Runtime Environments
+
+---
+
+## Course Outcome
+
+CO2
+
+---
+
+## Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Explain the concept of Runtime Environments.
+- Describe the purpose of Runtime Environments in IICS.
+- Differentiate between Cloud Hosted Agent and Secure Agent.
+- Explain Runtime Environment Architecture.
+- Select appropriate Runtime Environments for enterprise deployments.
+
+---
+
+# Introduction
+
+Enterprise data integration involves connecting numerous systems such as databases, cloud applications, APIs, ERP systems, CRM platforms, and on-premises servers.
+
+While Informatica Intelligent Cloud Services (IICS) provides cloud-based design tools, the actual execution of integration tasks requires a Runtime Environment.
+
+A Runtime Environment acts as the execution engine responsible for processing mappings, synchronization tasks, API calls, and data movement.
+
+Without a Runtime Environment, mappings designed in IICS cannot be executed.
+
+---
+
+# What is a Runtime Environment?
+
+A Runtime Environment is the execution platform where Informatica integration jobs run.
+
+It is responsible for:
+
+- Executing mappings
+- Running synchronization tasks
+- Processing transformations
+- Connecting to source systems
+- Loading target systems
+- Managing execution logs
+
+It forms the bridge between the IICS cloud platform and enterprise data sources.
+
+---
+
+# Runtime Environment Architecture
+
+```
+                 Informatica Cloud
+
+                         │
+
+                Administrator Console
+
+                         │
+
+                Runtime Environment
+
+               ┌─────────┴─────────┐
+
+         Hosted Runtime       Secure Agent
+
+               │                    │
+
+        Cloud Sources       On-Premises Systems
+
+                             Databases
+
+                             Applications
+
+                             ERP
+
+                             File Servers
+```
+
+---
+
+# Why Runtime Environments are Required
+
+The Runtime Environment performs several critical functions:
+
+- Executes integration jobs.
+- Communicates with enterprise systems.
+- Transfers data securely.
+- Processes transformations.
+- Monitors execution.
+- Generates execution logs.
+
+---
+
+# Types of Runtime Environments
+
+IICS primarily supports two Runtime Environments:
+
+1. Informatica Cloud Hosted Agent
+2. Informatica Cloud Secure Agent
+
+---
+
+# Informatica Cloud Hosted Agent
+
+The Hosted Agent is managed entirely by Informatica.
+
+The execution infrastructure is maintained in Informatica Cloud.
+
+---
+
+## Characteristics
+
+- No installation required.
+- Fully managed by Informatica.
+- Automatic maintenance.
+- Automatic software updates.
+- Suitable for cloud-to-cloud integrations.
+
+---
+
+## Advantages
+
+- Zero infrastructure maintenance.
+- Fast deployment.
+- High availability.
+- Automatic upgrades.
+- Reduced operational overhead.
+
+---
+
+## Limitations
+
+- Cannot directly access on-premises systems.
+- Limited customization.
+- Depends on internet connectivity.
+
+---
+
+# Secure Agent Runtime
+
+The Secure Agent is installed within the customer's infrastructure.
+
+It enables secure communication between Informatica Cloud and enterprise resources.
+
+Typical deployment locations include:
+
+- Windows Server
+- Linux Server
+- Virtual Machine
+- Cloud Virtual Machine
+
+---
+
+## Advantages
+
+- Supports hybrid integration.
+- Access to on-premises databases.
+- Better enterprise security.
+- Flexible deployment.
+- Local execution.
+
+---
+
+## Limitations
+
+- Installation required.
+- Requires maintenance.
+- Hardware resources needed.
+- Administrator responsibility.
+
+---
+
+# Hosted Agent vs Secure Agent
+
+| Feature | Hosted Agent | Secure Agent |
+|----------|--------------|--------------|
+| Installation | Not Required | Required |
+| Managed By | Informatica | Customer |
+| On-Premises Access | No | Yes |
+| Cloud-to-Cloud Integration | Excellent | Excellent |
+| Hybrid Integration | Limited | Excellent |
+| Maintenance | Automatic | Customer Managed |
+| Infrastructure | Informatica Cloud | Customer Environment |
+
+---
+
+# Enterprise Deployment Scenarios
+
+### Scenario 1
+
+Company uses:
+
+- Salesforce
+- Workday
+- ServiceNow
+
+All applications are cloud-based.
+
+Recommended Runtime:
+
+✔ Hosted Agent
+
+---
+
+### Scenario 2
+
+Company uses:
+
+- Oracle Database
+- SAP ERP
+- Local File Server
+- Active Directory
+
+Recommended Runtime:
+
+✔ Secure Agent
+
+---
+
+### Scenario 3
+
+Company uses:
+
+- Salesforce
+- Oracle Database
+- SQL Server
+- SAP
+
+Recommended Runtime:
+
+✔ Secure Agent
+
+because cloud applications must communicate with on-premises resources.
+
+---
+
+# Runtime Selection Guidelines
+
+Use Hosted Agent when:
+
+- All applications are cloud-based.
+- Minimal administration is desired.
+- No on-premises connectivity is required.
+
+Use Secure Agent when:
+
+- Enterprise databases are involved.
+- Hybrid cloud architecture is used.
+- Internal applications must be accessed.
+- Enhanced control is required.
+
+---
+
+# Runtime Environment Responsibilities
+
+A Runtime Environment performs:
+
+- Job execution
+- Connection management
+- Data transfer
+- Logging
+- Monitoring
+- Error handling
+- Communication with Informatica Cloud
+
+---
+
+# Enterprise Example
+
+A multinational retail company stores:
+
+- Customer Orders in Salesforce
+- Inventory in Oracle Database
+- Employee Information in SAP
+
+Because Oracle and SAP are on-premises, Secure Agent is installed inside the corporate network to securely transfer data between local systems and Informatica Cloud.
+
+---
+
+# Best Practices
+
+- Select the Runtime Environment based on business requirements.
+- Monitor runtime performance regularly.
+- Keep Secure Agent updated.
+- Minimize network latency.
+- Use separate runtimes for development, testing, and production when appropriate.
+
+---
+
+# Common Mistakes
+
+❌ Using Hosted Agent for on-premises database integration.
+
+✔ Use Secure Agent for hybrid environments.
+
+---
+
+❌ Installing one Secure Agent for every project without planning.
+
+✔ Design Runtime Environments based on organizational architecture and workload.
+
+---
+
+❌ Ignoring runtime monitoring.
+
+✔ Monitor job execution and performance continuously.
+
+---
+
+# Classroom Activity
+
+Given the following organizations, identify the appropriate Runtime Environment:
+
+1. Online Retail Company using only cloud SaaS applications.
+2. Government Office with Oracle Database on-premises.
+3. Hospital using SAP and local Electronic Medical Records (EMR).
+4. University integrating Moodle Cloud with an internal Student Information System.
+
+Discuss your reasoning.
+
+---
+
+# Discussion Questions
+
+1. Why is a Runtime Environment essential in IICS?
+
+2. Compare Hosted Agent and Secure Agent.
+
+3. Which Runtime Environment would you recommend for a hybrid cloud enterprise? Justify your answer.
+
+---
+
+# Faculty Tips
+
+Relate Runtime Environments to familiar concepts:
+
+- A Runtime Environment is like the **engine** of a car.
+- The cloud platform designs the workflow, but the Runtime Environment actually executes it.
+
+This analogy helps students distinguish between design-time and run-time components.
+
+---
+
+# Interview Questions
+
+1. What is a Runtime Environment?
+
+2. Why is it required?
+
+3. Differentiate Hosted Agent and Secure Agent.
+
+4. Which Runtime Environment is suitable for hybrid cloud?
+
+5. Can Hosted Agent connect directly to an on-premises Oracle Database? Explain.
+
+---
+
+# Examination Tips
+
+Students should be able to:
+
+- Define Runtime Environment.
+- Draw the Runtime Environment architecture.
+- Compare Hosted Agent and Secure Agent.
+- Explain runtime selection with enterprise examples.
+
+---
+
+# Chapter Summary
+
+In this chapter, students learned:
+
+- Runtime Environment
+- Hosted Agent
+- Secure Agent
+- Runtime Architecture
+- Enterprise Deployment
+- Runtime Selection
+- Best Practices
+
+Understanding Runtime Environments prepares students for the next chapter, which focuses on the Secure Agent—the core execution component of hybrid cloud integration.
+
+---
+
+# End of Chapter 7
