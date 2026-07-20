@@ -2279,3 +2279,420 @@ In this chapter, you learned:
 - Enterprise applications of MDM.
 
 Master Data Management enables organizations to maintain trusted, consistent, and shared business information, forming the foundation for effective governance, analytics, customer experience, and enterprise decision making.
+---
+
+# Chapter 7
+
+# Cloud Data Governance & Catalog (CDGC)
+
+---
+
+## Learning Objectives
+
+After studying this chapter, you should be able to:
+
+- Define Cloud Data Governance & Catalog (CDGC).
+- Explain the importance of data governance in enterprise organizations.
+- Describe metadata, data lineage, and data stewardship.
+- Explain the role of a data catalog.
+- Identify enterprise use cases of Cloud Data Governance.
+
+---
+
+# Introduction
+
+Organizations collect and manage massive amounts of data. However, simply integrating and storing data is not sufficient. Organizations must know:
+
+- What data exists?
+- Where is it stored?
+- Who owns it?
+- Who can access it?
+- Is it accurate and trustworthy?
+- How has it changed over time?
+
+Cloud Data Governance & Catalog (CDGC) provides answers to these questions.
+
+---
+
+# What is Cloud Data Governance & Catalog?
+
+**Cloud Data Governance & Catalog (CDGC)** is an Informatica Intelligent Data Management Cloud (IDMC) service that enables organizations to discover, classify, catalog, govern, monitor, and manage enterprise data assets while ensuring compliance, security, and trust.
+
+---
+
+# Why is Data Governance Required?
+
+Without governance:
+
+- Sensitive data may be exposed.
+- Duplicate datasets may exist.
+- Data ownership becomes unclear.
+- Compliance becomes difficult.
+- Reports may use untrusted data.
+
+With governance:
+
+- Data ownership is clearly defined.
+- Trusted datasets are identified.
+- Regulatory compliance improves.
+- Data usage becomes transparent.
+
+---
+
+# Data Governance Framework
+
+```
+Enterprise Data
+
+↓
+
+Discover
+
+↓
+
+Classify
+
+↓
+
+Catalog
+
+↓
+
+Govern
+
+↓
+
+Monitor
+
+↓
+
+Trusted Data Assets
+```
+
+---
+
+# Major Components of CDGC
+
+## 1. Data Discovery
+
+Automatically identifies enterprise data assets from multiple systems.
+
+Examples:
+
+- Databases
+- Data Warehouses
+- Cloud Storage
+- Applications
+
+---
+
+## 2. Metadata Management
+
+Metadata is **data about data**.
+
+Examples:
+
+- Table Name
+- Column Name
+- Data Type
+- Owner
+- Last Modified Date
+
+Metadata helps users understand the structure and meaning of enterprise data.
+
+---
+
+## 3. Data Catalog
+
+A centralized repository containing information about enterprise data assets.
+
+The catalog helps users:
+
+- Search datasets
+- Understand business definitions
+- Identify data owners
+- View technical metadata
+
+---
+
+## 4. Data Lineage
+
+Data lineage shows the journey of data from its source to its destination.
+
+```
+Oracle Database
+
+↓
+
+Cloud Data Integration
+
+↓
+
+Snowflake
+
+↓
+
+Power BI Dashboard
+```
+
+Lineage helps answer:
+
+- Where did the data originate?
+- How was it transformed?
+- Which reports use this data?
+
+---
+
+## 5. Data Stewardship
+
+A **Data Steward** is responsible for maintaining the quality, consistency, and governance of enterprise data.
+
+Typical responsibilities include:
+
+- Approving data definitions
+- Monitoring data quality
+- Resolving data issues
+- Ensuring compliance
+
+---
+
+# Governance Policies
+
+Organizations define governance policies to ensure proper use of data.
+
+Examples:
+
+- Role-based access control
+- Data retention policies
+- Privacy policies
+- Data classification rules
+- Regulatory compliance (GDPR, HIPAA, etc.)
+
+---
+
+# CDGC Architecture
+
+```
+Enterprise Data Sources
+
+↓
+
+Metadata Discovery
+
+↓
+
+Cloud Data Governance & Catalog
+
+├── Data Catalog
+├── Metadata
+├── Lineage
+├── Stewardship
+├── Governance Policies
+
+↓
+
+Trusted Enterprise Data
+
+↓
+
+Business Users
+```
+
+---
+
+# Enterprise Example
+
+## Healthcare
+
+A hospital maintains:
+
+- Patient Records
+- Laboratory Reports
+- Pharmacy Data
+- Billing Information
+
+Governance ensures:
+
+- Only authorized doctors access patient records.
+- Sensitive information is protected.
+- Data lineage supports auditing.
+- Compliance with healthcare regulations is maintained.
+
+---
+
+# Banking Example
+
+A bank stores customer information in multiple systems.
+
+Governance helps:
+
+- Identify sensitive customer data.
+- Protect account information.
+- Track data movement.
+- Meet regulatory requirements.
+- Ensure trusted reporting.
+
+---
+
+# Benefits of CDGC
+
+- Improved data trust
+- Better compliance
+- Enhanced security
+- Improved collaboration
+- Faster data discovery
+- Better decision making
+- Increased transparency
+
+---
+
+# Limitations
+
+- Requires organizational policies.
+- Needs active data stewardship.
+- Governance processes must be maintained.
+- Metadata should be updated regularly.
+
+---
+
+# Remember
+
+**Data Governance is not only about security.**
+
+It also includes:
+
+- Ownership
+- Quality
+- Metadata
+- Lineage
+- Compliance
+- Stewardship
+
+---
+
+# CDGC vs MDM
+
+| MDM | CDGC |
+|------|------|
+| Manages master data | Governs all enterprise data |
+| Creates Golden Records | Maintains metadata and governance |
+| Customer 360 | Data Catalog |
+| Single Source of Truth | Data Trust & Compliance |
+
+Both services complement each other.
+
+---
+
+# Exam Tips
+
+Frequently asked university questions:
+
+1. Define Cloud Data Governance & Catalog.
+2. Explain metadata with examples.
+3. Explain data lineage.
+4. What is a data catalog?
+5. Differentiate MDM and CDGC.
+6. Explain the role of a Data Steward.
+
+---
+
+# Frequently Asked Questions
+
+### Q1. What is metadata?
+
+**Answer:**
+
+Metadata is information that describes data, such as table names, column names, data types, owners, and relationships.
+
+---
+
+### Q2. Why is data lineage important?
+
+**Answer:**
+
+Data lineage helps organizations understand where data originated, how it was transformed, and where it is used.
+
+---
+
+### Q3. Is governance only the responsibility of the IT department?
+
+**Answer:**
+
+No.
+
+Governance involves business users, data owners, data stewards, compliance teams, and IT professionals.
+
+---
+
+# Practice Questions
+
+## Multiple Choice
+
+1. Which IDMC service provides enterprise data governance?
+2. What is metadata?
+3. Which component shows the flow of data?
+
+---
+
+## Short Answer
+
+1. Define Cloud Data Governance.
+2. Explain metadata.
+3. What is data stewardship?
+
+---
+
+## Descriptive Questions
+
+1. Explain the architecture of CDGC.
+2. Discuss the importance of data governance.
+3. Explain data lineage with a suitable diagram.
+
+---
+
+## Scenario-Based Question
+
+A multinational company stores customer, financial, and HR data in multiple cloud platforms. The compliance team wants to know:
+
+- Where sensitive data is stored.
+- Who owns each dataset.
+- How data flows from source to reports.
+- Which users can access confidential information.
+
+Answer the following:
+
+1. Which IDMC service should be implemented?
+2. Explain how CDGC addresses these requirements.
+3. Why are metadata and data lineage important?
+
+---
+
+# Quick Revision
+
+✔ Data Governance
+
+✔ Metadata
+
+✔ Data Catalog
+
+✔ Data Lineage
+
+✔ Data Steward
+
+✔ Governance Policies
+
+✔ Trusted Data
+
+---
+
+# Chapter Summary
+
+In this chapter, you learned:
+
+- The purpose of Cloud Data Governance & Catalog (CDGC).
+- The importance of governance in enterprise data management.
+- Metadata, data lineage, and data stewardship.
+- The role of a data catalog.
+- Enterprise applications of governance.
+
+Cloud Data Governance & Catalog enables organizations to manage enterprise data responsibly by improving trust, compliance, transparency, and collaboration across the organization.
