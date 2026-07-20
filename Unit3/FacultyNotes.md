@@ -701,3 +701,402 @@ These concepts enable administrators to manage Secure Agents effectively and mai
 ---
 
 # End of Session 2
+# Session 3
+
+# Performance Tuning
+
+**Duration:** 2 Hours
+
+---
+
+# Learning Objectives
+
+After completing this session, students will be able to:
+
+- Explain the importance of performance tuning.
+- Configure Secure Agent Service Properties.
+- Optimize the Data Integration Server.
+- Describe the Serverless Runtime Environment.
+- Identify common performance bottlenecks.
+- Recommend enterprise performance optimization strategies.
+
+---
+
+# Introduction
+
+Performance tuning is the process of optimizing the Secure Agent and Runtime Environment to achieve maximum efficiency, scalability, and reliability.
+
+Poorly configured Secure Agents may result in:
+
+- Slow mapping execution
+- High CPU utilization
+- Memory bottlenecks
+- Long queue times
+- Failed jobs
+
+Proper tuning ensures efficient resource utilization and faster execution of integration tasks.
+
+---
+
+# What is Performance Tuning?
+
+Performance tuning involves configuring runtime parameters to improve:
+
+- Execution speed
+- Resource utilization
+- Scalability
+- Throughput
+- Reliability
+
+The tuning process should be based on workload characteristics and available system resources.
+
+---
+
+# Performance Tuning Architecture
+
+```
+            Integration Job
+
+                    │
+
+          Secure Agent Runtime
+
+                    │
+
+    ┌───────────────┼───────────────┐
+
+ CPU Configuration   Memory Allocation
+
+ Thread Management   Connection Pool
+
+                    │
+
+          Optimized Execution
+
+                    │
+
+          Faster Job Completion
+```
+
+---
+
+# Secure Agent Service Properties
+
+Secure Agent Service Properties allow administrators to control how runtime services utilize system resources.
+
+Common configurable properties include:
+
+- Maximum Concurrent Jobs
+- JVM Heap Size
+- Thread Count
+- Cache Size
+- Temporary Directory
+- Logging Level
+
+Proper configuration improves stability and execution performance.
+
+---
+
+# Maximum Concurrent Jobs
+
+This property determines the maximum number of integration jobs executed simultaneously.
+
+### Low Value
+
+- Lower CPU usage
+- Lower memory usage
+- Longer queue times
+
+### High Value
+
+- Faster throughput
+- Higher CPU utilization
+- Greater memory requirements
+
+Administrators should select values based on server capacity.
+
+---
+
+# JVM Heap Size
+
+The Java Virtual Machine (JVM) Heap Size controls the memory available to runtime services.
+
+If the heap size is too small:
+
+- OutOfMemory errors
+- Frequent garbage collection
+- Poor performance
+
+If too large:
+
+- Memory wastage
+- Increased startup time
+
+Balance is essential.
+
+---
+
+# Thread Management
+
+Threads enable parallel processing.
+
+Increasing thread count improves:
+
+- Parallel execution
+- Throughput
+
+However, excessive threads may result in:
+
+- Context switching
+- CPU contention
+- Reduced performance
+
+---
+
+# Logging Level
+
+Logging assists in monitoring and troubleshooting.
+
+Typical levels include:
+
+- ERROR
+- WARNING
+- INFO
+- DEBUG
+
+Recommendations:
+
+- Production → ERROR or WARNING
+- Testing → INFO
+- Development → DEBUG
+
+---
+
+# Data Integration Server
+
+The Data Integration Server executes:
+
+- Mappings
+- Synchronization Tasks
+- Data Replication
+- Transformations
+
+It is the core execution engine for Cloud Data Integration.
+
+---
+
+# Factors Affecting Performance
+
+Performance depends on:
+
+- CPU
+- RAM
+- Disk I/O
+- Network latency
+- Database response time
+- Source system performance
+- Target system performance
+
+---
+
+# Performance Optimization Techniques
+
+Administrators should:
+
+- Increase available memory.
+- Reduce unnecessary logging.
+- Optimize SQL queries.
+- Minimize network latency.
+- Configure appropriate concurrent job limits.
+- Use efficient transformations.
+- Schedule large jobs during off-peak hours.
+
+---
+
+# Serverless Runtime Environment
+
+A Serverless Runtime Environment is a cloud-managed execution platform where infrastructure management is handled by Informatica.
+
+Administrators focus on integration logic rather than server administration.
+
+---
+
+# Characteristics of Serverless Runtime
+
+- No infrastructure management
+- Automatic scaling
+- Automatic updates
+- Reduced operational overhead
+- Elastic resource allocation
+
+---
+
+# Comparison: Secure Agent vs Serverless Runtime
+
+| Feature | Secure Agent | Serverless Runtime |
+|---------|--------------|-------------------|
+| Installation | Required | Not Required |
+| Infrastructure | Customer Managed | Informatica Managed |
+| Scaling | Manual | Automatic |
+| Maintenance | Customer | Informatica |
+| On-Premises Access | Yes | Limited |
+| Hybrid Integration | Excellent | Limited |
+
+---
+
+# Enterprise Example
+
+A retail company executes thousands of integration jobs every day.
+
+Initially:
+
+- High CPU utilization
+- Long job queues
+- Frequent execution delays
+
+After tuning:
+
+- Increased JVM Heap Size
+- Optimized concurrent jobs
+- Reduced logging
+- Scheduled batch jobs overnight
+
+Results:
+
+- 35% reduction in execution time
+- Improved system stability
+- Better resource utilization
+
+---
+
+# Demonstration
+
+Perform the following:
+
+1. Open Administrator Console.
+2. Navigate to Runtime Environment.
+3. Select Secure Agent.
+4. View Service Properties.
+5. Review JVM settings.
+6. Observe concurrent job configuration.
+7. Discuss tuning recommendations.
+
+---
+
+# Troubleshooting Performance Issues
+
+| Problem | Possible Cause | Solution |
+|----------|----------------|----------|
+| Slow jobs | High server load | Reduce concurrent jobs or scale resources |
+| OutOfMemory Error | Small JVM heap | Increase heap size |
+| High CPU Usage | Excessive parallel jobs | Optimize thread count |
+| Long Queue Times | Limited concurrent execution | Increase job concurrency carefully |
+| Poor Database Performance | Slow SQL queries | Optimize database queries and indexes |
+
+---
+
+# Best Practices
+
+- Monitor CPU and memory usage regularly.
+- Tune one parameter at a time.
+- Test changes in a non-production environment.
+- Maintain baseline performance metrics.
+- Schedule resource-intensive jobs during low-usage periods.
+- Review performance reports periodically.
+
+---
+
+# Teaching Tips
+
+Ask students:
+
+> "Is increasing every performance parameter always beneficial?"
+
+Guide them to understand the trade-offs between performance, stability, and resource availability.
+
+---
+
+# Classroom Discussion
+
+Discuss:
+
+"Would you recommend Serverless Runtime or Secure Agent for a multinational bank with strict data residency requirements?"
+
+Encourage students to justify their recommendations.
+
+---
+
+# Lab Activity
+
+1. Review Secure Agent Service Properties.
+2. Identify configurable parameters.
+3. Compare default and optimized settings.
+4. Record expected performance improvements.
+
+---
+
+# Interview Questions
+
+1. What is performance tuning?
+2. Why is JVM Heap Size important?
+3. What are concurrent jobs?
+4. Explain Serverless Runtime Environment.
+5. How would you improve Secure Agent performance?
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. Define Performance Tuning.
+2. What is JVM Heap Size?
+3. What is a Serverless Runtime Environment?
+
+---
+
+### 5 Marks
+
+1. Explain Secure Agent Service Properties.
+2. Compare Secure Agent and Serverless Runtime.
+
+---
+
+### 10 Marks
+
+Explain performance tuning in IDMC, including Secure Agent configuration, Data Integration Server optimization, and Serverless Runtime Environment.
+
+---
+
+# Key Points
+
+✔ Performance tuning improves execution efficiency.
+
+✔ JVM Heap Size directly affects runtime stability.
+
+✔ Concurrent job configuration influences throughput.
+
+✔ Serverless Runtime reduces infrastructure management.
+
+✔ Performance tuning should always be based on workload analysis.
+
+---
+
+# Summary
+
+In this session, students learned:
+
+- Performance Tuning
+- Secure Agent Service Properties
+- JVM Heap Size
+- Concurrent Job Configuration
+- Data Integration Server
+- Serverless Runtime Environment
+- Enterprise Optimization Techniques
+- Troubleshooting and Best Practices
+
+These concepts enable administrators to optimize runtime performance and ensure efficient enterprise data integration.
+
+---
+
+# End of Session 3
