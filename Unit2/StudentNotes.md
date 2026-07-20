@@ -1717,3 +1717,695 @@ User Roles are a fundamental security mechanism in IICS, ensuring that users rec
 ---
 
 # End of Chapter 6
+# Chapter 7
+
+# IICS Runtime Environments
+
+---
+
+## Introduction
+
+Designing an integration task is only one part of the integration process. The designed task must be executed in an environment capable of connecting to data sources, processing transformations, and loading data into target systems.
+
+This execution platform is known as the **Runtime Environment**.
+
+In Informatica Intelligent Cloud Services (IICS), Runtime Environments execute mappings, synchronization tasks, APIs, and workflows.
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Define Runtime Environment.
+- Explain the purpose of Runtime Environments.
+- Describe Hosted Agent.
+- Describe Secure Agent Runtime.
+- Compare Hosted Agent and Secure Agent.
+- Recommend suitable Runtime Environments for different enterprise scenarios.
+
+---
+
+# What is a Runtime Environment?
+
+A **Runtime Environment** is the execution platform where Informatica integration jobs are processed.
+
+It performs the following tasks:
+
+- Executes mappings
+- Runs synchronization tasks
+- Connects to data sources
+- Applies transformations
+- Loads target systems
+- Generates execution logs
+- Reports execution status
+
+Without a Runtime Environment, mappings created in IICS cannot be executed.
+
+---
+
+# Runtime Environment Architecture
+
+```
+                Informatica Cloud
+
+                        │
+
+             Administrator Console
+
+                        │
+
+               Runtime Environment
+
+             ┌──────────┴──────────┐
+
+      Hosted Runtime        Secure Agent
+
+             │                     │
+
+      Cloud Applications     Enterprise Systems
+
+                              Oracle
+
+                              SQL Server
+
+                              SAP
+
+                              Files
+
+                              APIs
+```
+
+---
+
+# Functions of Runtime Environment
+
+A Runtime Environment is responsible for:
+
+- Executing jobs
+- Managing connections
+- Processing transformations
+- Monitoring execution
+- Logging activities
+- Communicating with Informatica Cloud
+
+---
+
+# Types of Runtime Environments
+
+IICS supports two primary Runtime Environments:
+
+1. Hosted Agent
+2. Secure Agent
+
+---
+
+# Hosted Agent
+
+The Hosted Agent is fully managed by Informatica.
+
+No installation is required.
+
+### Features
+
+- Cloud-managed
+- Automatic updates
+- No maintenance
+- Supports cloud-to-cloud integration
+
+### Advantages
+
+- Easy deployment
+- No infrastructure management
+- Automatic maintenance
+- High availability
+
+### Limitations
+
+- Cannot directly access on-premises databases
+- Limited customization
+
+---
+
+# Secure Agent
+
+Secure Agent is installed inside the customer's network.
+
+It securely connects Informatica Cloud with enterprise resources.
+
+### Features
+
+- Installed locally
+- Supports hybrid cloud
+- Connects to on-premises systems
+- Customer-managed
+
+### Advantages
+
+- Access to enterprise databases
+- Supports hybrid integration
+- Greater deployment flexibility
+- Better control
+
+### Limitations
+
+- Installation required
+- Requires maintenance
+- Depends on local hardware resources
+
+---
+
+# Hosted Agent vs Secure Agent
+
+| Feature | Hosted Agent | Secure Agent |
+|----------|--------------|--------------|
+| Installation | Not Required | Required |
+| Managed By | Informatica | Customer |
+| Cloud Integration | Excellent | Excellent |
+| On-Premises Connectivity | No | Yes |
+| Infrastructure | Cloud | Local Server |
+| Maintenance | Automatic | Customer Managed |
+
+---
+
+# Runtime Selection
+
+Use **Hosted Agent** when:
+
+- All applications are cloud-based.
+- No on-premises systems are involved.
+- Fast deployment is required.
+
+Use **Secure Agent** when:
+
+- Oracle or SQL Server databases are on-premises.
+- SAP or ERP systems are inside the enterprise network.
+- Hybrid cloud architecture is used.
+- Greater administrative control is required.
+
+---
+
+# Enterprise Example
+
+### Scenario 1
+
+Applications:
+
+- Salesforce
+- Workday
+- ServiceNow
+
+Recommended Runtime:
+
+✔ Hosted Agent
+
+---
+
+### Scenario 2
+
+Applications:
+
+- Oracle Database
+- SAP ERP
+- Local File Server
+
+Recommended Runtime:
+
+✔ Secure Agent
+
+---
+
+### Scenario 3
+
+Applications:
+
+- Salesforce
+- Oracle Database
+- SQL Server
+
+Recommended Runtime:
+
+✔ Secure Agent
+
+because cloud applications must securely communicate with internal systems.
+
+---
+
+# Advantages of Runtime Environments
+
+- Secure execution
+- Reliable job processing
+- Enterprise scalability
+- Flexible deployment
+- Efficient monitoring
+
+---
+
+# Best Practices
+
+- Choose the appropriate Runtime Environment based on business requirements.
+- Monitor runtime performance regularly.
+- Separate Development, Testing, and Production environments.
+- Keep Secure Agents updated.
+- Allocate sufficient system resources.
+
+---
+
+# Common Mistakes
+
+❌ Using Hosted Agent for on-premises database access.
+
+✔ Use Secure Agent for hybrid environments.
+
+---
+
+❌ Installing multiple Secure Agents without planning.
+
+✔ Design Runtime Environments according to organizational architecture.
+
+---
+
+# Important Points
+
+✔ Runtime Environment executes integration tasks.
+
+✔ Hosted Agent is managed by Informatica.
+
+✔ Secure Agent is managed by the customer.
+
+✔ Hybrid cloud environments require Secure Agent.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. Define Runtime Environment.
+2. What is Hosted Agent?
+3. What is Secure Agent?
+
+---
+
+### 5 Marks
+
+1. Compare Hosted Agent and Secure Agent.
+2. Explain the functions of Runtime Environment.
+
+---
+
+### 10 Marks
+
+Explain Runtime Environments in IICS with suitable architecture and enterprise examples.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| Runtime Environment executes integration jobs |
+| Hosted Agent is cloud-managed |
+| Secure Agent is locally installed |
+| Secure Agent supports hybrid cloud |
+| Runtime Environment connects cloud and enterprise systems |
+
+---
+
+# Chapter Summary
+
+In this chapter, we studied:
+
+- Runtime Environment
+- Hosted Agent
+- Secure Agent
+- Runtime Architecture
+- Runtime Selection
+- Enterprise Deployment
+- Best Practices
+
+Runtime Environments are responsible for executing integration tasks and enabling secure communication between Informatica Cloud and enterprise systems.
+
+---
+
+# End of Chapter 7
+# Chapter 8
+
+# Informatica Cloud Secure Agent
+
+---
+
+## Introduction
+
+Modern enterprises store data across cloud platforms, on-premises databases, ERP systems, APIs, and file servers. Since Informatica Intelligent Cloud Services (IICS) is cloud-based, it requires a secure mechanism to communicate with internal enterprise systems.
+
+This mechanism is provided by the **Secure Agent**.
+
+The Secure Agent acts as the execution engine of IICS, securely transferring data between Informatica Cloud and enterprise resources.
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Define Secure Agent.
+- Explain Secure Agent Architecture.
+- Describe Agent Manager and Agent Core.
+- Explain the startup process.
+- Differentiate Local User and Network User execution.
+- Describe Secure Agent installation.
+- Explain common troubleshooting techniques.
+
+---
+
+# What is Secure Agent?
+
+A **Secure Agent** is a lightweight application installed within an organization's network.
+
+It enables secure communication between Informatica Intelligent Cloud Services (IICS) and enterprise resources.
+
+The Secure Agent performs:
+
+- Data extraction
+- Data loading
+- Transformation execution
+- Job execution
+- API execution
+- Monitoring
+- Logging
+
+---
+
+# Why is Secure Agent Required?
+
+Without Secure Agent:
+
+- Cloud cannot directly access internal databases.
+- Hybrid cloud integration is not possible.
+- Enterprise resources remain isolated.
+
+With Secure Agent:
+
+- Secure communication is established.
+- Enterprise systems remain protected.
+- Data integration becomes possible.
+
+---
+
+# Secure Agent Architecture
+
+```
+             Informatica Cloud
+
+                    │
+
+             HTTPS (TLS)
+
+                    │
+
+             Secure Agent
+
+        ┌─────────┼─────────┐
+
+     Database   Applications   Files
+
+      Oracle       SAP         CSV
+
+    SQL Server   Salesforce    XML
+
+      MySQL       REST API     JSON
+```
+
+---
+
+# Communication Flow
+
+```
+Create Mapping
+
+↓
+
+Submit Job
+
+↓
+
+Secure Agent Receives Task
+
+↓
+
+Connect Source
+
+↓
+
+Read Data
+
+↓
+
+Apply Transformations
+
+↓
+
+Load Target
+
+↓
+
+Send Status to Cloud
+```
+
+---
+
+# Components of Secure Agent
+
+Major components include:
+
+- Agent Manager
+- Agent Core
+- Data Integration Service
+- Process Server
+- Connector Services
+- Metadata Service
+- Logging Service
+
+Each component performs a specialized function.
+
+---
+
+# Agent Manager
+
+The **Agent Manager** controls the Secure Agent.
+
+Responsibilities include:
+
+- Starting services
+- Stopping services
+- Monitoring services
+- Downloading updates
+- Restarting failed services
+- Reporting status
+
+Think of the Agent Manager as the **supervisor** of the Secure Agent.
+
+---
+
+# Agent Core
+
+The **Agent Core** performs the actual integration work.
+
+Responsibilities include:
+
+- Executing mappings
+- Running workflows
+- Loading connectors
+- Processing transformations
+- Managing execution
+
+Agent Core is the **execution engine** of the Secure Agent.
+
+---
+
+# Secure Agent Startup
+
+The startup process follows these steps:
+
+1. Windows starts the Secure Agent service.
+2. Agent Manager initializes.
+3. Configuration files are loaded.
+4. Agent Core starts.
+5. Runtime services initialize.
+6. Secure connection with Informatica Cloud is established.
+7. Agent status changes to **Running**.
+
+---
+
+# Local User vs Network User
+
+| Local User | Network User |
+|-------------|--------------|
+| Local machine access | Domain/network access |
+| Simple setup | Enterprise deployment |
+| Limited shared resource access | Access to shared folders and Active Directory |
+| Suitable for development | Suitable for production |
+
+---
+
+# Minimum System Requirements
+
+| Component | Recommended |
+|-----------|-------------|
+| Processor | 64-bit Dual Core or higher |
+| RAM | 8 GB minimum (16 GB recommended) |
+| Disk Space | 10 GB minimum |
+| Internet | Stable HTTPS connectivity |
+| Operating System | Supported Windows or Linux versions |
+
+---
+
+# Installing Secure Agent
+
+General installation steps:
+
+1. Log in to IICS.
+2. Navigate to **Administrator → Runtime Environments**.
+3. Download Secure Agent.
+4. Run the installer.
+5. Accept the license agreement.
+6. Enter Informatica credentials.
+7. Register the Secure Agent.
+8. Wait for components to download.
+9. Verify the agent status.
+
+---
+
+# Verifying Installation
+
+After installation, verify:
+
+- Agent Status = Running
+- Runtime Environment = Online
+- Services = Healthy
+- Latest Version Installed
+
+A successful installation indicates that the Secure Agent is ready to execute integration jobs.
+
+---
+
+# Common Installation Errors
+
+| Problem | Possible Cause | Solution |
+|----------|----------------|----------|
+| Agent Offline | Network issue | Check internet and firewall |
+| Registration Failed | Incorrect credentials | Verify login details |
+| Service Not Starting | Permission issue | Run as Administrator |
+| Database Connection Failed | Invalid configuration | Check connection settings |
+| Slow Performance | Low system resources | Increase RAM or CPU |
+
+---
+
+# Best Practices
+
+- Install on a dedicated server.
+- Keep the Secure Agent updated.
+- Monitor CPU and memory usage.
+- Review logs regularly.
+- Separate Development, Testing, and Production environments.
+- Use secure service accounts for enterprise deployments.
+
+---
+
+# Enterprise Example
+
+A manufacturing company stores production data in an on-premises Oracle Database while using Salesforce CRM in the cloud.
+
+A Secure Agent installed inside the corporate network enables secure data exchange between Oracle Database and Salesforce without exposing the internal database to the Internet.
+
+---
+
+# Advantages
+
+- Secure communication
+- Hybrid cloud integration
+- Reliable execution
+- Enterprise scalability
+- Flexible deployment
+
+---
+
+# Limitations
+
+- Requires installation
+- Needs local hardware resources
+- Requires periodic maintenance
+
+---
+
+# Important Points
+
+✔ Secure Agent is the execution engine of IICS.
+
+✔ It connects cloud services with enterprise resources.
+
+✔ Agent Manager controls services.
+
+✔ Agent Core executes integration jobs.
+
+✔ Secure Agent uses secure outbound HTTPS communication.
+
+---
+
+# Examination Questions
+
+### 2 Marks
+
+1. Define Secure Agent.
+2. What is Agent Manager?
+3. What is Agent Core?
+
+---
+
+### 5 Marks
+
+1. Explain Secure Agent Architecture.
+2. Describe the Secure Agent startup process.
+3. Differentiate Local User and Network User.
+
+---
+
+### 10 Marks
+
+Explain Secure Agent Architecture, components, installation, and troubleshooting with suitable diagrams.
+
+---
+
+# Quick Revision
+
+| Remember |
+|-----------|
+| Secure Agent executes integration jobs |
+| Agent Manager manages services |
+| Agent Core performs execution |
+| Secure communication uses HTTPS |
+| Hybrid cloud requires Secure Agent |
+
+---
+
+# Chapter Summary
+
+In this chapter, we learned:
+
+- Secure Agent
+- Architecture
+- Components
+- Agent Manager
+- Agent Core
+- Startup sequence
+- Installation
+- Verification
+- Troubleshooting
+- Best practices
+
+The Secure Agent is the core execution component of Informatica Intelligent Cloud Services, enabling secure and reliable integration between cloud applications and enterprise systems.
+
+---
+
+# End of Chapter 8
