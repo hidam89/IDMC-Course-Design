@@ -2792,3 +2792,280 @@ These monitoring capabilities help administrators maintain reliable, secure, and
 ---
 
 # End of Session 7
+# Session 8
+
+# Unit Summary, Revision and Instructor Guide
+
+**Duration:** 1 Hour
+
+---
+
+# Learning Objectives
+
+At the end of this session, students should be able to:
+
+- Integrate all concepts learned in Unit 3.
+- Design enterprise administration solutions using IDMC.
+- Apply Secure Agent administration, Asset Management, Scheduling, and Monitoring concepts.
+- Prepare for laboratory examinations, university examinations, and technical interviews.
+
+---
+
+# Unit Concept Map
+
+```
+                     UNIT 3
+
+        Secure Agent Administration
+
+                    │
+
+     ┌──────────────┼───────────────┐
+
+ Secure Agent Groups     Performance Tuning
+
+                    │
+
+             Connections
+
+                    │
+
+            Asset Management
+
+                    │
+
+        Source Control & CLI
+
+                    │
+
+      Bundle Management & Scheduling
+
+                    │
+
+          Monitoring & Operational Insights
+```
+
+---
+
+# Complete Workflow of Unit 3
+
+```
+Secure Agent Installation
+
+↓
+
+Agent Group Configuration
+
+↓
+
+Runtime Configuration
+
+↓
+
+Connection Creation
+
+↓
+
+Asset Development
+
+↓
+
+Version Control
+
+↓
+
+Bundle Creation
+
+↓
+
+Deployment
+
+↓
+
+Scheduling
+
+↓
+
+Monitoring
+
+↓
+
+Operational Insights
+```
+
+---
+
+# End-to-End Enterprise Case Study
+
+## Scenario
+
+A multinational retail organization has offices in:
+
+- India
+- United States
+- Germany
+- Singapore
+
+The organization uses:
+
+- Oracle Database
+- Salesforce CRM
+- SAP ERP
+- Amazon S3
+- REST APIs
+
+### Requirements
+
+- High availability
+- Automated deployment
+- Source control
+- Scheduled nightly jobs
+- Operational monitoring
+
+### Discussion Points
+
+1. How many Secure Agents would you deploy?
+2. Would you use Secure Agent Groups?
+3. Which Runtime Environment would you recommend?
+4. Which connections are required?
+5. How would you organize assets?
+6. How would you implement Source Control?
+7. How would Bundles be used for deployment?
+8. What monitoring strategy would you recommend?
+
+---
+
+# Common Student Misconceptions
+
+| Misconception | Clarification |
+|---------------|---------------|
+| Secure Agent Group is another Secure Agent | A Secure Agent Group is a logical collection of Secure Agents. |
+| Connections and Connectors are the same | A Connector is the technology adapter; a Connection stores configuration details. |
+| Scheduling automatically improves performance | Scheduling automates execution but does not optimize performance. |
+| Operational Insights executes jobs | Operational Insights monitors and analyzes jobs; it does not execute them. |
+| CLI replaces the UI | The CLI complements the UI by supporting automation and scripting. |
+
+---
+
+# Revision Checklist
+
+Students should be able to:
+
+- Explain Secure Agent Groups.
+- View Secure Agent Details.
+- Interpret Secure Agent Statuses.
+- Configure Service Properties.
+- Explain Performance Tuning.
+- Compare Secure Agent and Serverless Runtime.
+- Configure Connections.
+- Explain Connectors.
+- Manage Assets.
+- Configure Source Control.
+- Use Asset Management CLI.
+- Explain Bundle Management.
+- Configure Schedules.
+- Explain RunAJob Utility.
+- Monitor Jobs.
+- Interpret Operational Insights.
+
+---
+
+# Viva Voce Questions
+
+1. What is a Secure Agent Group?
+2. Why is High Availability important?
+3. Explain Object Dependencies.
+4. What information is available in Secure Agent Details?
+5. What are Secure Agent Services?
+6. Explain JVM Heap Size.
+7. What is Serverless Runtime?
+8. Differentiate Connection and Connector.
+9. Explain Asset Lifecycle.
+10. What is Source Control?
+11. What is Bundle Management?
+12. What is the Asset Management CLI?
+13. Explain RunAJob Utility.
+14. Why are Schedules important?
+15. What is Operational Insights?
+
+---
+
+# Frequently Asked Interview Questions
+
+1. How would you design an IDMC architecture for a multinational organization?
+2. What factors influence Secure Agent performance?
+3. How do you troubleshoot a Secure Agent that is offline?
+4. How would you migrate assets from Development to Production?
+5. Explain the importance of Source Control in enterprise integration.
+6. How would you secure database connections in IDMC?
+7. Describe a deployment strategy using Bundles.
+8. How would you monitor integration performance?
+9. What KPIs would you track using Operational Insights?
+10. Explain how IDMC supports enterprise scalability.
+
+---
+
+# Teaching Tips
+
+- Begin each major topic with a real-world scenario.
+- Demonstrate every administrative task live whenever possible.
+- Encourage students to compare different deployment strategies.
+- Discuss common production issues and how administrators resolve them.
+- Reinforce the relationship between administration, performance, and governance.
+
+---
+
+# Suggested Mini Project
+
+**Enterprise Integration Administration**
+
+Students work in groups to design an IDMC environment for an enterprise.
+
+The project should include:
+
+- Organization structure
+- Secure Agent Groups
+- Runtime Environment selection
+- Connection design
+- Asset organization
+- Source Control strategy
+- Bundle deployment process
+- Scheduling plan
+- Monitoring dashboard
+
+Deliverables:
+
+- Architecture diagram
+- Deployment workflow
+- Written report
+- Presentation
+
+---
+
+# CO3 Achievement Checklist
+
+| Skill | Achieved |
+|--------|:--------:|
+| Configure Secure Agent Groups | ✓ |
+| Manage Secure Agent Services | ✓ |
+| Tune Runtime Performance | ✓ |
+| Configure Connections | ✓ |
+| Manage Assets | ✓ |
+| Configure Source Control | ✓ |
+| Use CLI Utility | ✓ |
+| Deploy Bundles | ✓ |
+| Create Schedules | ✓ |
+| Monitor Jobs | ✓ |
+| Analyze Operational Insights | ✓ |
+
+---
+
+# Unit Summary
+
+In Unit 3, students learned how to administer and optimize enterprise IDMC environments. Topics included Secure Agent Groups, runtime administration, performance tuning, connections, asset management, source control, scheduling, deployment automation, monitoring, and operational analytics.
+
+These concepts prepare students to manage enterprise-scale data integration platforms with a strong focus on governance, reliability, automation, and operational excellence.
+
+---
+
+# End of Unit 3 Faculty Notes
