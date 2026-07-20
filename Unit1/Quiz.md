@@ -393,3 +393,375 @@ C. Memory Size
 D. Screen Resolution
 
 **Answer:** A
+---
+
+## MCQ 21
+
+**CO:** CO3
+
+**Bloom's Level:** L1 – Remember
+
+**Difficulty:** Easy
+
+Which IDMC service is responsible for improving enterprise data quality?
+
+A. CDI
+
+B. CAI
+
+C. CDQ
+
+D. CIH
+
+**Answer:** C
+
+**Explanation**
+
+Cloud Data Quality (CDQ) profiles, validates, standardizes, and cleanses enterprise data.
+
+---
+
+## MCQ 22
+
+**CO:** CO3
+
+Which data quality dimension ensures duplicate records do not exist?
+
+A. Accuracy
+
+B. Completeness
+
+C. Uniqueness
+
+D. Timeliness
+
+**Answer:** C
+
+---
+
+## MCQ 23
+
+**CO:** CO3
+
+Data profiling is primarily used to
+
+A. Create dashboards
+
+B. Identify data quality issues
+
+C. Compress databases
+
+D. Encrypt data
+
+**Answer:** B
+
+---
+
+## MCQ 24
+
+**CO:** CO3
+
+Which process corrects spelling mistakes and invalid values?
+
+A. Profiling
+
+B. Cleansing
+
+C. Reporting
+
+D. Publishing
+
+**Answer:** B
+
+---
+
+## MCQ 25
+
+**CO:** CO3
+
+Which process converts data into a consistent format?
+
+A. Validation
+
+B. Matching
+
+C. Standardization
+
+D. Aggregation
+
+**Answer:** C
+
+---
+
+## MCQ 26
+
+**CO:** CO4
+
+Master Data Management primarily provides
+
+A. Network Security
+
+B. Single Source of Truth
+
+C. Database Backup
+
+D. Cloud Storage
+
+**Answer:** B
+
+---
+
+## MCQ 27
+
+**CO:** CO4
+
+Customer 360 is associated with
+
+A. CAI
+
+B. CDI
+
+C. MDM
+
+D. CDQ
+
+**Answer:** C
+
+---
+
+## MCQ 28
+
+**CO:** CO4
+
+A Golden Record represents
+
+A. Temporary Data
+
+B. Duplicate Data
+
+C. Trusted Master Data
+
+D. Archived Data
+
+**Answer:** C
+
+---
+
+## MCQ 29
+
+**CO:** CO4
+
+Which of the following is an example of Master Data?
+
+A. Invoice
+
+B. Payment
+
+C. Customer
+
+D. Purchase Order
+
+**Answer:** C
+
+---
+
+## MCQ 30
+
+**CO:** CO4
+
+Master Data generally changes
+
+A. Every second
+
+B. Frequently
+
+C. Infrequently
+
+D. Never
+
+**Answer:** C
+
+---
+
+## MCQ 31
+
+**CO:** CO6
+
+Cloud Data Governance & Catalog (CDGC) primarily focuses on
+
+A. Hardware Management
+
+B. Metadata and Governance
+
+C. Software Installation
+
+D. Programming
+
+**Answer:** B
+
+---
+
+## MCQ 32
+
+**CO:** CO6
+
+Metadata is best described as
+
+A. Hidden Data
+
+B. Duplicate Data
+
+C. Data about Data
+
+D. Deleted Data
+
+**Answer:** C
+
+---
+
+## MCQ 33
+
+**CO:** CO6
+
+Data Lineage helps identify
+
+A. Hardware Configuration
+
+B. Network Speed
+
+C. Data Flow from Source to Destination
+
+D. Database Passwords
+
+**Answer:** C
+
+---
+
+## MCQ 34
+
+**CO:** CO6
+
+Who is primarily responsible for maintaining data quality and governance?
+
+A. Database User
+
+B. Data Steward
+
+C. Software Tester
+
+D. Customer
+
+**Answer:** B
+
+---
+
+## MCQ 35
+
+**CO:** CO6
+
+Which feature allows users to search enterprise datasets?
+
+A. Data Catalog
+
+B. Router
+
+C. Gateway
+
+D. Firewall
+
+**Answer:** A
+
+---
+
+## MCQ 36
+
+**CO:** CO5
+
+Cloud Integration Hub (CIH) uses which architecture?
+
+A. Client–Server
+
+B. Peer-to-Peer
+
+C. Publish–Subscribe
+
+D. Three-Tier
+
+**Answer:** C
+
+---
+
+## MCQ 37
+
+**CO:** CO5
+
+The main advantage of Publish–Subscribe architecture is
+
+A. Increased point-to-point connections
+
+B. Reduced integration complexity
+
+C. Higher manual effort
+
+D. Reduced scalability
+
+**Answer:** B
+
+---
+
+## MCQ 38
+
+**CO:** CO5
+
+Cloud Data Marketplace (CDMP) enables
+
+A. Hardware Procurement
+
+B. Self-service Data Discovery
+
+C. Database Installation
+
+D. Network Monitoring
+
+**Answer:** B
+
+---
+
+## MCQ 39
+
+**CO:** CO5
+
+Business users typically use CDMP to
+
+A. Install applications
+
+B. Discover certified datasets
+
+C. Configure servers
+
+D. Design databases
+
+**Answer:** B
+
+---
+
+## MCQ 40
+
+**CO:** CO6
+
+Which sequence correctly represents the enterprise data management lifecycle?
+
+A. CDQ → CDI → MDM → CDGC
+
+B. CDI → CDQ → MDM → CDGC → CIH → CDMP
+
+C. MDM → CDI → CAI → CDMP
+
+D. CDGC → CDI → CDQ → CIH
+
+**Answer:** B
+
+**Explanation**
+
+The typical enterprise lifecycle is:
+Data Integration → Data Quality → Master Data → Governance → Data Distribution → Self-Service Data Access.
