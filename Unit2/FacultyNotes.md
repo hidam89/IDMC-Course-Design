@@ -833,3 +833,270 @@ Effective user management is fundamental to maintaining a secure and well-govern
 ---
 
 # End of Chapter 3
+# Chapter 4
+
+# User Statistics
+
+---
+
+## Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Explain the purpose of User Statistics.
+- Interpret List View and Chart View.
+- Monitor user activity.
+- Analyze user behavior using administrative dashboards.
+- Use statistics for capacity planning and security monitoring.
+
+---
+
+# Introduction
+
+In enterprise cloud environments, simply creating users is not enough. Administrators must continuously monitor user activity to ensure efficient resource utilization, maintain security, and comply with organizational policies.
+
+IICS provides User Statistics to help administrators understand how users interact with the platform.
+
+User Statistics help answer questions such as:
+
+- Who is actively using the system?
+- How many users logged in today?
+- Which users are inactive?
+- Are licenses being fully utilized?
+- Are there unusual login patterns?
+
+---
+
+# What are User Statistics?
+
+User Statistics provide summarized information about:
+
+- Active Users
+- Inactive Users
+- Login Frequency
+- User Activity
+- License Consumption
+- Authentication Status
+
+These statistics assist administrators in making informed decisions about user management and license allocation.
+
+---
+
+# Why are User Statistics Important?
+
+Monitoring user statistics helps organizations to:
+
+- Improve security.
+- Detect inactive accounts.
+- Optimize license usage.
+- Identify unusual access patterns.
+- Support compliance and auditing.
+
+---
+
+# User Statistics Dashboard
+
+The User Statistics Dashboard provides a centralized view of user-related information.
+
+Typical metrics include:
+
+- Total Users
+- Active Users
+- Inactive Users
+- Last Login
+- Authentication Type
+- Assigned Roles
+- License Usage
+
+---
+
+# List View
+
+## What is List View?
+
+List View displays user information in a tabular format.
+
+Example columns include:
+
+- User Name
+- Email Address
+- Role
+- Authentication Type
+- Status
+- Last Login
+- License Type
+
+### Advantages
+
+- Easy to search.
+- Supports sorting.
+- Supports filtering.
+- Useful for administrative tasks.
+
+---
+
+# Example List View
+
+| User | Role | Status | Last Login |
+|------|------|---------|------------|
+| Admin | Administrator | Active | Today |
+| John | Developer | Active | Yesterday |
+| Alice | Analyst | Inactive | 30 Days Ago |
+
+---
+
+# Chart View
+
+Chart View presents statistical information graphically.
+
+Common charts include:
+
+- Active vs Inactive Users
+- Authentication Methods
+- Role Distribution
+- License Usage
+- Login Trends
+
+---
+
+# Benefits of Chart View
+
+- Easy visualization.
+- Quick trend identification.
+- Executive reporting.
+- Better decision-making.
+- Capacity planning.
+
+---
+
+# Comparing List View and Chart View
+
+| Feature | List View | Chart View |
+|----------|-----------|------------|
+| Detailed Information | ✔ | ✘ |
+| Trend Analysis | ✘ | ✔ |
+| Filtering | ✔ | Limited |
+| Executive Dashboard | ✘ | ✔ |
+
+---
+
+# Monitoring User Activity
+
+Administrators should monitor:
+
+- Failed Login Attempts
+- Dormant Accounts
+- Frequent Login Failures
+- Sudden Increase in Users
+- License Utilization
+
+Regular monitoring helps maintain a secure and efficient environment.
+
+---
+
+# Enterprise Scenario
+
+A university has:
+
+- 1 Organization Administrator
+- 30 Faculty Members
+- 300 Students
+
+After reviewing User Statistics, the administrator discovers:
+
+- 50 student accounts have never been used.
+- 10 faculty accounts have been inactive for six months.
+- Several licenses remain unused.
+
+The administrator can:
+
+- Disable unused accounts.
+- Reallocate licenses.
+- Improve resource utilization.
+
+---
+
+# Best Practices
+
+- Review user statistics weekly.
+- Remove inactive users.
+- Monitor license utilization.
+- Investigate unusual login activity.
+- Generate periodic reports.
+
+---
+
+# Classroom Activity
+
+Analyze the following scenario:
+
+An organization has:
+
+- 500 Users
+- 300 Active
+- 150 Inactive
+- 50 Locked Accounts
+
+Discuss:
+
+- What concerns should the administrator investigate?
+- Which corrective actions should be taken?
+
+---
+
+# Discussion Question
+
+How can User Statistics improve organizational security and operational efficiency?
+
+---
+
+# Faculty Tips
+
+Explain User Statistics using examples from:
+
+- Learning Management Systems (Moodle)
+- Microsoft Teams
+- Google Classroom
+- University ERP Systems
+
+Students can easily relate to login statistics and user dashboards from these platforms.
+
+---
+
+# Common Mistakes
+
+❌ Ignoring inactive accounts.
+
+✔ Regularly review and disable unused accounts.
+
+---
+
+❌ Allocating licenses without reviewing usage.
+
+✔ Use statistics to optimize license allocation.
+
+---
+
+❌ Monitoring only login counts.
+
+✔ Analyze overall user behavior and trends.
+
+---
+
+# Summary
+
+This chapter introduced:
+
+- User Statistics
+- List View
+- Chart View
+- User Monitoring
+- Dashboard Analysis
+- Enterprise Reporting
+- Best Practices
+
+Effective use of User Statistics enables administrators to improve security, optimize resource allocation, and support informed decision-making.
+
+---
+
+# End of Chapter 4
