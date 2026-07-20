@@ -2135,3 +2135,466 @@ Understanding Runtime Environments prepares students for the next chapter, which
 ---
 
 # End of Chapter 7
+# Chapter 8
+
+# Informatica Cloud Secure Agent
+
+## Part A – Overview, Architecture and Components
+
+---
+
+## Course Outcome
+
+CO2
+
+---
+
+# Learning Objectives
+
+After completing this chapter, students will be able to:
+
+- Explain the purpose of the Secure Agent.
+- Describe the Secure Agent Architecture.
+- Identify Secure Agent components.
+- Explain how Secure Agent communicates with Informatica Cloud.
+- Describe the minimum system requirements.
+- Understand Secure Agent deployment models.
+
+---
+
+# Introduction
+
+Modern organizations store their data in multiple environments:
+
+- Oracle Database
+- SQL Server
+- SAP
+- Salesforce
+- AWS
+- Azure
+- Flat Files
+- REST APIs
+
+Most enterprise databases remain inside the organization's private network.
+
+Since Informatica Intelligent Cloud Services (IICS) is cloud-based, it cannot directly access these protected internal resources.
+
+To bridge this gap, Informatica provides the **Secure Agent**.
+
+The Secure Agent establishes a secure communication channel between Informatica Cloud and enterprise systems without exposing internal resources to the public Internet.
+
+---
+
+# What is Secure Agent?
+
+A Secure Agent is a lightweight application installed inside the customer's network.
+
+It performs all runtime activities required by Informatica Cloud.
+
+The Secure Agent:
+
+- Executes mappings
+- Connects to databases
+- Transfers data
+- Runs synchronization jobs
+- Executes APIs
+- Performs transformations
+- Sends execution status to Informatica Cloud
+
+Think of the Secure Agent as the **execution engine** of Informatica Cloud.
+
+---
+
+# Why is Secure Agent Required?
+
+Without Secure Agent:
+
+❌ Informatica Cloud cannot access:
+
+- Oracle Database
+- SQL Server
+- SAP
+- File Systems
+- Internal APIs
+
+With Secure Agent:
+
+✔ Secure communication is established.
+
+✔ Data remains protected.
+
+✔ Firewall rules remain simple.
+
+✔ No inbound ports are required.
+
+---
+
+# Secure Agent Architecture
+
+```
+                     Informatica Cloud
+
+                           │
+
+                    HTTPS (TLS/SSL)
+
+                           │
+
+                 --------------------
+
+                 Secure Communication
+
+                 --------------------
+
+                           │
+
+                    Secure Agent
+
+          ┌────────────┼────────────┐
+
+      Database      Applications      Files
+
+          │              │             │
+
+     Oracle        Salesforce      CSV
+
+     SQL Server    SAP             XML
+
+     MySQL         REST APIs       JSON
+```
+
+---
+
+# Communication Flow
+
+Step 1
+
+Administrator creates a mapping in Informatica Cloud.
+
+↓
+
+Step 2
+
+The mapping task is submitted.
+
+↓
+
+Step 3
+
+Secure Agent receives execution instructions.
+
+↓
+
+Step 4
+
+Secure Agent connects to the source system.
+
+↓
+
+Step 5
+
+Data is extracted.
+
+↓
+
+Step 6
+
+Transformation logic executes.
+
+↓
+
+Step 7
+
+Target system receives transformed data.
+
+↓
+
+Step 8
+
+Execution status is sent back to Informatica Cloud.
+
+---
+
+# Major Components
+
+The Secure Agent contains several services.
+
+Major components include:
+
+- Agent Core
+- Data Integration Service
+- Process Server
+- Metadata Service
+- Connector Services
+- Secure Communication Module
+- Log Manager
+
+Each component performs a specialized task.
+
+---
+
+# Secure Agent Services
+
+The Secure Agent automatically starts multiple background services.
+
+Examples include:
+
+- Data Integration Service
+- Cloud Integration Service
+- Process Engine
+- API Runtime
+- Metadata Processing
+- Logging Service
+
+These services work together to execute integration jobs.
+
+---
+
+# Secure Agent Deployment
+
+Secure Agent may be installed on:
+
+- Windows Desktop
+- Windows Server
+- Linux Server
+- VMware Virtual Machine
+- Hyper-V
+- AWS EC2
+- Microsoft Azure VM
+- Google Cloud VM
+
+---
+
+# Minimum System Requirements
+
+Typical requirements include:
+
+### Operating System
+
+- Windows 10
+- Windows 11
+- Windows Server
+- Linux (supported distributions)
+
+---
+
+### Processor
+
+64-bit CPU
+
+Minimum Dual Core
+
+Recommended Quad Core or higher
+
+---
+
+### Memory
+
+Minimum:
+
+8 GB RAM
+
+Recommended:
+
+16 GB RAM
+
+Large enterprise workloads:
+
+32 GB or more
+
+---
+
+### Disk Space
+
+Minimum:
+
+10 GB Free Space
+
+Recommended:
+
+25 GB+
+
+---
+
+### Java
+
+Supported Java Runtime Environment
+
+(as specified in the current Informatica documentation)
+
+---
+
+### Internet Connectivity
+
+Reliable broadband connection
+
+HTTPS access to Informatica Cloud endpoints
+
+---
+
+# Secure Agent Security
+
+Secure Agent uses:
+
+- TLS Encryption
+- HTTPS Communication
+- Authentication Tokens
+- Secure Certificates
+
+Sensitive information is encrypted during transmission.
+
+---
+
+# Advantages
+
+✔ Easy installation
+
+✔ Lightweight
+
+✔ Secure communication
+
+✔ Supports hybrid cloud
+
+✔ Supports cloud and on-premises systems
+
+✔ Automatic updates
+
+✔ Enterprise scalability
+
+---
+
+# Limitations
+
+- Requires local installation
+
+- Depends on network availability
+
+- Requires periodic monitoring
+
+- Local resources affect performance
+
+---
+
+# Enterprise Example
+
+ABC Bank stores customer records in Oracle Database.
+
+Developers design mappings in Informatica Cloud.
+
+The Secure Agent installed inside the bank's data center performs:
+
+- Oracle connection
+- Data extraction
+- Data transformation
+- Data loading
+- Execution monitoring
+
+No direct database exposure to the Internet is required.
+
+---
+
+# Best Practices
+
+- Install Secure Agent on a dedicated server.
+
+- Avoid installing on user desktops.
+
+- Monitor CPU and memory usage.
+
+- Keep the Secure Agent updated.
+
+- Backup configuration regularly.
+
+- Use separate Secure Agents for Development, Testing, and Production.
+
+---
+
+# Classroom Activity
+
+Scenario:
+
+A hospital stores patient data in:
+
+- Oracle Database
+- Laboratory Server
+- PACS Imaging System
+
+Question:
+
+Why is Secure Agent required?
+
+Which systems will it communicate with?
+
+Draw the communication architecture.
+
+---
+
+# Discussion Question
+
+Can Informatica Cloud directly connect to an Oracle Database inside a private network without Secure Agent?
+
+Explain your answer.
+
+---
+
+# Faculty Tips
+
+Explain Secure Agent using the analogy of a **trusted courier**.
+
+- Informatica Cloud sends instructions.
+- Secure Agent receives them.
+- Secure Agent safely enters the organization's network.
+- Secure Agent completes the assigned work.
+- Results are securely returned.
+
+This analogy helps students understand why Secure Agent is essential in hybrid cloud environments.
+
+---
+
+# Interview Questions
+
+1. What is Secure Agent?
+
+2. Why is Secure Agent required?
+
+3. Explain Secure Agent Architecture.
+
+4. Can multiple Secure Agents be deployed?
+
+5. Where should Secure Agent be installed?
+
+6. How does Secure Agent communicate securely?
+
+---
+
+# Examination Tips
+
+Students should be able to:
+
+- Define Secure Agent.
+- Draw Secure Agent Architecture.
+- Explain communication flow.
+- List system requirements.
+- Discuss advantages and limitations.
+- Explain enterprise deployment scenarios.
+
+---
+
+# Chapter Summary
+
+This section introduced:
+
+- Secure Agent
+- Secure Agent Architecture
+- Communication Flow
+- Components
+- Deployment
+- System Requirements
+- Security Features
+- Enterprise Applications
+
+The next section explains the internal working of the Secure Agent, including Agent Manager, Agent Core, service startup, and execution lifecycle.
+
+---
+
+# End of Chapter 8 – Part A
